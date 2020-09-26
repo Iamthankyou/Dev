@@ -1,0 +1,2 @@
+Tổng các số trong ma trận:  9
+có 9 số dương
