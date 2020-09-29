@@ -1,0 +1,10 @@
+F:\Dev\(C#) LapTrinhTrucQuan\My IPOS\My IPOS\bin\Debug\My IPOS.exe.config
+F:\Dev\(C#) LapTrinhTrucQuan\My IPOS\My IPOS\bin\Debug\My IPOS.exe
+F:\Dev\(C#) LapTrinhTrucQuan\My IPOS\My IPOS\bin\Debug\My IPOS.pdb
+F:\Dev\(C#) LapTrinhTrucQuan\My IPOS\My IPOS\obj\Debug\My IPOS.csprojAssemblyReference.cache
+F:\Dev\(C#) LapTrinhTrucQuan\My IPOS\My IPOS\obj\Debug\My_IPOS.Properties.Resources.resources
+F:\Dev\(C#) LapTrinhTrucQuan\My IPOS\My IPOS\obj\Debug\My IPOS.csproj.GenerateResource.cache
+F:\Dev\(C#) LapTrinhTrucQuan\My IPOS\My IPOS\obj\Debug\My IPOS.csproj.CoreCompileInputs.cache
+F:\Dev\(C#) LapTrinhTrucQuan\My IPOS\My IPOS\obj\Debug\My IPOS.exe
+F:\Dev\(C#) LapTrinhTrucQuan\My IPOS\My IPOS\obj\Debug\My IPOS.pdb
+F:\Dev\(C#) LapTrinhTrucQuan\My IPOS\My IPOS\obj\Debug\My_IPOS.Login.resources
