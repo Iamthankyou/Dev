@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.tbPassword = new System.Windows.Forms.TextBox();
             this.tbUserName = new System.Windows.Forms.TextBox();
             this.btThoatDangNhap = new System.Windows.Forms.Button();
@@ -111,7 +112,9 @@
             this.Controls.Add(this.btnDangNhap);
             this.Controls.Add(this.lbPassword);
             this.Controls.Add(this.lbUserName);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng Nhập";
             this.ResumeLayout(false);
             this.PerformLayout();

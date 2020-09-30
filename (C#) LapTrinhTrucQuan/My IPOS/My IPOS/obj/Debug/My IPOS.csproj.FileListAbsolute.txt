@@ -8,3 +8,4 @@ F:\Dev\(C#) LapTrinhTrucQuan\My IPOS\My IPOS\obj\Debug\My IPOS.csproj.CoreCompil
 F:\Dev\(C#) LapTrinhTrucQuan\My IPOS\My IPOS\obj\Debug\My IPOS.exe
 F:\Dev\(C#) LapTrinhTrucQuan\My IPOS\My IPOS\obj\Debug\My IPOS.pdb
 F:\Dev\(C#) LapTrinhTrucQuan\My IPOS\My IPOS\obj\Debug\My_IPOS.Login.resources
+F:\Dev\(C#) LapTrinhTrucQuan\My IPOS\My IPOS\obj\Debug\My_IPOS.NewCa.resources

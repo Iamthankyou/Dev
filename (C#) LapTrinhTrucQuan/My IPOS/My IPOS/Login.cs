@@ -22,9 +22,19 @@ namespace My_IPOS
             string userName = "admin", password = "admin";
             if (tbUserName.Text != "" && tbPassword.Text != "")
             {
-                if (userName != tbUserName.Text && password != tbPassword.Text)
+                if (userName != tbUserName.Text || password != tbPassword.Text)
                 {
-
+                    MessageBox.Show("Sai User Name hoặc Password!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    NewCa newCa = new NewCa();
+                    this.Hide();
+                    newCa.ShowDialog();
+                    if(newCa.Visible == false) 
+                    {
+                        this.Close();
+                    }
                 }
             }
             else
