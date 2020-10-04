@@ -31,10 +31,6 @@ namespace My_IPOS
                     NewCa newCa = new NewCa();
                     this.Hide();
                     newCa.ShowDialog();
-                    if(newCa.Visible == false) 
-                    {
-                        this.Close();
-                    }
                 }
             }
             else
@@ -46,6 +42,18 @@ namespace My_IPOS
         private void btThoatDangNhap_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void tbUserName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Down || e.KeyCode == Keys.Enter) tbPassword.Focus();
+        }
+
+        private void tbPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Down) btnDangNhap.Focus();
+            else if (e.KeyCode == Keys.Up) tbUserName.Focus();
+            else if (e.KeyCode == Keys.Enter) btnDangNhap_Click(sender,e);
         }
     }
 }

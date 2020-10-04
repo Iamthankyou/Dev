@@ -39,7 +39,7 @@
             this.lbDuDau.AutoSize = true;
             this.lbDuDau.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbDuDau.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.lbDuDau.Location = new System.Drawing.Point(12, 56);
+            this.lbDuDau.Location = new System.Drawing.Point(12, 60);
             this.lbDuDau.Name = "lbDuDau";
             this.lbDuDau.Size = new System.Drawing.Size(89, 24);
             this.lbDuDau.TabIndex = 0;
@@ -54,6 +54,7 @@
             this.tbDuDau.TabIndex = 1;
             this.tbDuDau.Text = "0";
             this.tbDuDau.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.tbDuDau.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbDuDau_KeyDown);
             // 
             // btBatDau
             // 
@@ -65,22 +66,25 @@
             this.btBatDau.TabIndex = 2;
             this.btBatDau.Text = "Bắt đầu";
             this.btBatDau.UseVisualStyleBackColor = true;
+            this.btBatDau.Click += new System.EventHandler(this.btBatDau_Click);
             // 
             // NewCa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(380, 244);
+            this.ClientSize = new System.Drawing.Size(369, 322);
             this.Controls.Add(this.btBatDau);
             this.Controls.Add(this.tbDuDau);
             this.Controls.Add(this.lbDuDau);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "NewCa";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Ca Mới";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.NewCa_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 
