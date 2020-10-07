@@ -21,10 +21,10 @@ namespace CoSoDuLieu
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //lấy dũ liệu đổ ra da
+            //lấy dữ liệu đổ ra form
             //B1: tạo chuỗi kết nối
-            string strConnect = "Data Source=DESKTOP-OH9IU5S\\SQLEXPRESS;DataBase=Bai1_C_Shafe;Integrated Security = true";
-            //B2: mở kết nối
+            string strConnect = "Data Source=DESKTOP-OH9IU5S\\SQLEXPRESS;DataBase=DataBaseTestCSharp;Integrated Security = true";
+            //B2: mở kết nối 
             SqlConnection sqlConnection = new SqlConnection(strConnect);
             if (sqlConnection.State != ConnectionState.Open)
             {
@@ -32,11 +32,15 @@ namespace CoSoDuLieu
                 MessageBox.Show("Thành công!");
             }
             //B3: Tạo lệnh SQL
-            string sqlSelect = "Select * from tblChatLieu";
+            string sqlSelect = "select * from tblChatLieu";
+                /*"insert into tblChatLieu (MaChatLieu,TenChatLieu)" +
+                "value (1431,N'sắt')";*/
             //B4: Thực thi lệnh Sql
             SqlDataAdapter dt = new SqlDataAdapter(sqlSelect, sqlConnection);
             DataTable tbChatLieu = new DataTable();
             dt.Fill(tbChatLieu);
+            /*dt.Update(tbChatLieu);*/
+
             //B5: Đóng kết nối và hủy đối tượng
             if (sqlConnection.State != ConnectionState.Closed)
             {
