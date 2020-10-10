@@ -13,4 +13,7 @@ F:\Dev\(C#) LapTrinhTrucQuan\My IPOS\My IPOS\obj\Debug\My_IPOS.Home.resources
 F:\Dev\(C#) LapTrinhTrucQuan\My IPOS\My IPOS\bin\Debug\vi-VN\My IPOS.resources.dll
 F:\Dev\(C#) LapTrinhTrucQuan\My IPOS\My IPOS\obj\Debug\My_IPOS.Home.vi-VN.resources
 F:\Dev\(C#) LapTrinhTrucQuan\My IPOS\My IPOS\obj\Debug\vi-VN\My IPOS.resources.dll
-F:\Dev\(C#) LapTrinhTrucQuan\My IPOS\My IPOS\obj\Debug\My_IPOS.Order.resources
+F:\Dev\(C#) LapTrinhTrucQuan\My IPOS\My IPOS\obj\Debug\My IPOS.exe.licenses
+F:\Dev\(C#) LapTrinhTrucQuan\My IPOS\My IPOS\obj\Debug\My IPOS.csproj.CopyComplete
+F:\Dev\(C#) LapTrinhTrucQuan\My IPOS\My IPOS\obj\Debug\My_IPOS.OrderTakeAway.resources
+F:\Dev\(C#) LapTrinhTrucQuan\My IPOS\My IPOS\bin\Debug\DevComponents.DotNetBar2.dll

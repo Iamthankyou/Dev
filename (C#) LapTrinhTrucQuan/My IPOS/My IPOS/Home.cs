@@ -25,7 +25,7 @@ namespace My_IPOS
 
         private void btnTakeAway_Click(object sender, EventArgs e)
         {
-            Order orderTakeAway = new Order("Take Away");
+            OrderTakeAway orderTakeAway = new OrderTakeAway();
             orderTakeAway.Show();
         }
     }

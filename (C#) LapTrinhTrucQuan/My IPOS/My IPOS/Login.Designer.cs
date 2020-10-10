@@ -32,9 +32,9 @@
             this.tbPassword = new System.Windows.Forms.TextBox();
             this.tbUserName = new System.Windows.Forms.TextBox();
             this.btThoatDangNhap = new System.Windows.Forms.Button();
-            this.btnDangNhap = new System.Windows.Forms.Button();
             this.lbPassword = new System.Windows.Forms.Label();
             this.lbUserName = new System.Windows.Forms.Label();
+            this.btnDangNhap = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // tbPassword
@@ -70,20 +70,6 @@
             this.btThoatDangNhap.UseVisualStyleBackColor = false;
             this.btThoatDangNhap.Click += new System.EventHandler(this.btThoatDangNhap_Click);
             // 
-            // btnDangNhap
-            // 
-            this.btnDangNhap.BackColor = System.Drawing.Color.Transparent;
-            this.btnDangNhap.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnDangNhap.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDangNhap.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnDangNhap.Location = new System.Drawing.Point(39, 118);
-            this.btnDangNhap.Name = "btnDangNhap";
-            this.btnDangNhap.Size = new System.Drawing.Size(84, 37);
-            this.btnDangNhap.TabIndex = 10;
-            this.btnDangNhap.Text = "Đăng Nhập";
-            this.btnDangNhap.UseVisualStyleBackColor = false;
-            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
-            // 
             // lbPassword
             // 
             this.lbPassword.AutoSize = true;
@@ -106,12 +92,27 @@
             this.lbUserName.TabIndex = 8;
             this.lbUserName.Text = "User Name:";
             // 
+            // btnDangNhap
+            // 
+            this.btnDangNhap.BackColor = System.Drawing.Color.Transparent;
+            this.btnDangNhap.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnDangNhap.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangNhap.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnDangNhap.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnDangNhap.Location = new System.Drawing.Point(50, 118);
+            this.btnDangNhap.Name = "btnDangNhap";
+            this.btnDangNhap.Size = new System.Drawing.Size(89, 37);
+            this.btnDangNhap.TabIndex = 10;
+            this.btnDangNhap.Text = "Đăng Nhập";
+            this.btnDangNhap.UseVisualStyleBackColor = false;
+            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(316, 167);
+            this.ClientSize = new System.Drawing.Size(332, 189);
             this.Controls.Add(this.tbPassword);
             this.Controls.Add(this.tbUserName);
             this.Controls.Add(this.btThoatDangNhap);
@@ -123,6 +124,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Login";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng Nhập";
             this.ResumeLayout(false);
@@ -135,8 +137,8 @@
         private System.Windows.Forms.TextBox tbPassword;
         private System.Windows.Forms.TextBox tbUserName;
         private System.Windows.Forms.Button btThoatDangNhap;
-        private System.Windows.Forms.Button btnDangNhap;
         private System.Windows.Forms.Label lbPassword;
         private System.Windows.Forms.Label lbUserName;
+        private System.Windows.Forms.Button btnDangNhap;
     }
 }

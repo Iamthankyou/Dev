@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace My_IPOS
 {
-    public partial class Order : Form
+    public partial class OrderTakeAway : Form
     {
-        public Order()
+        public OrderTakeAway()
         {
             InitializeComponent();
-        }
-
-        public Order(string nameFrame)
-        {
-            InitializeComponent();
-            this.Text = "Order "+ nameFrame;
         }
     }
 }
