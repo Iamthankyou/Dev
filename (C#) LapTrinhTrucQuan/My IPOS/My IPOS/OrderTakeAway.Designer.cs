@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvxOrder = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.clSoThuTu = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,12 +67,25 @@
             this.buttonX4 = new DevComponents.DotNetBar.ButtonX();
             this.buttonX3 = new DevComponents.DotNetBar.ButtonX();
             this.buttonX2 = new DevComponents.DotNetBar.ButtonX();
-            this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
+            this.btnMilkTea = new DevComponents.DotNetBar.ButtonX();
+            this.backBox = new System.Windows.Forms.PictureBox();
+            this.hourBox = new System.Windows.Forms.PictureBox();
+            this.minuteBox = new System.Windows.Forms.PictureBox();
+            this.dotBox = new System.Windows.Forms.PictureBox();
+            this.secondBox = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvxOrder)).BeginInit();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.backBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hourBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.minuteBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dotBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.secondBox)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -94,14 +108,14 @@
             this.dgvxOrder.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvxOrder.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             this.dgvxOrder.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvxOrder.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvxOrder.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvxOrder.ColumnHeadersHeight = 50;
             this.dgvxOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvxOrder.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -114,14 +128,14 @@
             this.clGioGoi,
             this.clThanhTien,
             this.clMamon});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvxOrder.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvxOrder.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvxOrder.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvxOrder.GridColor = System.Drawing.Color.White;
             this.dgvxOrder.HighlightSelectedColumnHeaders = false;
@@ -131,14 +145,14 @@
             this.dgvxOrder.ReadOnly = true;
             this.dgvxOrder.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dgvxOrder.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvxOrder.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvxOrder.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvxOrder.RowHeadersVisible = false;
             this.dgvxOrder.RowHeadersWidth = 4;
             this.dgvxOrder.SelectAllSignVisible = false;
@@ -240,17 +254,25 @@
             // 
             // vScrollBar2
             // 
+            this.vScrollBar2.LargeChange = 2;
             this.vScrollBar2.Location = new System.Drawing.Point(887, 6);
+            this.vScrollBar2.Maximum = 2;
+            this.vScrollBar2.Minimum = 1;
             this.vScrollBar2.Name = "vScrollBar2";
             this.vScrollBar2.Size = new System.Drawing.Size(46, 322);
             this.vScrollBar2.TabIndex = 3;
+            this.vScrollBar2.Value = 1;
             // 
             // vScrollBar1
             // 
+            this.vScrollBar1.LargeChange = 2;
             this.vScrollBar1.Location = new System.Drawing.Point(169, 6);
+            this.vScrollBar1.Maximum = 2;
+            this.vScrollBar1.Minimum = 1;
             this.vScrollBar1.Name = "vScrollBar1";
             this.vScrollBar1.Size = new System.Drawing.Size(39, 322);
             this.vScrollBar1.TabIndex = 2;
+            this.vScrollBar1.Value = 1;
             // 
             // tableLayoutPanel2
             // 
@@ -289,6 +311,7 @@
             // buttonX20
             // 
             this.buttonX20.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX20.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
             this.buttonX20.Location = new System.Drawing.Point(507, 249);
             this.buttonX20.Name = "buttonX20";
             this.buttonX20.Size = new System.Drawing.Size(163, 76);
@@ -298,6 +321,7 @@
             // buttonX19
             // 
             this.buttonX19.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX19.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
             this.buttonX19.Location = new System.Drawing.Point(339, 249);
             this.buttonX19.Name = "buttonX19";
             this.buttonX19.Size = new System.Drawing.Size(162, 76);
@@ -307,6 +331,7 @@
             // buttonX18
             // 
             this.buttonX18.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX18.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
             this.buttonX18.Location = new System.Drawing.Point(171, 249);
             this.buttonX18.Name = "buttonX18";
             this.buttonX18.Size = new System.Drawing.Size(162, 76);
@@ -316,6 +341,7 @@
             // buttonX17
             // 
             this.buttonX17.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX17.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
             this.buttonX17.Location = new System.Drawing.Point(3, 249);
             this.buttonX17.Name = "buttonX17";
             this.buttonX17.Size = new System.Drawing.Size(162, 76);
@@ -325,6 +351,7 @@
             // buttonX16
             // 
             this.buttonX16.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX16.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
             this.buttonX16.Location = new System.Drawing.Point(507, 167);
             this.buttonX16.Name = "buttonX16";
             this.buttonX16.Size = new System.Drawing.Size(163, 76);
@@ -334,6 +361,7 @@
             // buttonX15
             // 
             this.buttonX15.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX15.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
             this.buttonX15.Location = new System.Drawing.Point(339, 167);
             this.buttonX15.Name = "buttonX15";
             this.buttonX15.Size = new System.Drawing.Size(162, 76);
@@ -343,6 +371,7 @@
             // buttonX14
             // 
             this.buttonX14.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX14.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
             this.buttonX14.Location = new System.Drawing.Point(171, 167);
             this.buttonX14.Name = "buttonX14";
             this.buttonX14.Size = new System.Drawing.Size(162, 76);
@@ -352,6 +381,7 @@
             // buttonX13
             // 
             this.buttonX13.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX13.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
             this.buttonX13.Location = new System.Drawing.Point(3, 167);
             this.buttonX13.Name = "buttonX13";
             this.buttonX13.Size = new System.Drawing.Size(162, 76);
@@ -361,6 +391,7 @@
             // buttonX12
             // 
             this.buttonX12.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX12.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
             this.buttonX12.Location = new System.Drawing.Point(507, 85);
             this.buttonX12.Name = "buttonX12";
             this.buttonX12.Size = new System.Drawing.Size(163, 76);
@@ -370,6 +401,7 @@
             // buttonX11
             // 
             this.buttonX11.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX11.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
             this.buttonX11.Location = new System.Drawing.Point(339, 85);
             this.buttonX11.Name = "buttonX11";
             this.buttonX11.Size = new System.Drawing.Size(162, 76);
@@ -379,6 +411,7 @@
             // buttonX10
             // 
             this.buttonX10.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX10.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
             this.buttonX10.Location = new System.Drawing.Point(171, 85);
             this.buttonX10.Name = "buttonX10";
             this.buttonX10.Size = new System.Drawing.Size(162, 76);
@@ -388,6 +421,7 @@
             // buttonX9
             // 
             this.buttonX9.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX9.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
             this.buttonX9.Location = new System.Drawing.Point(3, 85);
             this.buttonX9.Name = "buttonX9";
             this.buttonX9.Size = new System.Drawing.Size(162, 76);
@@ -397,6 +431,7 @@
             // buttonX5
             // 
             this.buttonX5.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX5.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
             this.buttonX5.Location = new System.Drawing.Point(3, 3);
             this.buttonX5.Name = "buttonX5";
             this.buttonX5.Size = new System.Drawing.Size(162, 76);
@@ -406,6 +441,7 @@
             // buttonX6
             // 
             this.buttonX6.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX6.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
             this.buttonX6.Location = new System.Drawing.Point(171, 3);
             this.buttonX6.Name = "buttonX6";
             this.buttonX6.Size = new System.Drawing.Size(162, 76);
@@ -415,6 +451,7 @@
             // buttonX7
             // 
             this.buttonX7.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX7.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
             this.buttonX7.Location = new System.Drawing.Point(339, 3);
             this.buttonX7.Name = "buttonX7";
             this.buttonX7.Size = new System.Drawing.Size(162, 76);
@@ -424,6 +461,7 @@
             // buttonX8
             // 
             this.buttonX8.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX8.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
             this.buttonX8.Location = new System.Drawing.Point(507, 3);
             this.buttonX8.Name = "buttonX8";
             this.buttonX8.Size = new System.Drawing.Size(163, 76);
@@ -437,7 +475,7 @@
             this.tableLayoutPanel1.Controls.Add(this.buttonX4, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.buttonX3, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.buttonX2, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.buttonX1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btnMilkTea, 0, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
@@ -451,6 +489,7 @@
             // buttonX4
             // 
             this.buttonX4.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX4.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
             this.buttonX4.Location = new System.Drawing.Point(3, 249);
             this.buttonX4.Name = "buttonX4";
             this.buttonX4.Size = new System.Drawing.Size(156, 76);
@@ -460,6 +499,7 @@
             // buttonX3
             // 
             this.buttonX3.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX3.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
             this.buttonX3.Location = new System.Drawing.Point(3, 167);
             this.buttonX3.Name = "buttonX3";
             this.buttonX3.Size = new System.Drawing.Size(156, 76);
@@ -469,27 +509,98 @@
             // buttonX2
             // 
             this.buttonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
             this.buttonX2.Location = new System.Drawing.Point(3, 85);
             this.buttonX2.Name = "buttonX2";
             this.buttonX2.Size = new System.Drawing.Size(156, 76);
             this.buttonX2.TabIndex = 1;
             this.buttonX2.Text = "buttonX2";
             // 
-            // buttonX1
+            // btnMilkTea
             // 
-            this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX1.Location = new System.Drawing.Point(3, 3);
-            this.buttonX1.Name = "buttonX1";
-            this.buttonX1.Size = new System.Drawing.Size(156, 76);
-            this.buttonX1.TabIndex = 0;
-            this.buttonX1.Text = "buttonX1";
+            this.btnMilkTea.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnMilkTea.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
+            this.btnMilkTea.Location = new System.Drawing.Point(3, 3);
+            this.btnMilkTea.Name = "btnMilkTea";
+            this.btnMilkTea.Size = new System.Drawing.Size(156, 76);
+            this.btnMilkTea.TabIndex = 0;
+            this.btnMilkTea.Text = "Milk Tea";
+            // 
+            // backBox
+            // 
+            this.backBox.BackColor = System.Drawing.Color.Transparent;
+            this.backBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.backBox.Location = new System.Drawing.Point(0, 0);
+            this.backBox.Name = "backBox";
+            this.backBox.Size = new System.Drawing.Size(300, 300);
+            this.backBox.TabIndex = 3;
+            this.backBox.TabStop = false;
+            // 
+            // hourBox
+            // 
+            this.hourBox.BackColor = System.Drawing.Color.Transparent;
+            this.hourBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.hourBox.Location = new System.Drawing.Point(0, 0);
+            this.hourBox.Name = "hourBox";
+            this.hourBox.Size = new System.Drawing.Size(300, 300);
+            this.hourBox.TabIndex = 4;
+            this.hourBox.TabStop = false;
+            // 
+            // minuteBox
+            // 
+            this.minuteBox.BackColor = System.Drawing.Color.Transparent;
+            this.minuteBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.minuteBox.Location = new System.Drawing.Point(0, 0);
+            this.minuteBox.Name = "minuteBox";
+            this.minuteBox.Size = new System.Drawing.Size(300, 300);
+            this.minuteBox.TabIndex = 5;
+            this.minuteBox.TabStop = false;
+            // 
+            // dotBox
+            // 
+            this.dotBox.BackColor = System.Drawing.Color.Transparent;
+            this.dotBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dotBox.Location = new System.Drawing.Point(0, 0);
+            this.dotBox.Name = "dotBox";
+            this.dotBox.Size = new System.Drawing.Size(300, 300);
+            this.dotBox.TabIndex = 6;
+            this.dotBox.TabStop = false;
+            // 
+            // secondBox
+            // 
+            this.secondBox.BackColor = System.Drawing.Color.Transparent;
+            this.secondBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.secondBox.Location = new System.Drawing.Point(0, 0);
+            this.secondBox.Name = "secondBox";
+            this.secondBox.Size = new System.Drawing.Size(300, 300);
+            this.secondBox.TabIndex = 7;
+            this.secondBox.TabStop = false;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.backBox);
+            this.panel3.Controls.Add(this.secondBox);
+            this.panel3.Controls.Add(this.hourBox);
+            this.panel3.Controls.Add(this.dotBox);
+            this.panel3.Controls.Add(this.minuteBox);
+            this.panel3.Location = new System.Drawing.Point(961, 363);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(300, 300);
+            this.panel3.TabIndex = 8;
             // 
             // OrderTakeAway
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(1240, 693);
+            this.ClientSize = new System.Drawing.Size(1284, 688);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -502,6 +613,12 @@
             this.panel2.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.backBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hourBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.minuteBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dotBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.secondBox)).EndInit();
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -543,6 +660,13 @@
         private DevComponents.DotNetBar.ButtonX buttonX4;
         private DevComponents.DotNetBar.ButtonX buttonX3;
         private DevComponents.DotNetBar.ButtonX buttonX2;
-        private DevComponents.DotNetBar.ButtonX buttonX1;
+        private DevComponents.DotNetBar.ButtonX btnMilkTea;
+        private System.Windows.Forms.PictureBox backBox;
+        private System.Windows.Forms.PictureBox hourBox;
+        private System.Windows.Forms.PictureBox minuteBox;
+        private System.Windows.Forms.PictureBox dotBox;
+        private System.Windows.Forms.PictureBox secondBox;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Panel panel3;
     }
 }
