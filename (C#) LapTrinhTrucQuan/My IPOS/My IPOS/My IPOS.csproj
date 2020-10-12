@@ -132,5 +132,8 @@
   <ItemGroup>
     <None Include="bin\Debug\image\log-in.bmp" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\image\buttom-1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

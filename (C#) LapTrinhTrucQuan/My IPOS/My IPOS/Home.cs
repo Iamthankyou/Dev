@@ -23,7 +23,7 @@ namespace My_IPOS
             System.Windows.Forms.Application.Exit();
         }
 
-        private void btnTakeAway_Click(object sender, EventArgs e)
+        private void btnTakeAway_Click_1(object sender, EventArgs e)
         {
             OrderTakeAway orderTakeAway = new OrderTakeAway();
             orderTakeAway.Show();

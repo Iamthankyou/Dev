@@ -16,7 +16,7 @@ namespace My_IPOS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new OrderTakeAway());
+            Application.Run(new Home());
         }
     }
 }
