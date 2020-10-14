@@ -101,6 +101,7 @@
             this.mnuHangHoa.Name = "mnuHangHoa";
             this.mnuHangHoa.Size = new System.Drawing.Size(180, 22);
             this.mnuHangHoa.Text = "Hàng Hóa";
+            this.mnuHangHoa.Click += new System.EventHandler(this.mnuHangHoa_Click);
             // 
             // mnuHoaDon
             // 
@@ -113,7 +114,7 @@
             // mnuHoaDonBan
             // 
             this.mnuHoaDonBan.Name = "mnuHoaDonBan";
-            this.mnuHoaDonBan.Size = new System.Drawing.Size(180, 22);
+            this.mnuHoaDonBan.Size = new System.Drawing.Size(144, 22);
             this.mnuHoaDonBan.Text = "Hóa Đơn Bán";
             // 
             // mnuTimKiem
@@ -129,19 +130,19 @@
             // mnuTKHoaDon
             // 
             this.mnuTKHoaDon.Name = "mnuTKHoaDon";
-            this.mnuTKHoaDon.Size = new System.Drawing.Size(180, 22);
+            this.mnuTKHoaDon.Size = new System.Drawing.Size(139, 22);
             this.mnuTKHoaDon.Text = "Hóa Đơn";
             // 
             // mnuTKKhachHang
             // 
             this.mnuTKKhachHang.Name = "mnuTKKhachHang";
-            this.mnuTKKhachHang.Size = new System.Drawing.Size(180, 22);
+            this.mnuTKKhachHang.Size = new System.Drawing.Size(139, 22);
             this.mnuTKKhachHang.Text = "Khách Hàng";
             // 
             // mnuTKHang
             // 
             this.mnuTKHang.Name = "mnuTKHang";
-            this.mnuTKHang.Size = new System.Drawing.Size(180, 22);
+            this.mnuTKHang.Size = new System.Drawing.Size(139, 22);
             this.mnuTKHang.Text = "Hàng";
             // 
             // mnBaoCao
@@ -156,13 +157,13 @@
             // mnuHangTon
             // 
             this.mnuHangTon.Name = "mnuHangTon";
-            this.mnuHangTon.Size = new System.Drawing.Size(180, 22);
+            this.mnuHangTon.Size = new System.Drawing.Size(132, 22);
             this.mnuHangTon.Text = "Hàng Tồn";
             // 
             // mnuDoanhThu
             // 
             this.mnuDoanhThu.Name = "mnuDoanhThu";
-            this.mnuDoanhThu.Size = new System.Drawing.Size(180, 22);
+            this.mnuDoanhThu.Size = new System.Drawing.Size(132, 22);
             this.mnuDoanhThu.Text = "Doanh Thu";
             // 
             // mnuTroGiup

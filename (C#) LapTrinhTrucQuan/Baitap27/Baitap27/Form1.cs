@@ -23,5 +23,11 @@ namespace Baitap27
             Form2 form2 = new Form2();
             form2.Show();
         }
+
+        private void mnuHangHoa_Click(object sender, EventArgs e)
+        {
+            Form3 form3 = new Form3();
+            form3.Show();
+        }
     }
 }
