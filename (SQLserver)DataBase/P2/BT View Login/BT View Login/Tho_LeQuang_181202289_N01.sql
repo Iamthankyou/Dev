@@ -38,13 +38,14 @@ as
 select S.MaSach, S.TenSach, S.MaNXB, NXB.TenNXB, ISNULL(TNB.TNhap,0) as Nhap, ISNULL(TNB.TBan,0) as Ban, S.SoLuong
 from tSach S, tNhaXuatBan NXB , tongNhapBan() TNB
 where S.MaNXB = 'NXB05' and  NXB.MaNXB = S.MaNXB and TNB.MS = S.MaSach
-
+Go
 select * from SachGD
 /*
 	2.	Tạo view KhachVip đưa ra khách hàng gồm thông tin MaKH, 
 		TenKH, địa chỉ, điện thoại cho những khách hàng đã mua hàng 
 		với tổng tất cả các trị giá hóa đơn trong năm hiện tại lớn hơn 30.000.000
 */
+Go
 create view KhachVip
 as
 select KH.MaKH, KH.TenKH, KH.DiaChi, KH.DienThoai from tKhachHang KH, tHoaDonBan HDB, tChiTietHDB CTHDB, tSach S
@@ -58,6 +59,9 @@ Having (SUM(CTHDB.SLBan * S.DonGiaBan) > 30000000)
 	3.	Tạo view đưa ra số hóa đơn, trị giá các hóa đơn và tổng toàn bộ trị giá 
 		của các hoa đơn do nhân viên có tên “Trần Huy” lập trong tháng hiện tại
 */
+Go
+create view HDTranHuy
+as
 select HDB.SoHDB, SUM(CTHDB.SLBan * S.DonGiaBan) as N'Tổng Tiền' from tKhachHang KH, tHoaDonBan HDB, tChiTietHDB CTHDB, tSach S, tNhanVien NV
 where NV.TenNV = N'Trần Huy' and S.MaSach = CTHDB.MaSach and HDB.SoHDB = CTHDB.SoHDB and HDB.MaKH = KH.MaKH and HDB.MaNV = NV.MaNV
 GROUP BY HDB.SoHDB
@@ -66,13 +70,27 @@ GROUP BY HDB.SoHDB
 /*
 	4.	Tạo view đưa thông tin các các sách còn tồn
 */
-
-
+Go
+create view SachTon
+as
+select * from tSach S
+where S.SoLuong > 0
 
 /*
 	5.	Tạo view đưa ra danh sách các sách không bán được trong năm 2014.
 */
+Go
+create function KhongBan2014()
+returns table
+as 
+return(
+		select S.MaSach as MaSach from tHoaDonBan HDB, tChiTietHDB CTHDB, tSach S
+		where HDB.SoHDB = CTHDB.SoHDB and CTHDB.MaSach = S.MaSach and YEAR(HDB.NgayBan) = 2014
+		Group by S.MaSach
+		)
 
+select S.MaSach, S.TenSach from tSach S,KhongBan2014() KB
+where KB.MaSach<>S.MaSach
 
 
 /*
