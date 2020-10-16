@@ -1,4 +1,4 @@
-﻿--Bài tập 1
+﻿--------------------------------------------Bài tập 1------------------------------------------------------------------------
 
 /*1.	Tạo view SachGD đưa ra danh sách các sách với các thông tin 
 		MaSach,TenSach, tên thể loại, tổng số lượng nhập, tổng số lượng bán, 
@@ -76,29 +76,133 @@ as
 select * from tSach S
 where S.SoLuong > 0
 
+
 /*
 	5.	Tạo view đưa ra danh sách các sách không bán được trong năm 2014.
 */
 Go
-create function KhongBan2014()
-returns table
-as 
-return(
-		select S.MaSach as MaSach from tHoaDonBan HDB, tChiTietHDB CTHDB, tSach S
+Create view KhongBan2014
+as
+select * from tSach S
+where S.MaSach not in (select S.MaSach as MaSach from tHoaDonBan HDB, tChiTietHDB CTHDB, tSach S
+		where HDB.SoHDB = CTHDB.SoHDB and CTHDB.MaSach = S.MaSach and YEAR(HDB.NgayBan) = 2014) 
+
+--select * from KhongBan2014
+
+
+
+/*
+	6.	Tạo view đưa ra danh sách các sách của NXB Giáo Dục không bán được trong năm 2014.
+*/
+Go
+Create view KhongBan2014_NXB05
+as
+select S.MaSach, S.TenSach from tSach S,tNhaXuatBan NXB
+where S.MaSach not in (select S.MaSach as MaSach from tHoaDonBan HDB, tChiTietHDB CTHDB, tSach S
+		where HDB.SoHDB = CTHDB.SoHDB and CTHDB.MaSach = S.MaSach and YEAR(HDB.NgayBan) = 2014) 
+		and NXB.MaNXB = S.MaNXB and S.MaNXB = 'NXB05'
+
+--		select * from tSach S, tNhaXuatBan NXB where S.MaNXB = NXB.MaNXB and NXB.MaNXB = 'NXB05'
+
+
+/*
+	7.	Tạo view đưa ra các thông tin về sách và số lượng từng sách được bán ra trong năm 2014.
+*/
+Go
+Create view ban2014
+as
+select S.MaSach as N'Mã Sách', S.TenSach, S.DonGiaBan, S.DonGiaNhap,
+		SUM(CTHDB.SLBan) as N'Số Lượng Bán'
+from tHoaDonBan HDB, tChiTietHDB CTHDB, tSach S
 		where HDB.SoHDB = CTHDB.SoHDB and CTHDB.MaSach = S.MaSach and YEAR(HDB.NgayBan) = 2014
-		Group by S.MaSach
-		)
+		Group By S.MaSach, S.TenSach, S.DonGiaBan, S.DonGiaNhap
 
-select S.MaSach, S.TenSach from tSach S,KhongBan2014() KB
-where KB.MaSach<>S.MaSach
+
+
+/*
+	8.	Tạo view đưa ra họ tên khách hàng đã mua hóa đơn có trị giá cao nhất trong năm 2014.
+*/
+Go
+Create view HDCaoNhat
+as
+select Top(1) KH.MaKH, KH.TenKH, (CTHDB.SLBan*S.DonGiaBan) as N'Giá Trị HĐ', HDB.NgayBan
+from tChiTietHDB CTHDB, tHoaDonBan HDB, tKhachHang KH, tSach S
+	where CTHDB.SoHDB = HDB.SoHDB and KH.MaKH = HDB.MaKH and S.MaSach = CTHDB.MaSach and YEAR(HDB.NgayBan) = 2014
+	Group by KH.MaKH, KH.TenKH,(CTHDB.SLBan*S.DonGiaBan) ,HDB.NgayBan
+	ORDER BY (CTHDB.SLBan*S.DonGiaBan) DESC
+/*
+	9.	Tạo view đưa ra danh sách 3 nhân viên (MaNV, TenNV) có doanh số cao nhất của năm hiện tại.
+*/
+Go
+Create View Top3DoanhThu
+as
+select Top(3) NV.MaNV, NV.TenNV, SUM(S.DonGiaBan* CTHDB.SLBan) as N'Tổng Tiền' from tNhanVien NV, tHoaDonBan HDB, tChiTietHDB CTHDB, tSach S
+where NV.MaNV = HDB.MaNV and CTHDB.SoHDB = HDB.SoHDB and  S.MaSach = CTHDB.MaSach
+Group by  NV.MaNV, NV.TenNV 
+
+
+
+/*
+	10.	Tạo view đưa ra danh sách sách và số lượng nhập của mỗi nhà xuất bản trong năm hiện tại
+*/
+Go
+Create view soluongtonNhapNow
+as
+select S.MaSach, S.SoLuong, iif(SUM(HDN.SLNhap)>0,SUM(HDN.SLNhap),0) as SoLuongNhap, NXB.MaNXB 
+from tSach S left join tHoaDonNhap N on YEAR(GETDATE()) = YEAR(N.NgayNhap)
+			left join tChiTietHDN HDN on HDN.MaSach = S.MaSach and YEAR(GETDATE()) = YEAR(N.NgayNhap)
+			left join tNhaXuatBan NXB on S.MaNXB = NXB.MaNXB 
+Group By S.MaSach, S.SoLuong, NXB.MaNXB 
+
+
+
+--------------------------------------------Bài tập 2------------------------------------------------------------------------
+
+/*
+	
+*/
+Go
+
 
 
 /*
 	
 */
+Go
+
 
 
 
 /*
 	
 */
+Go
+
+
+
+
+/*
+	
+*/
+Go
+
+
+
+/*
+	
+*/
+Go
+
+
+
+/*
+	
+*/
+Go
+
+
+
+/*
+	
+*/
+Go
