@@ -31,10 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnTakeAway = new DevComponents.DotNetBar.ButtonX();
-            this.btnGrab = new DevComponents.DotNetBar.ButtonX();
-            this.buttonX3 = new DevComponents.DotNetBar.ButtonX();
             this.buttonX4 = new DevComponents.DotNetBar.ButtonX();
+            this.buttonX3 = new DevComponents.DotNetBar.ButtonX();
+            this.btnGrab = new DevComponents.DotNetBar.ButtonX();
+            this.btnTakeAway = new DevComponents.DotNetBar.ButtonX();
             this.btnDangXuat = new DevComponents.DotNetBar.ButtonX();
             this.btnKhoaSo = new DevComponents.DotNetBar.ButtonX();
             this.panel1.SuspendLayout();
@@ -57,20 +57,12 @@
             this.tableLayoutPanel1.Controls.Add(this.btnTakeAway, 0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             // 
-            // btnTakeAway
+            // buttonX4
             // 
-            this.btnTakeAway.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnTakeAway.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
-            resources.ApplyResources(this.btnTakeAway, "btnTakeAway");
-            this.btnTakeAway.Name = "btnTakeAway";
-            this.btnTakeAway.Click += new System.EventHandler(this.btnTakeAway_Click_1);
-            // 
-            // btnGrab
-            // 
-            this.btnGrab.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnGrab.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
-            resources.ApplyResources(this.btnGrab, "btnGrab");
-            this.btnGrab.Name = "btnGrab";
+            this.buttonX4.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX4.ColorTable = DevComponents.DotNetBar.eButtonColor.MagentaWithBackground;
+            resources.ApplyResources(this.buttonX4, "buttonX4");
+            this.buttonX4.Name = "buttonX4";
             // 
             // buttonX3
             // 
@@ -79,12 +71,20 @@
             resources.ApplyResources(this.buttonX3, "buttonX3");
             this.buttonX3.Name = "buttonX3";
             // 
-            // buttonX4
+            // btnGrab
             // 
-            this.buttonX4.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX4.ColorTable = DevComponents.DotNetBar.eButtonColor.MagentaWithBackground;
-            resources.ApplyResources(this.buttonX4, "buttonX4");
-            this.buttonX4.Name = "buttonX4";
+            this.btnGrab.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnGrab.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
+            resources.ApplyResources(this.btnGrab, "btnGrab");
+            this.btnGrab.Name = "btnGrab";
+            // 
+            // btnTakeAway
+            // 
+            this.btnTakeAway.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnTakeAway.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
+            resources.ApplyResources(this.btnTakeAway, "btnTakeAway");
+            this.btnTakeAway.Name = "btnTakeAway";
+            this.btnTakeAway.Click += new System.EventHandler(this.btnTakeAway_Click_1);
             // 
             // btnDangXuat
             // 

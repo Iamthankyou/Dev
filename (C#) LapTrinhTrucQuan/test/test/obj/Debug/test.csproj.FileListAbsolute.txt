@@ -28,3 +28,5 @@ F:\Dev\(C#) LapTrinhTrucQuan\test\test\obj\Debug\test.csproj.CoreCompileInputs.c
 F:\Dev\(C#) LapTrinhTrucQuan\test\test\obj\Debug\test.csproj.CopyComplete
 F:\Dev\(C#) LapTrinhTrucQuan\test\test\obj\Debug\test.exe
 F:\Dev\(C#) LapTrinhTrucQuan\test\test\obj\Debug\test.pdb
+F:\Dev\(C#) LapTrinhTrucQuan\test\test\bin\Debug\Guna.UI.dll
+F:\Dev\(C#) LapTrinhTrucQuan\test\test\bin\Debug\DevComponents.DotNetBar2.dll

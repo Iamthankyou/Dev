@@ -29,20 +29,18 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dgvxOrder = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.clSoThuTu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clTenMon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clSoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clGiamGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clDonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clGhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clGioGoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clMamon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvxTakeAway = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.clxSTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clxTenMon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clxSoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clxGiamGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clxDongia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clxGhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clxGioGoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clxThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clxMon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.vScrollBar2 = new System.Windows.Forms.VScrollBar();
             this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
@@ -87,7 +85,7 @@
             this.buttonX21 = new DevComponents.DotNetBar.ButtonX();
             this.btn1 = new DevComponents.DotNetBar.ButtonX();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvxOrder)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvxTakeAway)).BeginInit();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -104,155 +102,148 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.dgvxOrder);
+            this.panel1.Controls.Add(this.dgvxTakeAway);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(933, 340);
             this.panel1.TabIndex = 1;
             // 
-            // dgvxOrder
+            // dgvxTakeAway
             // 
-            this.dgvxOrder.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.dgvxOrder.AllowUserToAddRows = false;
-            this.dgvxOrder.AllowUserToDeleteRows = false;
-            this.dgvxOrder.AllowUserToResizeColumns = false;
-            this.dgvxOrder.AllowUserToResizeRows = false;
-            this.dgvxOrder.BackgroundColor = System.Drawing.SystemColors.Window;
-            this.dgvxOrder.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dgvxOrder.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
-            this.dgvxOrder.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvxOrder.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvxOrder.ColumnHeadersHeight = 50;
-            this.dgvxOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgvxOrder.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.clSoThuTu,
-            this.clTenMon,
-            this.clSoLuong,
-            this.clGiamGia,
-            this.clDonGia,
-            this.clGhiChu,
-            this.clGioGoi,
-            this.clThanhTien,
-            this.clMamon});
+            this.dgvxTakeAway.AllowUserToAddRows = false;
+            this.dgvxTakeAway.AllowUserToDeleteRows = false;
+            this.dgvxTakeAway.AllowUserToResizeRows = false;
+            this.dgvxTakeAway.BackgroundColor = System.Drawing.Color.White;
+            this.dgvxTakeAway.ColumnHeadersHeight = 50;
+            this.dgvxTakeAway.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvxTakeAway.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.clxSTT,
+            this.clxTenMon,
+            this.clxSoLuong,
+            this.clxGiamGia,
+            this.clxDongia,
+            this.clxGhiChu,
+            this.clxGioGoi,
+            this.clxThanhTien,
+            this.clxMon});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvxOrder.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvxOrder.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvxOrder.GridColor = System.Drawing.Color.White;
-            this.dgvxOrder.HighlightSelectedColumnHeaders = false;
-            this.dgvxOrder.Location = new System.Drawing.Point(0, 0);
-            this.dgvxOrder.MultiSelect = false;
-            this.dgvxOrder.Name = "dgvxOrder";
-            this.dgvxOrder.ReadOnly = true;
-            this.dgvxOrder.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dgvxOrder.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvxOrder.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvxOrder.RowHeadersVisible = false;
-            this.dgvxOrder.RowHeadersWidth = 4;
-            this.dgvxOrder.SelectAllSignVisible = false;
-            this.dgvxOrder.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvxOrder.Size = new System.Drawing.Size(933, 340);
-            this.dgvxOrder.TabIndex = 0;
-            this.dgvxOrder.TabStop = false;
-            this.dgvxOrder.VirtualMode = true;
+            this.dgvxTakeAway.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvxTakeAway.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvxTakeAway.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.dgvxTakeAway.Location = new System.Drawing.Point(0, 0);
+            this.dgvxTakeAway.Name = "dgvxTakeAway";
+            this.dgvxTakeAway.ReadOnly = true;
+            this.dgvxTakeAway.RowHeadersVisible = false;
+            this.dgvxTakeAway.RowHeadersWidth = 50;
+            this.dgvxTakeAway.RowTemplate.Height = 40;
+            this.dgvxTakeAway.RowTemplate.ReadOnly = true;
+            this.dgvxTakeAway.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvxTakeAway.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dgvxTakeAway.Size = new System.Drawing.Size(933, 340);
+            this.dgvxTakeAway.TabIndex = 0;
+            this.dgvxTakeAway.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvxTakeAway_CellClick);
             // 
-            // clSoThuTu
+            // clxSTT
             // 
-            this.clSoThuTu.HeaderText = "";
-            this.clSoThuTu.MinimumWidth = 40;
-            this.clSoThuTu.Name = "clSoThuTu";
-            this.clSoThuTu.ReadOnly = true;
-            this.clSoThuTu.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.clSoThuTu.Width = 40;
+            this.clxSTT.Frozen = true;
+            this.clxSTT.HeaderText = "";
+            this.clxSTT.MinimumWidth = 40;
+            this.clxSTT.Name = "clxSTT";
+            this.clxSTT.ReadOnly = true;
+            this.clxSTT.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.clxSTT.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.clxSTT.Width = 40;
             // 
-            // clTenMon
+            // clxTenMon
             // 
-            this.clTenMon.HeaderText = "Tên món";
-            this.clTenMon.MinimumWidth = 300;
-            this.clTenMon.Name = "clTenMon";
-            this.clTenMon.ReadOnly = true;
-            this.clTenMon.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.clTenMon.Width = 300;
+            this.clxTenMon.Frozen = true;
+            this.clxTenMon.HeaderText = "Tên Món";
+            this.clxTenMon.MinimumWidth = 300;
+            this.clxTenMon.Name = "clxTenMon";
+            this.clxTenMon.ReadOnly = true;
+            this.clxTenMon.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.clxTenMon.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.clxTenMon.Width = 300;
             // 
-            // clSoLuong
+            // clxSoLuong
             // 
-            this.clSoLuong.HeaderText = "Số lượng";
-            this.clSoLuong.MinimumWidth = 70;
-            this.clSoLuong.Name = "clSoLuong";
-            this.clSoLuong.ReadOnly = true;
-            this.clSoLuong.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.clSoLuong.Width = 70;
+            this.clxSoLuong.Frozen = true;
+            this.clxSoLuong.HeaderText = "Số Lượng";
+            this.clxSoLuong.MinimumWidth = 70;
+            this.clxSoLuong.Name = "clxSoLuong";
+            this.clxSoLuong.ReadOnly = true;
+            this.clxSoLuong.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.clxSoLuong.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.clxSoLuong.Width = 70;
             // 
-            // clGiamGia
+            // clxGiamGia
             // 
-            this.clGiamGia.HeaderText = "Giảm giá";
-            this.clGiamGia.MinimumWidth = 70;
-            this.clGiamGia.Name = "clGiamGia";
-            this.clGiamGia.ReadOnly = true;
-            this.clGiamGia.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.clGiamGia.Width = 70;
+            this.clxGiamGia.Frozen = true;
+            this.clxGiamGia.HeaderText = "Giảm Giá";
+            this.clxGiamGia.MinimumWidth = 80;
+            this.clxGiamGia.Name = "clxGiamGia";
+            this.clxGiamGia.ReadOnly = true;
+            this.clxGiamGia.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.clxGiamGia.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.clxGiamGia.Width = 80;
             // 
-            // clDonGia
+            // clxDongia
             // 
-            this.clDonGia.HeaderText = "Đơn Giá";
-            this.clDonGia.MinimumWidth = 90;
-            this.clDonGia.Name = "clDonGia";
-            this.clDonGia.ReadOnly = true;
-            this.clDonGia.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.clDonGia.Width = 90;
+            this.clxDongia.Frozen = true;
+            this.clxDongia.HeaderText = "Đơn Giá";
+            this.clxDongia.MinimumWidth = 100;
+            this.clxDongia.Name = "clxDongia";
+            this.clxDongia.ReadOnly = true;
+            this.clxDongia.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.clxDongia.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // clGhiChu
+            // clxGhiChu
             // 
-            this.clGhiChu.HeaderText = "Ghi chú";
-            this.clGhiChu.MinimumWidth = 80;
-            this.clGhiChu.Name = "clGhiChu";
-            this.clGhiChu.ReadOnly = true;
-            this.clGhiChu.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.clGhiChu.Width = 80;
+            this.clxGhiChu.Frozen = true;
+            this.clxGhiChu.HeaderText = "Ghi chú";
+            this.clxGhiChu.MinimumWidth = 70;
+            this.clxGhiChu.Name = "clxGhiChu";
+            this.clxGhiChu.ReadOnly = true;
+            this.clxGhiChu.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.clxGhiChu.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.clxGhiChu.Width = 70;
             // 
-            // clGioGoi
+            // clxGioGoi
             // 
-            this.clGioGoi.HeaderText = "Giờ gọi";
-            this.clGioGoi.MinimumWidth = 80;
-            this.clGioGoi.Name = "clGioGoi";
-            this.clGioGoi.ReadOnly = true;
-            this.clGioGoi.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.clGioGoi.Width = 80;
+            this.clxGioGoi.Frozen = true;
+            this.clxGioGoi.HeaderText = "Giờ Gọi";
+            this.clxGioGoi.MinimumWidth = 120;
+            this.clxGioGoi.Name = "clxGioGoi";
+            this.clxGioGoi.ReadOnly = true;
+            this.clxGioGoi.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.clxGioGoi.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.clxGioGoi.Width = 120;
             // 
-            // clThanhTien
+            // clxThanhTien
             // 
-            this.clThanhTien.HeaderText = "Thành tiền";
-            this.clThanhTien.MinimumWidth = 100;
-            this.clThanhTien.Name = "clThanhTien";
-            this.clThanhTien.ReadOnly = true;
-            this.clThanhTien.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.clxThanhTien.Frozen = true;
+            this.clxThanhTien.HeaderText = "Thành Tiền";
+            this.clxThanhTien.MinimumWidth = 100;
+            this.clxThanhTien.Name = "clxThanhTien";
+            this.clxThanhTien.ReadOnly = true;
+            this.clxThanhTien.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.clxThanhTien.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // clMamon
+            // clxMon
             // 
-            this.clMamon.HeaderText = "Mã món";
-            this.clMamon.MinimumWidth = 100;
-            this.clMamon.Name = "clMamon";
-            this.clMamon.ReadOnly = true;
-            this.clMamon.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.clxMon.HeaderText = "MaMon";
+            this.clxMon.MinimumWidth = 50;
+            this.clxMon.Name = "clxMon";
+            this.clxMon.ReadOnly = true;
+            this.clxMon.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.clxMon.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.clxMon.Width = 50;
             // 
             // panel2
             // 
@@ -452,6 +443,7 @@
             this.btnTX_M.Size = new System.Drawing.Size(162, 76);
             this.btnTX_M.TabIndex = 4;
             this.btnTX_M.Text = " Trà Xanh (M)";
+            this.btnTX_M.Click += new System.EventHandler(this.btnTX_M_Click);
             // 
             // btnTX_L
             // 
@@ -748,7 +740,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Take Away";
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvxOrder)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvxTakeAway)).EndInit();
             this.panel2.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -767,16 +759,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private DevComponents.DotNetBar.Controls.DataGridViewX dgvxOrder;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clSoThuTu;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clTenMon;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clSoLuong;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clGiamGia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clDonGia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clGhiChu;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clGioGoi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clThanhTien;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clMamon;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.VScrollBar vScrollBar2;
         private System.Windows.Forms.VScrollBar vScrollBar1;
@@ -820,5 +802,15 @@
         private DevComponents.DotNetBar.ButtonX buttonX22;
         private DevComponents.DotNetBar.ButtonX buttonX21;
         private DevComponents.DotNetBar.ButtonX btn1;
+        private DevComponents.DotNetBar.Controls.DataGridViewX dgvxTakeAway;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clxSTT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clxTenMon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clxSoLuong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clxGiamGia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clxDongia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clxGhiChu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clxGioGoi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clxThanhTien;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clxMon;
     }
 }

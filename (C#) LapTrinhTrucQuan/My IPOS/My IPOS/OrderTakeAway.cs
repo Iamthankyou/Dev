@@ -1,4 +1,5 @@
-﻿using System;
+﻿using My_IPOS.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +14,8 @@ namespace My_IPOS
     public partial class OrderTakeAway : Form
     {
         Bitmap back, hour, minute, dot, second;
+
+        int stt = 0;
 
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -44,6 +47,31 @@ namespace My_IPOS
             secondBox.Image = rotateImage(second, AngleS);
         }
 
+        private void dgvxTakeAway_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 2 && dgvxTakeAway.RowCount != 0)
+            {
+                edit ed = new edit(this, e.RowIndex, e.ColumnIndex);
+                ed.Show();
+            }
+        }
+
+        public void updateCell(int a, int b, int values)
+        {
+            dgvxTakeAway.Rows[a].Cells[b].Value = values;
+        }
+
+        private void btnTX_M_Click(object sender, EventArgs e)
+        {
+            int soluong = 1;
+            float giamgia = 0;
+            int dongia = 32000;
+            string ghichu = "";
+            string time = DateTime.UtcNow.ToString();
+            string MaMon = "";
+            addMon(++stt ,btnTX_M.Text, soluong, giamgia, dongia, ghichu, time, soluong*dongia - (soluong * dongia*giamgia), MaMon);
+        }
+
         public OrderTakeAway()
         {
             InitializeComponent();
@@ -53,11 +81,6 @@ namespace My_IPOS
             minute = new Bitmap(".\\image\\minute.png");
             dot = new Bitmap(".\\image\\dot.png");
             second = new Bitmap(".\\image\\second.png");
-        }
-
-        private void form1_Load(object sender, EventArgs e)
-        {
-
         }
 
         private Bitmap rotateImage(Bitmap rotateMe, float angle)
@@ -72,6 +95,11 @@ namespace My_IPOS
                 g.DrawImage(rotateMe, new Point(0, 0));
             }
             return rotatedImage;
+        }
+
+        void addMon(int stt, string TenMon, int SoLuong, float GiamGia, int DonGia, string GhiChu, string GioGoi, float ThanhTien, string MaMon)
+        { 
+            dgvxTakeAway.Rows.Add(stt, TenMon, SoLuong, GiamGia, DonGia, GhiChu, GioGoi, ThanhTien, MaMon);
         }
     }
 }

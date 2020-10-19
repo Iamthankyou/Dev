@@ -36,9 +36,14 @@
     <Reference Include="DevComponents.DotNetBar2">
       <HintPath>D:\app\DevComponents.DotNetBar2\DevComponents.DotNetBar2.dll</HintPath>
     </Reference>
+    <Reference Include="Guna.UI">
+      <HintPath>..\..\Guna_UI\_Getintopc.com_Guna_UI_Framework_Ultimate_v2.0.0.1\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna.UI-Framework-Lib-master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web" />
@@ -54,6 +59,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\updateCell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\updateCell.Designer.cs">
+      <DependentUpon>updateCell.cs</DependentUpon>
+    </Compile>
     <Compile Include="OrderTakeAway.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +97,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Home.vi-VN.resx">
       <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\updateCell.resx">
+      <DependentUpon>updateCell.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NewCa.resx">
       <DependentUpon>NewCa.cs</DependentUpon>
