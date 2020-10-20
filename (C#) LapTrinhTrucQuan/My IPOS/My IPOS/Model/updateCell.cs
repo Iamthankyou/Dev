@@ -28,5 +28,13 @@ namespace My_IPOS.Model
             tw.updateCell(row, column, Convert.ToInt32(tbSua.Text));
             this.Close();
         }
+
+        private void tbSua_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                btnOK_Click(sender, e);
+            }
+        }
     }
 }

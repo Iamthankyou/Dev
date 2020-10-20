@@ -59,6 +59,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="TongTien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TongTien.Designer.cs">
+      <DependentUpon>TongTien.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\updateCell.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +126,9 @@
     </Compile>
     <EmbeddedResource Include="OrderTakeAway.resx">
       <DependentUpon>OrderTakeAway.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TongTien.resx">
+      <DependentUpon>TongTien.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -19,3 +19,4 @@ F:\Dev\(C#) LapTrinhTrucQuan\My IPOS\My IPOS\obj\Debug\My_IPOS.OrderTakeAway.res
 F:\Dev\(C#) LapTrinhTrucQuan\My IPOS\My IPOS\bin\Debug\DevComponents.DotNetBar2.dll
 F:\Dev\(C#) LapTrinhTrucQuan\My IPOS\My IPOS\bin\Debug\Guna.UI.dll
 F:\Dev\(C#) LapTrinhTrucQuan\My IPOS\My IPOS\obj\Debug\My_IPOS.Model.edit.resources
+F:\Dev\(C#) LapTrinhTrucQuan\My IPOS\My IPOS\obj\Debug\My_IPOS.TongTien.resources

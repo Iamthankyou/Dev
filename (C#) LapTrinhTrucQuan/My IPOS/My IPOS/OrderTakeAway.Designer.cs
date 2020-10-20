@@ -29,7 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrderTakeAway));
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvxTakeAway = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.clxSTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,11 +69,6 @@
             this.btnMilkTea = new DevComponents.DotNetBar.ButtonX();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel3 = new System.Windows.Forms.Panel();
-            this.backBox = new System.Windows.Forms.PictureBox();
-            this.secondBox = new System.Windows.Forms.PictureBox();
-            this.hourBox = new System.Windows.Forms.PictureBox();
-            this.dotBox = new System.Windows.Forms.PictureBox();
-            this.minuteBox = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnTongTien = new DevComponents.DotNetBar.ButtonX();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
@@ -84,19 +80,24 @@
             this.buttonX22 = new DevComponents.DotNetBar.ButtonX();
             this.buttonX21 = new DevComponents.DotNetBar.ButtonX();
             this.btn1 = new DevComponents.DotNetBar.ButtonX();
+            this.backBox = new System.Windows.Forms.PictureBox();
+            this.secondBox = new System.Windows.Forms.PictureBox();
+            this.hourBox = new System.Windows.Forms.PictureBox();
+            this.dotBox = new System.Windows.Forms.PictureBox();
+            this.minuteBox = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvxTakeAway)).BeginInit();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.backBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.secondBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hourBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dotBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minuteBox)).BeginInit();
-            this.panel4.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -126,14 +127,14 @@
             this.clxGioGoi,
             this.clxThanhTien,
             this.clxMon});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvxTakeAway.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvxTakeAway.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvxTakeAway.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvxTakeAway.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.dgvxTakeAway.Location = new System.Drawing.Point(0, 0);
@@ -144,7 +145,7 @@
             this.dgvxTakeAway.RowTemplate.Height = 40;
             this.dgvxTakeAway.RowTemplate.ReadOnly = true;
             this.dgvxTakeAway.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvxTakeAway.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dgvxTakeAway.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvxTakeAway.Size = new System.Drawing.Size(933, 340);
             this.dgvxTakeAway.TabIndex = 0;
             this.dgvxTakeAway.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvxTakeAway_CellClick);
@@ -323,6 +324,7 @@
             this.btnTXHongLongPhaLeTuyet_L.Size = new System.Drawing.Size(163, 76);
             this.btnTXHongLongPhaLeTuyet_L.TabIndex = 19;
             this.btnTXHongLongPhaLeTuyet_L.Text = "Hồng Long Pha Lê Tuyết (L)";
+            this.btnTXHongLongPhaLeTuyet_L.Click += new System.EventHandler(this.btnTXHongLongPhaLeTuyet_L_Click);
             // 
             // btnTXHongLongPhaLeTuyet_M
             // 
@@ -333,6 +335,7 @@
             this.btnTXHongLongPhaLeTuyet_M.Size = new System.Drawing.Size(162, 76);
             this.btnTXHongLongPhaLeTuyet_M.TabIndex = 18;
             this.btnTXHongLongPhaLeTuyet_M.Text = "Hồng Long Pha Lê Tuyết (M)";
+            this.btnTXHongLongPhaLeTuyet_M.Click += new System.EventHandler(this.btnTXHongLongPhaLeTuyet_M_Click);
             // 
             // btnTXDuaHongHac_L
             // 
@@ -343,6 +346,7 @@
             this.btnTXDuaHongHac_L.Size = new System.Drawing.Size(162, 76);
             this.btnTXDuaHongHac_L.TabIndex = 17;
             this.btnTXDuaHongHac_L.Text = "Trà Dứa Hồng Hạc (L)";
+            this.btnTXDuaHongHac_L.Click += new System.EventHandler(this.btnTXDuaHongHac_L_Click);
             // 
             // btnTXDuaHongHac_M
             // 
@@ -353,6 +357,7 @@
             this.btnTXDuaHongHac_M.Size = new System.Drawing.Size(162, 76);
             this.btnTXDuaHongHac_M.TabIndex = 16;
             this.btnTXDuaHongHac_M.Text = "Trà Dứa Hồng Hạc (M)";
+            this.btnTXDuaHongHac_M.Click += new System.EventHandler(this.btnTXDuaHongHac_M_Click);
             // 
             // btnTXDuaNhietDoi_L
             // 
@@ -363,6 +368,7 @@
             this.btnTXDuaNhietDoi_L.Size = new System.Drawing.Size(163, 76);
             this.btnTXDuaNhietDoi_L.TabIndex = 15;
             this.btnTXDuaNhietDoi_L.Text = "Trà Dứa Nhiệt Đới (L)";
+            this.btnTXDuaNhietDoi_L.Click += new System.EventHandler(this.btnTXDuaNhietDoi_L_Click);
             // 
             // btnTXDuaNhietDoi_M
             // 
@@ -373,6 +379,7 @@
             this.btnTXDuaNhietDoi_M.Size = new System.Drawing.Size(162, 76);
             this.btnTXDuaNhietDoi_M.TabIndex = 14;
             this.btnTXDuaNhietDoi_M.Text = "Trà Dứa Nhiệt Đới (M)";
+            this.btnTXDuaNhietDoi_M.Click += new System.EventHandler(this.btnTXDuaNhietDoi_M_Click);
             // 
             // btnTXDauTamPhaLeTuyet_L
             // 
@@ -383,6 +390,7 @@
             this.btnTXDauTamPhaLeTuyet_L.Size = new System.Drawing.Size(162, 76);
             this.btnTXDauTamPhaLeTuyet_L.TabIndex = 13;
             this.btnTXDauTamPhaLeTuyet_L.Text = "Trà Dâu Tằm Pha Lê Tuyết (L)";
+            this.btnTXDauTamPhaLeTuyet_L.Click += new System.EventHandler(this.btnTXDauTamPhaLeTuyet_L_Click);
             // 
             // btnTXDauTamPhaLeTuyet_M
             // 
@@ -393,6 +401,7 @@
             this.btnTXDauTamPhaLeTuyet_M.Size = new System.Drawing.Size(162, 76);
             this.btnTXDauTamPhaLeTuyet_M.TabIndex = 12;
             this.btnTXDauTamPhaLeTuyet_M.Text = "Trà Dâu Tằm Pha Lê Tuyết (M)";
+            this.btnTXDauTamPhaLeTuyet_M.Click += new System.EventHandler(this.btnTXDauTamPhaLeTuyet_M_Click);
             // 
             // btnTXChanhLeo_L
             // 
@@ -403,6 +412,7 @@
             this.btnTXChanhLeo_L.Size = new System.Drawing.Size(163, 76);
             this.btnTXChanhLeo_L.TabIndex = 11;
             this.btnTXChanhLeo_L.Text = "Trà Xanh Chanh Leo (L)";
+            this.btnTXChanhLeo_L.Click += new System.EventHandler(this.btnTXChanhLeo_L_Click);
             // 
             // btnTXChanhLeo_M
             // 
@@ -413,6 +423,7 @@
             this.btnTXChanhLeo_M.Size = new System.Drawing.Size(162, 76);
             this.btnTXChanhLeo_M.TabIndex = 10;
             this.btnTXChanhLeo_M.Text = "Trà Xanh Chanh Leo (M)";
+            this.btnTXChanhLeo_M.Click += new System.EventHandler(this.btnTXChanhLeo_M_Click);
             // 
             // btnTXXoai_L
             // 
@@ -423,6 +434,7 @@
             this.btnTXXoai_L.Size = new System.Drawing.Size(162, 76);
             this.btnTXXoai_L.TabIndex = 9;
             this.btnTXXoai_L.Text = "Trà Xanh Xoai (L)";
+            this.btnTXXoai_L.Click += new System.EventHandler(this.btnTXXoai_L_Click);
             // 
             // btnTXXoai_M
             // 
@@ -433,6 +445,7 @@
             this.btnTXXoai_M.Size = new System.Drawing.Size(162, 76);
             this.btnTXXoai_M.TabIndex = 8;
             this.btnTXXoai_M.Text = "Trà Xanh Xoai (M)";
+            this.btnTXXoai_M.Click += new System.EventHandler(this.btnTXXoai_M_Click);
             // 
             // btnTX_M
             // 
@@ -454,6 +467,7 @@
             this.btnTX_L.Size = new System.Drawing.Size(162, 76);
             this.btnTX_L.TabIndex = 5;
             this.btnTX_L.Text = "Trà Xanh (L)";
+            this.btnTX_L.Click += new System.EventHandler(this.btnTX_L_Click);
             // 
             // btnTXKiwiChanhLeo_M
             // 
@@ -464,6 +478,7 @@
             this.btnTXKiwiChanhLeo_M.Size = new System.Drawing.Size(162, 76);
             this.btnTXKiwiChanhLeo_M.TabIndex = 6;
             this.btnTXKiwiChanhLeo_M.Text = "Trà Xanh Kiwi Chanh Leo (M)";
+            this.btnTXKiwiChanhLeo_M.Click += new System.EventHandler(this.btnTXKiwiChanhLeo_M_Click);
             // 
             // btnTXKiwiChanhLeo_L
             // 
@@ -475,6 +490,7 @@
             this.btnTXKiwiChanhLeo_L.Size = new System.Drawing.Size(163, 76);
             this.btnTXKiwiChanhLeo_L.TabIndex = 7;
             this.btnTXKiwiChanhLeo_L.Text = "Trà Xanh Kiwi Chanh Leo (L)";
+            this.btnTXKiwiChanhLeo_L.Click += new System.EventHandler(this.btnTXKiwiChanhLeo_L_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -552,56 +568,6 @@
             this.panel3.Size = new System.Drawing.Size(300, 300);
             this.panel3.TabIndex = 8;
             // 
-            // backBox
-            // 
-            this.backBox.BackColor = System.Drawing.Color.Transparent;
-            this.backBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.backBox.Location = new System.Drawing.Point(0, 0);
-            this.backBox.Name = "backBox";
-            this.backBox.Size = new System.Drawing.Size(300, 300);
-            this.backBox.TabIndex = 3;
-            this.backBox.TabStop = false;
-            // 
-            // secondBox
-            // 
-            this.secondBox.BackColor = System.Drawing.Color.Transparent;
-            this.secondBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.secondBox.Location = new System.Drawing.Point(0, 0);
-            this.secondBox.Name = "secondBox";
-            this.secondBox.Size = new System.Drawing.Size(300, 300);
-            this.secondBox.TabIndex = 7;
-            this.secondBox.TabStop = false;
-            // 
-            // hourBox
-            // 
-            this.hourBox.BackColor = System.Drawing.Color.Transparent;
-            this.hourBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.hourBox.Location = new System.Drawing.Point(0, 0);
-            this.hourBox.Name = "hourBox";
-            this.hourBox.Size = new System.Drawing.Size(300, 300);
-            this.hourBox.TabIndex = 4;
-            this.hourBox.TabStop = false;
-            // 
-            // dotBox
-            // 
-            this.dotBox.BackColor = System.Drawing.Color.Transparent;
-            this.dotBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dotBox.Location = new System.Drawing.Point(0, 0);
-            this.dotBox.Name = "dotBox";
-            this.dotBox.Size = new System.Drawing.Size(300, 300);
-            this.dotBox.TabIndex = 6;
-            this.dotBox.TabStop = false;
-            // 
-            // minuteBox
-            // 
-            this.minuteBox.BackColor = System.Drawing.Color.Transparent;
-            this.minuteBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.minuteBox.Location = new System.Drawing.Point(0, 0);
-            this.minuteBox.Name = "minuteBox";
-            this.minuteBox.Size = new System.Drawing.Size(300, 300);
-            this.minuteBox.TabIndex = 5;
-            this.minuteBox.TabStop = false;
-            // 
             // panel4
             // 
             this.panel4.Controls.Add(this.btnTongTien);
@@ -620,6 +586,7 @@
             this.btnTongTien.Size = new System.Drawing.Size(318, 66);
             this.btnTongTien.TabIndex = 1;
             this.btnTongTien.Text = "Tổng Tiền";
+            this.btnTongTien.Click += new System.EventHandler(this.btnTongTien_Click);
             // 
             // tableLayoutPanel3
             // 
@@ -683,6 +650,7 @@
             this.bntBoMon.Size = new System.Drawing.Size(156, 60);
             this.bntBoMon.TabIndex = 4;
             this.bntBoMon.Text = "Bỏ Món";
+            this.bntBoMon.Click += new System.EventHandler(this.bntBoMon_Click);
             // 
             // buttonX23
             // 
@@ -724,6 +692,56 @@
             this.btn1.TabIndex = 0;
             this.btn1.Text = "ToDo";
             // 
+            // backBox
+            // 
+            this.backBox.BackColor = System.Drawing.Color.Transparent;
+            this.backBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.backBox.Location = new System.Drawing.Point(0, 0);
+            this.backBox.Name = "backBox";
+            this.backBox.Size = new System.Drawing.Size(300, 300);
+            this.backBox.TabIndex = 3;
+            this.backBox.TabStop = false;
+            // 
+            // secondBox
+            // 
+            this.secondBox.BackColor = System.Drawing.Color.Transparent;
+            this.secondBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.secondBox.Location = new System.Drawing.Point(0, 0);
+            this.secondBox.Name = "secondBox";
+            this.secondBox.Size = new System.Drawing.Size(300, 300);
+            this.secondBox.TabIndex = 7;
+            this.secondBox.TabStop = false;
+            // 
+            // hourBox
+            // 
+            this.hourBox.BackColor = System.Drawing.Color.Transparent;
+            this.hourBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.hourBox.Location = new System.Drawing.Point(0, 0);
+            this.hourBox.Name = "hourBox";
+            this.hourBox.Size = new System.Drawing.Size(300, 300);
+            this.hourBox.TabIndex = 4;
+            this.hourBox.TabStop = false;
+            // 
+            // dotBox
+            // 
+            this.dotBox.BackColor = System.Drawing.Color.Transparent;
+            this.dotBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dotBox.Location = new System.Drawing.Point(0, 0);
+            this.dotBox.Name = "dotBox";
+            this.dotBox.Size = new System.Drawing.Size(300, 300);
+            this.dotBox.TabIndex = 6;
+            this.dotBox.TabStop = false;
+            // 
+            // minuteBox
+            // 
+            this.minuteBox.BackColor = System.Drawing.Color.Transparent;
+            this.minuteBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.minuteBox.Location = new System.Drawing.Point(0, 0);
+            this.minuteBox.Name = "minuteBox";
+            this.minuteBox.Size = new System.Drawing.Size(300, 300);
+            this.minuteBox.TabIndex = 5;
+            this.minuteBox.TabStop = false;
+            // 
             // OrderTakeAway
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -735,6 +753,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "OrderTakeAway";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -745,13 +764,13 @@
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.backBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.secondBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hourBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dotBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.minuteBox)).EndInit();
-            this.panel4.ResumeLayout(false);
-            this.tableLayoutPanel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

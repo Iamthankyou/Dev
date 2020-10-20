@@ -47,6 +47,7 @@
             this.tbSua.SelectedText = "";
             this.tbSua.Size = new System.Drawing.Size(160, 30);
             this.tbSua.TabIndex = 0;
+            this.tbSua.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbSua_KeyDown);
             // 
             // btnOK
             // 
