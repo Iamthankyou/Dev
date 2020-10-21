@@ -17,6 +17,7 @@ namespace My_IPOS
 
         int stt = 0;
 
+       
         private void btnTX_M_Click(object sender, EventArgs e)
         {
             int soluong = 1;
@@ -250,8 +251,8 @@ namespace My_IPOS
 
         private void btnTongTien_Click(object sender, EventArgs e)
         {
-            TongTien tongtien = new TongTien(this);
-            tongtien.ShowDialog();
+            TongTien tongtien = new TongTien(dgvxTakeAway);
+            tongtien.Show();
         }
 
         void addMon(int stt, string TenMon, int SoLuong, float GiamGia, int DonGia, string GhiChu, string GioGoi, float ThanhTien, string MaMon)
