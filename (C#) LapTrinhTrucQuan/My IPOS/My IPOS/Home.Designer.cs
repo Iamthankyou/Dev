@@ -31,8 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.buttonX4 = new DevComponents.DotNetBar.ButtonX();
-            this.buttonX3 = new DevComponents.DotNetBar.ButtonX();
             this.btnGrab = new DevComponents.DotNetBar.ButtonX();
             this.btnTakeAway = new DevComponents.DotNetBar.ButtonX();
             this.btnDangXuat = new DevComponents.DotNetBar.ButtonX();
@@ -51,25 +49,9 @@
             // tableLayoutPanel1
             // 
             resources.ApplyResources(this.tableLayoutPanel1, "tableLayoutPanel1");
-            this.tableLayoutPanel1.Controls.Add(this.buttonX4, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.buttonX3, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.btnGrab, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnTakeAway, 0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            // 
-            // buttonX4
-            // 
-            this.buttonX4.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX4.ColorTable = DevComponents.DotNetBar.eButtonColor.MagentaWithBackground;
-            resources.ApplyResources(this.buttonX4, "buttonX4");
-            this.buttonX4.Name = "buttonX4";
-            // 
-            // buttonX3
-            // 
-            this.buttonX3.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX3.ColorTable = DevComponents.DotNetBar.eButtonColor.MagentaWithBackground;
-            resources.ApplyResources(this.buttonX3, "buttonX3");
-            this.buttonX3.Name = "buttonX3";
             // 
             // btnGrab
             // 
@@ -96,6 +78,7 @@
             this.btnDangXuat.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
             resources.ApplyResources(this.btnDangXuat, "btnDangXuat");
             this.btnDangXuat.Name = "btnDangXuat";
+            this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click);
             // 
             // btnKhoaSo
             // 
@@ -131,8 +114,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private DevComponents.DotNetBar.ButtonX buttonX4;
-        private DevComponents.DotNetBar.ButtonX buttonX3;
         private DevComponents.DotNetBar.ButtonX btnGrab;
         private DevComponents.DotNetBar.ButtonX btnTakeAway;
         private DevComponents.DotNetBar.ButtonX btnDangXuat;

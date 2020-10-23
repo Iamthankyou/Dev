@@ -241,6 +241,7 @@
             this.tbKhachDua.SelectedText = "";
             this.tbKhachDua.Size = new System.Drawing.Size(160, 30);
             this.tbKhachDua.TabIndex = 6;
+            this.tbKhachDua.TextChanged += new System.EventHandler(this.tbKhachDua_TextChanged);
             this.tbKhachDua.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbKhachDua_KeyPress);
             // 
             // tbThanhToan
@@ -312,6 +313,7 @@
             this.btnInHoaDon.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.btnInHoaDon.BorderColor = System.Drawing.Color.Black;
             this.btnInHoaDon.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnInHoaDon.Enabled = false;
             this.btnInHoaDon.FocusedColor = System.Drawing.Color.Empty;
             this.btnInHoaDon.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnInHoaDon.ForeColor = System.Drawing.Color.White;
@@ -327,6 +329,7 @@
             this.btnInHoaDon.Size = new System.Drawing.Size(118, 42);
             this.btnInHoaDon.TabIndex = 11;
             this.btnInHoaDon.Text = "In hóa đơn";
+            this.btnInHoaDon.Click += new System.EventHandler(this.btnInHoaDon_Click);
             // 
             // btnDong
             // 
@@ -350,6 +353,7 @@
             this.btnDong.Size = new System.Drawing.Size(95, 42);
             this.btnDong.TabIndex = 12;
             this.btnDong.Text = "Đóng";
+            this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
             // 
             // btnVoucher
             // 
@@ -373,6 +377,7 @@
             this.btnVoucher.Size = new System.Drawing.Size(97, 29);
             this.btnVoucher.TabIndex = 14;
             this.btnVoucher.Text = "Voucher";
+            this.btnVoucher.Click += new System.EventHandler(this.btnVoucher_Click);
             // 
             // TongTien
             // 

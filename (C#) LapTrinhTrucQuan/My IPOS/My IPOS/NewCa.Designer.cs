@@ -55,6 +55,7 @@
             this.tbDuDau.Text = "0";
             this.tbDuDau.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.tbDuDau.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbDuDau_KeyDown);
+            this.tbDuDau.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbDuDau_KeyPress);
             // 
             // btBatDau
             // 

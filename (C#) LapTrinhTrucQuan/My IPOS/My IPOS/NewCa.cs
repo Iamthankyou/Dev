@@ -12,10 +12,13 @@ namespace My_IPOS
 {
     public partial class NewCa : Form
     {
-        private double duDau = 0; 
-        public NewCa()
+        private double duDau = 0;
+        Login homeLogin;
+
+        public NewCa(Login a)
         {
             InitializeComponent();
+            homeLogin = a;
         }
 
         public void setDuDau(double a)
@@ -32,7 +35,7 @@ namespace My_IPOS
         {
             setDuDau(Convert.ToInt32(tbDuDau.Text.ToString()));
             this.Hide();
-            Home home = new Home();
+            Home home = new Home(homeLogin);
             home.Show();
         }
 
@@ -56,6 +59,14 @@ namespace My_IPOS
         private void tbDuDau_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter) btBatDau_Click(sender, e);
+        }
+
+        private void tbDuDau_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

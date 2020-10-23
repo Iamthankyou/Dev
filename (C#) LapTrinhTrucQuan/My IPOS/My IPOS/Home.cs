@@ -13,9 +13,11 @@ namespace My_IPOS
 {
     public partial class Home : Form
     {
-        public Home()
+        Login homeLogin;
+        public Home(Login a)
         {
             InitializeComponent();
+            homeLogin = a;
         }
 
         private void Home_FormClosed(object sender, FormClosedEventArgs e)
@@ -27,6 +29,11 @@ namespace My_IPOS
         {
             OrderTakeAway orderTakeAway = new OrderTakeAway();
             orderTakeAway.Show();
+        }
+
+        private void btnDangXuat_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
         }
     }
 }

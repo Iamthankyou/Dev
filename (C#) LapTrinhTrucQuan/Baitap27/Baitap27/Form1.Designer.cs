@@ -114,8 +114,9 @@
             // mnuHoaDonBan
             // 
             this.mnuHoaDonBan.Name = "mnuHoaDonBan";
-            this.mnuHoaDonBan.Size = new System.Drawing.Size(144, 22);
+            this.mnuHoaDonBan.Size = new System.Drawing.Size(180, 22);
             this.mnuHoaDonBan.Text = "Hóa Đơn Bán";
+            this.mnuHoaDonBan.Click += new System.EventHandler(this.mnuHoaDonBan_Click);
             // 
             // mnuTimKiem
             // 
