@@ -17,11 +17,13 @@ namespace My_IPOS
     {
         DataGridView dt;
         DataBase data = new DataBase();
+        OrderTakeAway od;
 
-        public TongTien(DataGridView a)
+        public TongTien(DataGridView a, OrderTakeAway od)
         {
             InitializeComponent();
             dt = a;
+            this.od = od;
         }
 
         private void TongTien_Load(object sender, EventArgs e)
@@ -101,7 +103,8 @@ namespace My_IPOS
             string ID_HoaDon, TongTien, ID_KhachHang, ID_Voucher;
             int soluong = 1;
             DataTable dt ;
-
+            DateTime dateTime = DateTime.Now;
+            string date = "" + dateTime;
 
 
             if (tbTheGiamGia.Text == "") ID_Voucher = "None";
@@ -109,12 +112,12 @@ namespace My_IPOS
             TongTien = tbThanhToan.Text;
             ID_HoaDon = "" + random.Next(1, 100);
             ID_KhachHang = "TakeAway";
-            data.dataChange("insert into HoaDon values('"+ID_HoaDon+"','"+TongTien+"','"+ID_KhachHang+"','"+ID_Voucher+"')");
+
+            data.dataChange("insert into HoaDon values('"+ID_HoaDon+"','"+ date +"','" + TongTien+"','"+ID_KhachHang+"','"+ID_Voucher+"')");
             dt = data.dataReaderTable("select * from TraSua where TenTraSua = N'"+dgvTongTien.Rows[0].Cells[1].Value.ToString()+"'");
-            //MessageBox.Show(dt.Rows[0]["TenTraSua"].ToString());
             data.dataChange("insert into ChiTietHoaDon values('50','"+soluong+"','" + ID_HoaDon + "','" + dt.Rows[0]["ID_TraSua"].ToString() + "')");
-            //data.dataChange("")
             this.Close();
+            od.outOrder();
         }
     }
 }

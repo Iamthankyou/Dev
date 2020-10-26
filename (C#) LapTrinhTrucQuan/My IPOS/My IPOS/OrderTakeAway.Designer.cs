@@ -43,32 +43,20 @@
             this.clxThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clxMon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.vScrollBar2 = new System.Windows.Forms.VScrollBar();
             this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnTXHongLongPhaLeTuyet_L = new DevComponents.DotNetBar.ButtonX();
-            this.btnTXHongLongPhaLeTuyet_M = new DevComponents.DotNetBar.ButtonX();
-            this.btnTXDuaHongHac_L = new DevComponents.DotNetBar.ButtonX();
-            this.btnTXDuaHongHac_M = new DevComponents.DotNetBar.ButtonX();
-            this.btnTXDuaNhietDoi_L = new DevComponents.DotNetBar.ButtonX();
-            this.btnTXDuaNhietDoi_M = new DevComponents.DotNetBar.ButtonX();
-            this.btnTXDauTamPhaLeTuyet_L = new DevComponents.DotNetBar.ButtonX();
-            this.btnTXDauTamPhaLeTuyet_M = new DevComponents.DotNetBar.ButtonX();
-            this.btnTXChanhLeo_L = new DevComponents.DotNetBar.ButtonX();
-            this.btnTXChanhLeo_M = new DevComponents.DotNetBar.ButtonX();
-            this.btnTXXoai_L = new DevComponents.DotNetBar.ButtonX();
-            this.btnTXXoai_M = new DevComponents.DotNetBar.ButtonX();
-            this.btnTX_M = new DevComponents.DotNetBar.ButtonX();
-            this.btnTX_L = new DevComponents.DotNetBar.ButtonX();
-            this.btnTXKiwiChanhLeo_M = new DevComponents.DotNetBar.ButtonX();
-            this.btnTXKiwiChanhLeo_L = new DevComponents.DotNetBar.ButtonX();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnYeuCauKhac = new DevComponents.DotNetBar.ButtonX();
-            this.btnTopping = new DevComponents.DotNetBar.ButtonX();
-            this.btnFreshFruitTea = new DevComponents.DotNetBar.ButtonX();
-            this.btnMilkTea = new DevComponents.DotNetBar.ButtonX();
+            this.gunaGradientTileButton3 = new Guna.UI.WinForms.GunaGradientTileButton();
+            this.gunaGradientTileButton2 = new Guna.UI.WinForms.GunaGradientTileButton();
+            this.gunaGradientTileButton1 = new Guna.UI.WinForms.GunaGradientTileButton();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel3 = new System.Windows.Forms.Panel();
+            this.backBox = new System.Windows.Forms.PictureBox();
+            this.secondBox = new System.Windows.Forms.PictureBox();
+            this.hourBox = new System.Windows.Forms.PictureBox();
+            this.dotBox = new System.Windows.Forms.PictureBox();
+            this.minuteBox = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnTongTien = new DevComponents.DotNetBar.ButtonX();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
@@ -80,24 +68,19 @@
             this.buttonX22 = new DevComponents.DotNetBar.ButtonX();
             this.buttonX21 = new DevComponents.DotNetBar.ButtonX();
             this.btn1 = new DevComponents.DotNetBar.ButtonX();
-            this.backBox = new System.Windows.Forms.PictureBox();
-            this.secondBox = new System.Windows.Forms.PictureBox();
-            this.hourBox = new System.Windows.Forms.PictureBox();
-            this.dotBox = new System.Windows.Forms.PictureBox();
-            this.minuteBox = new System.Windows.Forms.PictureBox();
+            this.gunaGradientTileButton4 = new Guna.UI.WinForms.GunaGradientTileButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvxTakeAway)).BeginInit();
             this.panel2.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.backBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.secondBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hourBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dotBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minuteBox)).BeginInit();
+            this.panel4.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -248,14 +231,21 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.panel5);
             this.panel2.Controls.Add(this.vScrollBar2);
             this.panel2.Controls.Add(this.vScrollBar1);
-            this.panel2.Controls.Add(this.tableLayoutPanel2);
             this.panel2.Controls.Add(this.tableLayoutPanel1);
             this.panel2.Location = new System.Drawing.Point(0, 347);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(941, 340);
             this.panel2.TabIndex = 2;
+            // 
+            // panel5
+            // 
+            this.panel5.Location = new System.Drawing.Point(212, 4);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(672, 333);
+            this.panel5.TabIndex = 4;
             // 
             // vScrollBar2
             // 
@@ -281,225 +271,14 @@
             this.vScrollBar1.TabIndex = 2;
             this.vScrollBar1.Value = 1;
             // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.ColumnCount = 4;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.Controls.Add(this.btnTXHongLongPhaLeTuyet_L, 3, 3);
-            this.tableLayoutPanel2.Controls.Add(this.btnTXHongLongPhaLeTuyet_M, 2, 3);
-            this.tableLayoutPanel2.Controls.Add(this.btnTXDuaHongHac_L, 1, 3);
-            this.tableLayoutPanel2.Controls.Add(this.btnTXDuaHongHac_M, 0, 3);
-            this.tableLayoutPanel2.Controls.Add(this.btnTXDuaNhietDoi_L, 3, 2);
-            this.tableLayoutPanel2.Controls.Add(this.btnTXDuaNhietDoi_M, 2, 2);
-            this.tableLayoutPanel2.Controls.Add(this.btnTXDauTamPhaLeTuyet_L, 1, 2);
-            this.tableLayoutPanel2.Controls.Add(this.btnTXDauTamPhaLeTuyet_M, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.btnTXChanhLeo_L, 3, 1);
-            this.tableLayoutPanel2.Controls.Add(this.btnTXChanhLeo_M, 2, 1);
-            this.tableLayoutPanel2.Controls.Add(this.btnTXXoai_L, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.btnTXXoai_M, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.btnTX_M, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.btnTX_L, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.btnTXKiwiChanhLeo_M, 2, 0);
-            this.tableLayoutPanel2.Controls.Add(this.btnTXKiwiChanhLeo_L, 3, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(211, 3);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 4;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(673, 331);
-            this.tableLayoutPanel2.TabIndex = 1;
-            // 
-            // btnTXHongLongPhaLeTuyet_L
-            // 
-            this.btnTXHongLongPhaLeTuyet_L.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnTXHongLongPhaLeTuyet_L.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
-            this.btnTXHongLongPhaLeTuyet_L.Location = new System.Drawing.Point(507, 249);
-            this.btnTXHongLongPhaLeTuyet_L.Name = "btnTXHongLongPhaLeTuyet_L";
-            this.btnTXHongLongPhaLeTuyet_L.Size = new System.Drawing.Size(163, 76);
-            this.btnTXHongLongPhaLeTuyet_L.TabIndex = 19;
-            this.btnTXHongLongPhaLeTuyet_L.Text = "Hồng Long Pha Lê Tuyết (L)";
-            this.btnTXHongLongPhaLeTuyet_L.Click += new System.EventHandler(this.btnTXHongLongPhaLeTuyet_L_Click);
-            // 
-            // btnTXHongLongPhaLeTuyet_M
-            // 
-            this.btnTXHongLongPhaLeTuyet_M.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnTXHongLongPhaLeTuyet_M.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
-            this.btnTXHongLongPhaLeTuyet_M.Location = new System.Drawing.Point(339, 249);
-            this.btnTXHongLongPhaLeTuyet_M.Name = "btnTXHongLongPhaLeTuyet_M";
-            this.btnTXHongLongPhaLeTuyet_M.Size = new System.Drawing.Size(162, 76);
-            this.btnTXHongLongPhaLeTuyet_M.TabIndex = 18;
-            this.btnTXHongLongPhaLeTuyet_M.Text = "Hồng Long Pha Lê Tuyết (M)";
-            this.btnTXHongLongPhaLeTuyet_M.Click += new System.EventHandler(this.btnTXHongLongPhaLeTuyet_M_Click);
-            // 
-            // btnTXDuaHongHac_L
-            // 
-            this.btnTXDuaHongHac_L.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnTXDuaHongHac_L.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
-            this.btnTXDuaHongHac_L.Location = new System.Drawing.Point(171, 249);
-            this.btnTXDuaHongHac_L.Name = "btnTXDuaHongHac_L";
-            this.btnTXDuaHongHac_L.Size = new System.Drawing.Size(162, 76);
-            this.btnTXDuaHongHac_L.TabIndex = 17;
-            this.btnTXDuaHongHac_L.Text = "Trà Dứa Hồng Hạc (L)";
-            this.btnTXDuaHongHac_L.Click += new System.EventHandler(this.btnTXDuaHongHac_L_Click);
-            // 
-            // btnTXDuaHongHac_M
-            // 
-            this.btnTXDuaHongHac_M.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnTXDuaHongHac_M.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
-            this.btnTXDuaHongHac_M.Location = new System.Drawing.Point(3, 249);
-            this.btnTXDuaHongHac_M.Name = "btnTXDuaHongHac_M";
-            this.btnTXDuaHongHac_M.Size = new System.Drawing.Size(162, 76);
-            this.btnTXDuaHongHac_M.TabIndex = 16;
-            this.btnTXDuaHongHac_M.Text = "Trà Dứa Hồng Hạc (M)";
-            this.btnTXDuaHongHac_M.Click += new System.EventHandler(this.btnTXDuaHongHac_M_Click);
-            // 
-            // btnTXDuaNhietDoi_L
-            // 
-            this.btnTXDuaNhietDoi_L.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnTXDuaNhietDoi_L.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
-            this.btnTXDuaNhietDoi_L.Location = new System.Drawing.Point(507, 167);
-            this.btnTXDuaNhietDoi_L.Name = "btnTXDuaNhietDoi_L";
-            this.btnTXDuaNhietDoi_L.Size = new System.Drawing.Size(163, 76);
-            this.btnTXDuaNhietDoi_L.TabIndex = 15;
-            this.btnTXDuaNhietDoi_L.Text = "Trà Dứa Nhiệt Đới (L)";
-            this.btnTXDuaNhietDoi_L.Click += new System.EventHandler(this.btnTXDuaNhietDoi_L_Click);
-            // 
-            // btnTXDuaNhietDoi_M
-            // 
-            this.btnTXDuaNhietDoi_M.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnTXDuaNhietDoi_M.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
-            this.btnTXDuaNhietDoi_M.Location = new System.Drawing.Point(339, 167);
-            this.btnTXDuaNhietDoi_M.Name = "btnTXDuaNhietDoi_M";
-            this.btnTXDuaNhietDoi_M.Size = new System.Drawing.Size(162, 76);
-            this.btnTXDuaNhietDoi_M.TabIndex = 14;
-            this.btnTXDuaNhietDoi_M.Text = "Trà Dứa Nhiệt Đới (M)";
-            this.btnTXDuaNhietDoi_M.Click += new System.EventHandler(this.btnTXDuaNhietDoi_M_Click);
-            // 
-            // btnTXDauTamPhaLeTuyet_L
-            // 
-            this.btnTXDauTamPhaLeTuyet_L.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnTXDauTamPhaLeTuyet_L.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
-            this.btnTXDauTamPhaLeTuyet_L.Location = new System.Drawing.Point(171, 167);
-            this.btnTXDauTamPhaLeTuyet_L.Name = "btnTXDauTamPhaLeTuyet_L";
-            this.btnTXDauTamPhaLeTuyet_L.Size = new System.Drawing.Size(162, 76);
-            this.btnTXDauTamPhaLeTuyet_L.TabIndex = 13;
-            this.btnTXDauTamPhaLeTuyet_L.Text = "Trà Dâu Tằm Pha Lê Tuyết (L)";
-            this.btnTXDauTamPhaLeTuyet_L.Click += new System.EventHandler(this.btnTXDauTamPhaLeTuyet_L_Click);
-            // 
-            // btnTXDauTamPhaLeTuyet_M
-            // 
-            this.btnTXDauTamPhaLeTuyet_M.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnTXDauTamPhaLeTuyet_M.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
-            this.btnTXDauTamPhaLeTuyet_M.Location = new System.Drawing.Point(3, 167);
-            this.btnTXDauTamPhaLeTuyet_M.Name = "btnTXDauTamPhaLeTuyet_M";
-            this.btnTXDauTamPhaLeTuyet_M.Size = new System.Drawing.Size(162, 76);
-            this.btnTXDauTamPhaLeTuyet_M.TabIndex = 12;
-            this.btnTXDauTamPhaLeTuyet_M.Text = "Trà Dâu Tằm Pha Lê Tuyết (M)";
-            this.btnTXDauTamPhaLeTuyet_M.Click += new System.EventHandler(this.btnTXDauTamPhaLeTuyet_M_Click);
-            // 
-            // btnTXChanhLeo_L
-            // 
-            this.btnTXChanhLeo_L.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnTXChanhLeo_L.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
-            this.btnTXChanhLeo_L.Location = new System.Drawing.Point(507, 85);
-            this.btnTXChanhLeo_L.Name = "btnTXChanhLeo_L";
-            this.btnTXChanhLeo_L.Size = new System.Drawing.Size(163, 76);
-            this.btnTXChanhLeo_L.TabIndex = 11;
-            this.btnTXChanhLeo_L.Text = "Trà Xanh Chanh Leo (L)";
-            this.btnTXChanhLeo_L.Click += new System.EventHandler(this.btnTXChanhLeo_L_Click);
-            // 
-            // btnTXChanhLeo_M
-            // 
-            this.btnTXChanhLeo_M.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnTXChanhLeo_M.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
-            this.btnTXChanhLeo_M.Location = new System.Drawing.Point(339, 85);
-            this.btnTXChanhLeo_M.Name = "btnTXChanhLeo_M";
-            this.btnTXChanhLeo_M.Size = new System.Drawing.Size(162, 76);
-            this.btnTXChanhLeo_M.TabIndex = 10;
-            this.btnTXChanhLeo_M.Text = "Trà Xanh Chanh Leo (M)";
-            this.btnTXChanhLeo_M.Click += new System.EventHandler(this.btnTXChanhLeo_M_Click);
-            // 
-            // btnTXXoai_L
-            // 
-            this.btnTXXoai_L.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnTXXoai_L.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
-            this.btnTXXoai_L.Location = new System.Drawing.Point(171, 85);
-            this.btnTXXoai_L.Name = "btnTXXoai_L";
-            this.btnTXXoai_L.Size = new System.Drawing.Size(162, 76);
-            this.btnTXXoai_L.TabIndex = 9;
-            this.btnTXXoai_L.Text = "Trà Xanh Xoai (L)";
-            this.btnTXXoai_L.Click += new System.EventHandler(this.btnTXXoai_L_Click);
-            // 
-            // btnTXXoai_M
-            // 
-            this.btnTXXoai_M.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnTXXoai_M.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
-            this.btnTXXoai_M.Location = new System.Drawing.Point(3, 85);
-            this.btnTXXoai_M.Name = "btnTXXoai_M";
-            this.btnTXXoai_M.Size = new System.Drawing.Size(162, 76);
-            this.btnTXXoai_M.TabIndex = 8;
-            this.btnTXXoai_M.Text = "Trà Xanh Xoai (M)";
-            this.btnTXXoai_M.Click += new System.EventHandler(this.btnTXXoai_M_Click);
-            // 
-            // btnTX_M
-            // 
-            this.btnTX_M.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnTX_M.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
-            this.btnTX_M.Location = new System.Drawing.Point(3, 3);
-            this.btnTX_M.Name = "btnTX_M";
-            this.btnTX_M.Size = new System.Drawing.Size(162, 76);
-            this.btnTX_M.TabIndex = 4;
-            this.btnTX_M.Text = " Trà Xanh (M)";
-            this.btnTX_M.Click += new System.EventHandler(this.btnTX_M_Click);
-            // 
-            // btnTX_L
-            // 
-            this.btnTX_L.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnTX_L.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
-            this.btnTX_L.Location = new System.Drawing.Point(171, 3);
-            this.btnTX_L.Name = "btnTX_L";
-            this.btnTX_L.Size = new System.Drawing.Size(162, 76);
-            this.btnTX_L.TabIndex = 5;
-            this.btnTX_L.Text = "Trà Xanh (L)";
-            this.btnTX_L.Click += new System.EventHandler(this.btnTX_L_Click);
-            // 
-            // btnTXKiwiChanhLeo_M
-            // 
-            this.btnTXKiwiChanhLeo_M.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnTXKiwiChanhLeo_M.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
-            this.btnTXKiwiChanhLeo_M.Location = new System.Drawing.Point(339, 3);
-            this.btnTXKiwiChanhLeo_M.Name = "btnTXKiwiChanhLeo_M";
-            this.btnTXKiwiChanhLeo_M.Size = new System.Drawing.Size(162, 76);
-            this.btnTXKiwiChanhLeo_M.TabIndex = 6;
-            this.btnTXKiwiChanhLeo_M.Text = "Trà Xanh Kiwi Chanh Leo (M)";
-            this.btnTXKiwiChanhLeo_M.Click += new System.EventHandler(this.btnTXKiwiChanhLeo_M_Click);
-            // 
-            // btnTXKiwiChanhLeo_L
-            // 
-            this.btnTXKiwiChanhLeo_L.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnTXKiwiChanhLeo_L.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
-            this.btnTXKiwiChanhLeo_L.Location = new System.Drawing.Point(507, 3);
-            this.btnTXKiwiChanhLeo_L.Name = "btnTXKiwiChanhLeo_L";
-            this.btnTXKiwiChanhLeo_L.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnTXKiwiChanhLeo_L.Size = new System.Drawing.Size(163, 76);
-            this.btnTXKiwiChanhLeo_L.TabIndex = 7;
-            this.btnTXKiwiChanhLeo_L.Text = "Trà Xanh Kiwi Chanh Leo (L)";
-            this.btnTXKiwiChanhLeo_L.Click += new System.EventHandler(this.btnTXKiwiChanhLeo_L_Click);
-            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.btnYeuCauKhac, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.btnTopping, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.btnFreshFruitTea, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.btnMilkTea, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.gunaGradientTileButton3, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.gunaGradientTileButton1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.gunaGradientTileButton4, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.gunaGradientTileButton2, 0, 2);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
@@ -510,45 +289,93 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(162, 331);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // btnYeuCauKhac
+            // gunaGradientTileButton3
             // 
-            this.btnYeuCauKhac.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnYeuCauKhac.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
-            this.btnYeuCauKhac.Location = new System.Drawing.Point(3, 249);
-            this.btnYeuCauKhac.Name = "btnYeuCauKhac";
-            this.btnYeuCauKhac.Size = new System.Drawing.Size(156, 76);
-            this.btnYeuCauKhac.TabIndex = 3;
-            this.btnYeuCauKhac.Text = "Yêu Cầu Khác";
+            this.gunaGradientTileButton3.AnimationHoverSpeed = 0.07F;
+            this.gunaGradientTileButton3.AnimationSpeed = 0.03F;
+            this.gunaGradientTileButton3.BackColor = System.Drawing.Color.Transparent;
+            this.gunaGradientTileButton3.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.gunaGradientTileButton3.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.gunaGradientTileButton3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.gunaGradientTileButton3.BorderSize = 2;
+            this.gunaGradientTileButton3.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gunaGradientTileButton3.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaGradientTileButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.gunaGradientTileButton3.ForeColor = System.Drawing.Color.Black;
+            this.gunaGradientTileButton3.Image = null;
+            this.gunaGradientTileButton3.ImageSize = new System.Drawing.Size(52, 52);
+            this.gunaGradientTileButton3.Location = new System.Drawing.Point(3, 249);
+            this.gunaGradientTileButton3.Name = "gunaGradientTileButton3";
+            this.gunaGradientTileButton3.OnHoverBaseColor1 = System.Drawing.Color.White;
+            this.gunaGradientTileButton3.OnHoverBaseColor2 = System.Drawing.Color.White;
+            this.gunaGradientTileButton3.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.gunaGradientTileButton3.OnHoverForeColor = System.Drawing.Color.Black;
+            this.gunaGradientTileButton3.OnHoverImage = null;
+            this.gunaGradientTileButton3.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaGradientTileButton3.Radius = 10;
+            this.gunaGradientTileButton3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.gunaGradientTileButton3.Size = new System.Drawing.Size(156, 76);
+            this.gunaGradientTileButton3.TabIndex = 6;
+            this.gunaGradientTileButton3.Text = "Yêu Cầu Khác";
             // 
-            // btnTopping
+            // gunaGradientTileButton2
             // 
-            this.btnTopping.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnTopping.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
-            this.btnTopping.Location = new System.Drawing.Point(3, 167);
-            this.btnTopping.Name = "btnTopping";
-            this.btnTopping.Size = new System.Drawing.Size(156, 76);
-            this.btnTopping.TabIndex = 2;
-            this.btnTopping.Text = "Topping";
+            this.gunaGradientTileButton2.AnimationHoverSpeed = 0.07F;
+            this.gunaGradientTileButton2.AnimationSpeed = 0.03F;
+            this.gunaGradientTileButton2.BackColor = System.Drawing.Color.Transparent;
+            this.gunaGradientTileButton2.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.gunaGradientTileButton2.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.gunaGradientTileButton2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.gunaGradientTileButton2.BorderSize = 2;
+            this.gunaGradientTileButton2.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gunaGradientTileButton2.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaGradientTileButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.gunaGradientTileButton2.ForeColor = System.Drawing.Color.Black;
+            this.gunaGradientTileButton2.Image = null;
+            this.gunaGradientTileButton2.ImageSize = new System.Drawing.Size(52, 52);
+            this.gunaGradientTileButton2.Location = new System.Drawing.Point(3, 167);
+            this.gunaGradientTileButton2.Name = "gunaGradientTileButton2";
+            this.gunaGradientTileButton2.OnHoverBaseColor1 = System.Drawing.Color.White;
+            this.gunaGradientTileButton2.OnHoverBaseColor2 = System.Drawing.Color.White;
+            this.gunaGradientTileButton2.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.gunaGradientTileButton2.OnHoverForeColor = System.Drawing.Color.Black;
+            this.gunaGradientTileButton2.OnHoverImage = null;
+            this.gunaGradientTileButton2.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaGradientTileButton2.Radius = 10;
+            this.gunaGradientTileButton2.Size = new System.Drawing.Size(156, 76);
+            this.gunaGradientTileButton2.TabIndex = 5;
+            this.gunaGradientTileButton2.Text = "Topping";
+            this.gunaGradientTileButton2.Click += new System.EventHandler(this.gunaGradientTileButton2_Click);
             // 
-            // btnFreshFruitTea
+            // gunaGradientTileButton1
             // 
-            this.btnFreshFruitTea.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnFreshFruitTea.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
-            this.btnFreshFruitTea.Location = new System.Drawing.Point(3, 85);
-            this.btnFreshFruitTea.Name = "btnFreshFruitTea";
-            this.btnFreshFruitTea.Size = new System.Drawing.Size(156, 76);
-            this.btnFreshFruitTea.TabIndex = 1;
-            this.btnFreshFruitTea.Text = "Fresh  Fruit Tea";
-            // 
-            // btnMilkTea
-            // 
-            this.btnMilkTea.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnMilkTea.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
-            this.btnMilkTea.Location = new System.Drawing.Point(3, 3);
-            this.btnMilkTea.Name = "btnMilkTea";
-            this.btnMilkTea.Size = new System.Drawing.Size(156, 76);
-            this.btnMilkTea.TabIndex = 0;
-            this.btnMilkTea.Text = "Milk Tea";
+            this.gunaGradientTileButton1.AnimationHoverSpeed = 0.07F;
+            this.gunaGradientTileButton1.AnimationSpeed = 0.03F;
+            this.gunaGradientTileButton1.BackColor = System.Drawing.Color.Transparent;
+            this.gunaGradientTileButton1.BaseColor1 = System.Drawing.Color.Lime;
+            this.gunaGradientTileButton1.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.gunaGradientTileButton1.BorderColor = System.Drawing.Color.Lime;
+            this.gunaGradientTileButton1.BorderSize = 2;
+            this.gunaGradientTileButton1.CausesValidation = false;
+            this.gunaGradientTileButton1.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gunaGradientTileButton1.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaGradientTileButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.gunaGradientTileButton1.ForeColor = System.Drawing.Color.Black;
+            this.gunaGradientTileButton1.Image = null;
+            this.gunaGradientTileButton1.ImageSize = new System.Drawing.Size(52, 52);
+            this.gunaGradientTileButton1.Location = new System.Drawing.Point(3, 3);
+            this.gunaGradientTileButton1.Name = "gunaGradientTileButton1";
+            this.gunaGradientTileButton1.OnHoverBaseColor1 = System.Drawing.Color.White;
+            this.gunaGradientTileButton1.OnHoverBaseColor2 = System.Drawing.Color.White;
+            this.gunaGradientTileButton1.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.gunaGradientTileButton1.OnHoverForeColor = System.Drawing.Color.Black;
+            this.gunaGradientTileButton1.OnHoverImage = null;
+            this.gunaGradientTileButton1.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaGradientTileButton1.Radius = 10;
+            this.gunaGradientTileButton1.Size = new System.Drawing.Size(156, 76);
+            this.gunaGradientTileButton1.TabIndex = 4;
+            this.gunaGradientTileButton1.Text = "Milk Tea";
+            this.gunaGradientTileButton1.Click += new System.EventHandler(this.gunaGradientTileButton1_Click);
             // 
             // timer1
             // 
@@ -567,6 +394,56 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(300, 300);
             this.panel3.TabIndex = 8;
+            // 
+            // backBox
+            // 
+            this.backBox.BackColor = System.Drawing.Color.Transparent;
+            this.backBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.backBox.Location = new System.Drawing.Point(0, 0);
+            this.backBox.Name = "backBox";
+            this.backBox.Size = new System.Drawing.Size(300, 300);
+            this.backBox.TabIndex = 3;
+            this.backBox.TabStop = false;
+            // 
+            // secondBox
+            // 
+            this.secondBox.BackColor = System.Drawing.Color.Transparent;
+            this.secondBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.secondBox.Location = new System.Drawing.Point(0, 0);
+            this.secondBox.Name = "secondBox";
+            this.secondBox.Size = new System.Drawing.Size(300, 300);
+            this.secondBox.TabIndex = 7;
+            this.secondBox.TabStop = false;
+            // 
+            // hourBox
+            // 
+            this.hourBox.BackColor = System.Drawing.Color.Transparent;
+            this.hourBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.hourBox.Location = new System.Drawing.Point(0, 0);
+            this.hourBox.Name = "hourBox";
+            this.hourBox.Size = new System.Drawing.Size(300, 300);
+            this.hourBox.TabIndex = 4;
+            this.hourBox.TabStop = false;
+            // 
+            // dotBox
+            // 
+            this.dotBox.BackColor = System.Drawing.Color.Transparent;
+            this.dotBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dotBox.Location = new System.Drawing.Point(0, 0);
+            this.dotBox.Name = "dotBox";
+            this.dotBox.Size = new System.Drawing.Size(300, 300);
+            this.dotBox.TabIndex = 6;
+            this.dotBox.TabStop = false;
+            // 
+            // minuteBox
+            // 
+            this.minuteBox.BackColor = System.Drawing.Color.Transparent;
+            this.minuteBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.minuteBox.Location = new System.Drawing.Point(0, 0);
+            this.minuteBox.Name = "minuteBox";
+            this.minuteBox.Size = new System.Drawing.Size(300, 300);
+            this.minuteBox.TabIndex = 5;
+            this.minuteBox.TabStop = false;
             // 
             // panel4
             // 
@@ -692,55 +569,34 @@
             this.btn1.TabIndex = 0;
             this.btn1.Text = "ToDo";
             // 
-            // backBox
+            // gunaGradientTileButton4
             // 
-            this.backBox.BackColor = System.Drawing.Color.Transparent;
-            this.backBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.backBox.Location = new System.Drawing.Point(0, 0);
-            this.backBox.Name = "backBox";
-            this.backBox.Size = new System.Drawing.Size(300, 300);
-            this.backBox.TabIndex = 3;
-            this.backBox.TabStop = false;
-            // 
-            // secondBox
-            // 
-            this.secondBox.BackColor = System.Drawing.Color.Transparent;
-            this.secondBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.secondBox.Location = new System.Drawing.Point(0, 0);
-            this.secondBox.Name = "secondBox";
-            this.secondBox.Size = new System.Drawing.Size(300, 300);
-            this.secondBox.TabIndex = 7;
-            this.secondBox.TabStop = false;
-            // 
-            // hourBox
-            // 
-            this.hourBox.BackColor = System.Drawing.Color.Transparent;
-            this.hourBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.hourBox.Location = new System.Drawing.Point(0, 0);
-            this.hourBox.Name = "hourBox";
-            this.hourBox.Size = new System.Drawing.Size(300, 300);
-            this.hourBox.TabIndex = 4;
-            this.hourBox.TabStop = false;
-            // 
-            // dotBox
-            // 
-            this.dotBox.BackColor = System.Drawing.Color.Transparent;
-            this.dotBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dotBox.Location = new System.Drawing.Point(0, 0);
-            this.dotBox.Name = "dotBox";
-            this.dotBox.Size = new System.Drawing.Size(300, 300);
-            this.dotBox.TabIndex = 6;
-            this.dotBox.TabStop = false;
-            // 
-            // minuteBox
-            // 
-            this.minuteBox.BackColor = System.Drawing.Color.Transparent;
-            this.minuteBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.minuteBox.Location = new System.Drawing.Point(0, 0);
-            this.minuteBox.Name = "minuteBox";
-            this.minuteBox.Size = new System.Drawing.Size(300, 300);
-            this.minuteBox.TabIndex = 5;
-            this.minuteBox.TabStop = false;
+            this.gunaGradientTileButton4.AnimationHoverSpeed = 0.07F;
+            this.gunaGradientTileButton4.AnimationSpeed = 0.03F;
+            this.gunaGradientTileButton4.BackColor = System.Drawing.Color.Transparent;
+            this.gunaGradientTileButton4.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.gunaGradientTileButton4.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.gunaGradientTileButton4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.gunaGradientTileButton4.BorderSize = 2;
+            this.gunaGradientTileButton4.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gunaGradientTileButton4.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaGradientTileButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.gunaGradientTileButton4.ForeColor = System.Drawing.Color.Black;
+            this.gunaGradientTileButton4.Image = null;
+            this.gunaGradientTileButton4.ImageSize = new System.Drawing.Size(52, 52);
+            this.gunaGradientTileButton4.Location = new System.Drawing.Point(3, 85);
+            this.gunaGradientTileButton4.Name = "gunaGradientTileButton4";
+            this.gunaGradientTileButton4.OnHoverBaseColor1 = System.Drawing.Color.White;
+            this.gunaGradientTileButton4.OnHoverBaseColor2 = System.Drawing.Color.White;
+            this.gunaGradientTileButton4.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.gunaGradientTileButton4.OnHoverForeColor = System.Drawing.Color.Black;
+            this.gunaGradientTileButton4.OnHoverImage = null;
+            this.gunaGradientTileButton4.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaGradientTileButton4.Radius = 10;
+            this.gunaGradientTileButton4.Size = new System.Drawing.Size(156, 76);
+            this.gunaGradientTileButton4.TabIndex = 7;
+            this.gunaGradientTileButton4.Text = "Fresh Fruit Tea";
+            this.gunaGradientTileButton4.Click += new System.EventHandler(this.gunaGradientTileButton4_Click);
             // 
             // OrderTakeAway
             // 
@@ -761,16 +617,15 @@
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvxTakeAway)).EndInit();
             this.panel2.ResumeLayout(false);
-            this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.tableLayoutPanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.backBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.secondBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hourBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dotBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.minuteBox)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -781,28 +636,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.VScrollBar vScrollBar2;
         private System.Windows.Forms.VScrollBar vScrollBar1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private DevComponents.DotNetBar.ButtonX btnTXHongLongPhaLeTuyet_L;
-        private DevComponents.DotNetBar.ButtonX btnTXHongLongPhaLeTuyet_M;
-        private DevComponents.DotNetBar.ButtonX btnTXDuaHongHac_L;
-        private DevComponents.DotNetBar.ButtonX btnTXDuaHongHac_M;
-        private DevComponents.DotNetBar.ButtonX btnTXDuaNhietDoi_L;
-        private DevComponents.DotNetBar.ButtonX btnTXDuaNhietDoi_M;
-        private DevComponents.DotNetBar.ButtonX btnTXDauTamPhaLeTuyet_L;
-        private DevComponents.DotNetBar.ButtonX btnTXDauTamPhaLeTuyet_M;
-        private DevComponents.DotNetBar.ButtonX btnTXChanhLeo_L;
-        private DevComponents.DotNetBar.ButtonX btnTXChanhLeo_M;
-        private DevComponents.DotNetBar.ButtonX btnTXXoai_L;
-        private DevComponents.DotNetBar.ButtonX btnTXXoai_M;
-        private DevComponents.DotNetBar.ButtonX btnTX_M;
-        private DevComponents.DotNetBar.ButtonX btnTX_L;
-        private DevComponents.DotNetBar.ButtonX btnTXKiwiChanhLeo_M;
-        private DevComponents.DotNetBar.ButtonX btnTXKiwiChanhLeo_L;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private DevComponents.DotNetBar.ButtonX btnYeuCauKhac;
-        private DevComponents.DotNetBar.ButtonX btnTopping;
-        private DevComponents.DotNetBar.ButtonX btnFreshFruitTea;
-        private DevComponents.DotNetBar.ButtonX btnMilkTea;
         private System.Windows.Forms.PictureBox backBox;
         private System.Windows.Forms.PictureBox hourBox;
         private System.Windows.Forms.PictureBox minuteBox;
@@ -831,5 +665,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn clxGioGoi;
         private System.Windows.Forms.DataGridViewTextBoxColumn clxThanhTien;
         private System.Windows.Forms.DataGridViewTextBoxColumn clxMon;
+        private System.Windows.Forms.Panel panel5;
+        private Guna.UI.WinForms.GunaGradientTileButton gunaGradientTileButton3;
+        private Guna.UI.WinForms.GunaGradientTileButton gunaGradientTileButton2;
+        private Guna.UI.WinForms.GunaGradientTileButton gunaGradientTileButton1;
+        private Guna.UI.WinForms.GunaGradientTileButton gunaGradientTileButton4;
     }
 }

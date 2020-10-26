@@ -15,184 +15,7 @@ namespace My_IPOS
     {
         Bitmap back, hour, minute, dot, second;
 
-        int stt = 0;
-
-       
-        private void btnTX_M_Click(object sender, EventArgs e)
-        {
-            int soluong = 1;
-            float giamgia = 0;
-            int dongia = 32000;
-            string ghichu = "";
-            string time = DateTime.Now.ToString();
-            string MaMon = "";
-            addMon(++stt ,btnTX_M.Text, soluong, giamgia, dongia, ghichu, time, soluong*dongia - (soluong * dongia*giamgia), MaMon);
-        }
-
-        private void btnTXXoai_M_Click(object sender, EventArgs e)
-        {
-            int soluong = 1;
-            float giamgia = 0;
-            int dongia = 32000;
-            string ghichu = "";
-            string time = DateTime.Now.ToString();
-            string MaMon = "";
-            addMon(++stt, btnTXXoai_M.Text, soluong, giamgia, dongia, ghichu, time, soluong * dongia - (soluong * dongia * giamgia), MaMon);
-        }
-
-        private void btnTXDuaHongHac_M_Click(object sender, EventArgs e)
-        {
-            int soluong = 1;
-            float giamgia = 0;
-            int dongia = 32000;
-            string ghichu = "";
-            string time = DateTime.Now.ToString();
-            string MaMon = "";
-            addMon(++stt, btnTXDuaHongHac_M.Text, soluong, giamgia, dongia, ghichu, time, soluong * dongia - (soluong * dongia * giamgia), MaMon);
-        }
-
-        private void btnTX_L_Click(object sender, EventArgs e)
-        {
-            int soluong = 1;
-            float giamgia = 0;
-            int dongia = 32000;
-            string ghichu = "";
-            string time = DateTime.Now.ToString();
-            string MaMon = "";
-            addMon(++stt, btnTX_L.Text, soluong, giamgia, dongia, ghichu, time, soluong * dongia - (soluong * dongia * giamgia), MaMon);
-        }
-
-        private void btnTXXoai_L_Click(object sender, EventArgs e)
-        {
-            int soluong = 1;
-            float giamgia = 0;
-            int dongia = 32000;
-            string ghichu = "";
-            string time = DateTime.Now.ToString();
-            string MaMon = "";
-            addMon(++stt, btnTXXoai_L.Text, soluong, giamgia, dongia, ghichu, time, soluong * dongia - (soluong * dongia * giamgia), MaMon);
-        }
-
-        private void btnTXDauTamPhaLeTuyet_L_Click(object sender, EventArgs e)
-        {
-            int soluong = 1;
-            float giamgia = 0;
-            int dongia = 32000;
-            string ghichu = "";
-            string time = DateTime.Now.ToString();
-            string MaMon = "";
-            addMon(++stt, btnTXDauTamPhaLeTuyet_L.Text, soluong, giamgia, dongia, ghichu, time, soluong * dongia - (soluong * dongia * giamgia), MaMon);
-        }
-
-        private void btnTXDuaHongHac_L_Click(object sender, EventArgs e)
-        {
-            int soluong = 1;
-            float giamgia = 0;
-            int dongia = 32000;
-            string ghichu = "";
-            string time = DateTime.Now.ToString();
-            string MaMon = "";
-            addMon(++stt, btnTXDuaHongHac_L.Text, soluong, giamgia, dongia, ghichu, time, soluong * dongia - (soluong * dongia * giamgia), MaMon);
-        }
-
-        private void btnTXKiwiChanhLeo_M_Click(object sender, EventArgs e)
-        {
-            int soluong = 1;
-            float giamgia = 0;
-            int dongia = 32000;
-            string ghichu = "";
-            string time = DateTime.Now.ToString();
-            string MaMon = "";
-            addMon(++stt, btnTXKiwiChanhLeo_M.Text, soluong, giamgia, dongia, ghichu, time, soluong * dongia - (soluong * dongia * giamgia), MaMon);
-        }
-
-        private void btnTXChanhLeo_M_Click(object sender, EventArgs e)
-        {
-            int soluong = 1;
-            float giamgia = 0;
-            int dongia = 32000;
-            string ghichu = "";
-            string time = DateTime.Now.ToString();
-            string MaMon = "";
-            addMon(++stt, btnTXChanhLeo_M.Text, soluong, giamgia, dongia, ghichu, time, soluong * dongia - (soluong * dongia * giamgia), MaMon);
-        }
-
-        private void btnTXDuaNhietDoi_M_Click(object sender, EventArgs e)
-        {
-            int soluong = 1;
-            float giamgia = 0;
-            int dongia = 32000;
-            string ghichu = "";
-            string time = DateTime.Now.ToString();
-            string MaMon = "";
-            addMon(++stt, btnTXDuaNhietDoi_M.Text, soluong, giamgia, dongia, ghichu, time, soluong * dongia - (soluong * dongia * giamgia), MaMon);
-        }
-
-        private void btnTXHongLongPhaLeTuyet_M_Click(object sender, EventArgs e)
-        {
-            int soluong = 1;
-            float giamgia = 0;
-            int dongia = 32000;
-            string ghichu = "";
-            string time = DateTime.Now.ToString();
-            string MaMon = "";
-            addMon(++stt, btnTXHongLongPhaLeTuyet_M.Text, soluong, giamgia, dongia, ghichu, time, soluong * dongia - (soluong * dongia * giamgia), MaMon);
-        }
-
-        private void btnTXKiwiChanhLeo_L_Click(object sender, EventArgs e)
-        {
-            int soluong = 1;
-            float giamgia = 0;
-            int dongia = 32000;
-            string ghichu = "";
-            string time = DateTime.Now.ToString();
-            string MaMon = "";
-            addMon(++stt, btnTXKiwiChanhLeo_L.Text, soluong, giamgia, dongia, ghichu, time, soluong * dongia - (soluong * dongia * giamgia), MaMon);
-        }
-
-        private void btnTXChanhLeo_L_Click(object sender, EventArgs e)
-        {
-            int soluong = 1;
-            float giamgia = 0;
-            int dongia = 32000;
-            string ghichu = "";
-            string time = DateTime.Now.ToString();
-            string MaMon = "";
-            addMon(++stt, btnTXChanhLeo_L.Text, soluong, giamgia, dongia, ghichu, time, soluong * dongia - (soluong * dongia * giamgia), MaMon);
-        }
-
-        private void btnTXDuaNhietDoi_L_Click(object sender, EventArgs e)
-        {
-            int soluong = 1;
-            float giamgia = 0;
-            int dongia = 32000;
-            string ghichu = "";
-            string time = DateTime.Now.ToString();
-            string MaMon = "";
-            addMon(++stt, btnTXDuaNhietDoi_L.Text, soluong, giamgia, dongia, ghichu, time, soluong * dongia - (soluong * dongia * giamgia), MaMon);
-        }
-
-        private void btnTXHongLongPhaLeTuyet_L_Click(object sender, EventArgs e)
-        {
-            int soluong = 1;
-            float giamgia = 0;
-            int dongia = 32000;
-            string ghichu = "";
-            string time = DateTime.Now.ToString();
-            string MaMon = "";
-            addMon(++stt, btnTXHongLongPhaLeTuyet_L.Text, soluong, giamgia, dongia, ghichu, time, soluong * dongia - (soluong * dongia * giamgia), MaMon);
-        }
-
-        private void btnTXDauTamPhaLeTuyet_M_Click(object sender, EventArgs e)
-        {
-            int soluong = 1;
-            float giamgia = 0;
-            int dongia = 32000;
-            string ghichu = "";
-            string time = DateTime.Now.ToString();
-            string MaMon = "";
-            addMon(++stt, btnTXDauTamPhaLeTuyet_M.Text, soluong, giamgia, dongia, ghichu, time, soluong * dongia - (soluong * dongia * giamgia), MaMon);
-        }
+        public int stt = 0;
 
         public OrderTakeAway()
         {
@@ -203,6 +26,9 @@ namespace My_IPOS
             minute = new Bitmap(".\\image\\minute.png");
             dot = new Bitmap(".\\image\\dot.png");
             second = new Bitmap(".\\image\\second.png");
+            ControlTS a = new ControlTS(this);
+            panel5.Controls.Clear();
+            panel5.Controls.Add(a);
         }
 
         private Bitmap rotateImage(Bitmap rotateMe, float angle)
@@ -251,13 +77,34 @@ namespace My_IPOS
 
         private void btnTongTien_Click(object sender, EventArgs e)
         {
-            TongTien tongtien = new TongTien(dgvxTakeAway);
+            TongTien tongtien = new TongTien(dgvxTakeAway,this);
             tongtien.Show();
         }
 
-        void addMon(int stt, string TenMon, int SoLuong, float GiamGia, int DonGia, string GhiChu, string GioGoi, float ThanhTien, string MaMon)
+        public void addMon(int stt, string TenMon, int SoLuong, float GiamGia, int DonGia, string GhiChu, string GioGoi, float ThanhTien, string MaMon)
         { 
             dgvxTakeAway.Rows.Add(stt, TenMon, SoLuong, GiamGia, DonGia, GhiChu, GioGoi, ThanhTien, MaMon);
+        }
+
+        private void gunaGradientTileButton4_Click(object sender, EventArgs e)
+        {
+            ControlTX a = new ControlTX(this);
+            panel5.Controls.Clear();
+            panel5.Controls.Add(a);
+        }
+
+        private void gunaGradientTileButton1_Click(object sender, EventArgs e)
+        {
+            ControlTS a = new ControlTS(this);
+            panel5.Controls.Clear();
+            panel5.Controls.Add(a);
+        }
+
+        private void gunaGradientTileButton2_Click(object sender, EventArgs e)
+        {
+            ControlTP a = new ControlTP(this);
+            panel5.Controls.Clear();
+            panel5.Controls.Add(a);
         }
 
         public void updateCell(int a, int b, int values)
@@ -288,6 +135,11 @@ namespace My_IPOS
                 edit ed = new edit(this, e.RowIndex, e.ColumnIndex);
                 ed.ShowDialog();
             }
+        }
+
+        public void outOrder()
+        {
+            this.Close();
         }
 
     }

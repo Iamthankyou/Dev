@@ -69,7 +69,11 @@ namespace Baitap27
                 if (tbGiamGia.Text == "") gg = 0;
                 else gg = Convert.ToInt16(tbGiamGia.Text);
                 if (tbSoLuong.Text == "") sl = 0;
-                else sl = Convert.ToInt16(tbSoLuong.Text);
+                else
+                    sl = Convert.ToInt16(tbSoLuong.Text);
+                dg = Convert.ToInt32(tbDonGia.Text);
+                tt = sl * dg * (1 - (gg * 1.0) / 100);
+                tbThanhTien.Text = tt.ToString();
             }
             catch { }
         }
@@ -94,9 +98,16 @@ namespace Baitap27
                 tongtien = Convert.ToDouble(tbThanhTien.Text.ToString()) + Convert.ToDouble(dtHD.Rows[0]["TongTien"]);
                 data.DataChange("Update tblHDBan set TongTien = '" + tongtien.ToString() +"'"+ "where MaHDBan = '" + tbMaHoaDon.Text + "'");
             }
-            data.DataChange("insert into tblChiTietHDBan values('" + tbMaHoaDon.Text + "','" + cbbMaHang.SelectedValue.ToString()
-                + "','" + Convert.ToInt16(tbSoLuong.Text) + "','" + Convert.ToInt16(tbGiamGia.Text) + "','" + Convert.ToDouble(tbThanhTien.Text) + "')");
-            //dgvHoaDonBan.DataSource = data.DataReader("select tblHDBan.MaHang, TenHang, tblHDban.Soluong")
+            data.DataChange("insert into tblChiTietHDBan values('" + tbMaHoaDon.Text + "','" + cbbMaHang.SelectedValue.ToString() +
+                "','" + Convert.ToInt16(tbSoLuong.Text) +
+                "','" + Convert.ToInt16(tbGiamGia.Text) + "','" + Convert.ToDouble(tbThanhTien.Text) + "')");
+            dgvHoaDonBan.DataSource = data.DataReader("Select tblChiTietHDBan.MaHang,tblHang.TenHang,tblChiTietHDBan.SoLuong,tblHang.DonGiaBan,GiamGia,ThanhTien" +
+                " from tblChiTietHDBan inner join tblHang on tblChiTietHDBan.MaHang=tblHang.MaHang where MaHDBan='" + tbMaHoaDon.Text + "'");
+        }
+
+        private void btnDong_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

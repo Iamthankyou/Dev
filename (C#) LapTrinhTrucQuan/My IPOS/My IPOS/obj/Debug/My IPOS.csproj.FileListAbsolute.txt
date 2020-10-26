@@ -36,3 +36,6 @@ F:\Dev\(C#) LapTrinhTrucQuan\My IPOS\My IPOS\bin\Debug\CrystalDecisions.ReportAp
 F:\Dev\(C#) LapTrinhTrucQuan\My IPOS\My IPOS\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
 F:\Dev\(C#) LapTrinhTrucQuan\My IPOS\My IPOS\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
 F:\Dev\(C#) LapTrinhTrucQuan\My IPOS\My IPOS\bin\Debug\stdole.dll
+F:\Dev\(C#) LapTrinhTrucQuan\My IPOS\My IPOS\obj\Debug\My_IPOS.ControlTX.resources
+F:\Dev\(C#) LapTrinhTrucQuan\My IPOS\My IPOS\obj\Debug\My_IPOS.ControlTS.resources
+F:\Dev\(C#) LapTrinhTrucQuan\My IPOS\My IPOS\obj\Debug\My_IPOS.ControlTP.resources

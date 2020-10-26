@@ -13,11 +13,9 @@ namespace My_IPOS
 {
     public partial class Home : Form
     {
-        Login homeLogin;
-        public Home(Login a)
+        public Home()
         {
             InitializeComponent();
-            homeLogin = a;
         }
 
         private void Home_FormClosed(object sender, FormClosedEventArgs e)

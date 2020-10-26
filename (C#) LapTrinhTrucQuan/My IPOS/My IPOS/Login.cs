@@ -28,7 +28,7 @@ namespace My_IPOS
                 }
                 else
                 {
-                    NewCa newCa = new NewCa(this);
+                    NewCa newCa = new NewCa();
                     this.Hide();
                     newCa.ShowDialog();
                 }

@@ -13,12 +13,10 @@ namespace My_IPOS
     public partial class NewCa : Form
     {
         private double duDau = 0;
-        Login homeLogin;
 
-        public NewCa(Login a)
+        public NewCa()
         {
             InitializeComponent();
-            homeLogin = a;
         }
 
         public void setDuDau(double a)
@@ -35,7 +33,7 @@ namespace My_IPOS
         {
             setDuDau(Convert.ToInt32(tbDuDau.Text.ToString()));
             this.Hide();
-            Home home = new Home(homeLogin);
+            Home home = new Home();
             home.Show();
         }
 
