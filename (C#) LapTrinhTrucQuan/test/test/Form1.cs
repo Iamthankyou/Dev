@@ -21,7 +21,7 @@ namespace test
 
         private void buttonX1_Click(object sender, EventArgs e)
         {
-            dataGridViewX1.Rows.Add("a", "a", "a", "a");
+            
         }
     }
 }

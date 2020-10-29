@@ -48,8 +48,9 @@
             this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.gunaGradientTileButton3 = new Guna.UI.WinForms.GunaGradientTileButton();
-            this.gunaGradientTileButton2 = new Guna.UI.WinForms.GunaGradientTileButton();
             this.gunaGradientTileButton1 = new Guna.UI.WinForms.GunaGradientTileButton();
+            this.gunaGradientTileButton4 = new Guna.UI.WinForms.GunaGradientTileButton();
+            this.gunaGradientTileButton2 = new Guna.UI.WinForms.GunaGradientTileButton();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel3 = new System.Windows.Forms.Panel();
             this.backBox = new System.Windows.Forms.PictureBox();
@@ -68,7 +69,6 @@
             this.buttonX22 = new DevComponents.DotNetBar.ButtonX();
             this.buttonX21 = new DevComponents.DotNetBar.ButtonX();
             this.btn1 = new DevComponents.DotNetBar.ButtonX();
-            this.gunaGradientTileButton4 = new Guna.UI.WinForms.GunaGradientTileButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvxTakeAway)).BeginInit();
             this.panel2.SuspendLayout();
@@ -318,35 +318,6 @@
             this.gunaGradientTileButton3.TabIndex = 6;
             this.gunaGradientTileButton3.Text = "Yêu Cầu Khác";
             // 
-            // gunaGradientTileButton2
-            // 
-            this.gunaGradientTileButton2.AnimationHoverSpeed = 0.07F;
-            this.gunaGradientTileButton2.AnimationSpeed = 0.03F;
-            this.gunaGradientTileButton2.BackColor = System.Drawing.Color.Transparent;
-            this.gunaGradientTileButton2.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.gunaGradientTileButton2.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.gunaGradientTileButton2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.gunaGradientTileButton2.BorderSize = 2;
-            this.gunaGradientTileButton2.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaGradientTileButton2.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaGradientTileButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.gunaGradientTileButton2.ForeColor = System.Drawing.Color.Black;
-            this.gunaGradientTileButton2.Image = null;
-            this.gunaGradientTileButton2.ImageSize = new System.Drawing.Size(52, 52);
-            this.gunaGradientTileButton2.Location = new System.Drawing.Point(3, 167);
-            this.gunaGradientTileButton2.Name = "gunaGradientTileButton2";
-            this.gunaGradientTileButton2.OnHoverBaseColor1 = System.Drawing.Color.White;
-            this.gunaGradientTileButton2.OnHoverBaseColor2 = System.Drawing.Color.White;
-            this.gunaGradientTileButton2.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.gunaGradientTileButton2.OnHoverForeColor = System.Drawing.Color.Black;
-            this.gunaGradientTileButton2.OnHoverImage = null;
-            this.gunaGradientTileButton2.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaGradientTileButton2.Radius = 10;
-            this.gunaGradientTileButton2.Size = new System.Drawing.Size(156, 76);
-            this.gunaGradientTileButton2.TabIndex = 5;
-            this.gunaGradientTileButton2.Text = "Topping";
-            this.gunaGradientTileButton2.Click += new System.EventHandler(this.gunaGradientTileButton2_Click);
-            // 
             // gunaGradientTileButton1
             // 
             this.gunaGradientTileButton1.AnimationHoverSpeed = 0.07F;
@@ -376,6 +347,64 @@
             this.gunaGradientTileButton1.TabIndex = 4;
             this.gunaGradientTileButton1.Text = "Milk Tea";
             this.gunaGradientTileButton1.Click += new System.EventHandler(this.gunaGradientTileButton1_Click);
+            // 
+            // gunaGradientTileButton4
+            // 
+            this.gunaGradientTileButton4.AnimationHoverSpeed = 0.07F;
+            this.gunaGradientTileButton4.AnimationSpeed = 0.03F;
+            this.gunaGradientTileButton4.BackColor = System.Drawing.Color.Transparent;
+            this.gunaGradientTileButton4.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.gunaGradientTileButton4.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.gunaGradientTileButton4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.gunaGradientTileButton4.BorderSize = 2;
+            this.gunaGradientTileButton4.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gunaGradientTileButton4.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaGradientTileButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.gunaGradientTileButton4.ForeColor = System.Drawing.Color.Black;
+            this.gunaGradientTileButton4.Image = null;
+            this.gunaGradientTileButton4.ImageSize = new System.Drawing.Size(52, 52);
+            this.gunaGradientTileButton4.Location = new System.Drawing.Point(3, 85);
+            this.gunaGradientTileButton4.Name = "gunaGradientTileButton4";
+            this.gunaGradientTileButton4.OnHoverBaseColor1 = System.Drawing.Color.White;
+            this.gunaGradientTileButton4.OnHoverBaseColor2 = System.Drawing.Color.White;
+            this.gunaGradientTileButton4.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.gunaGradientTileButton4.OnHoverForeColor = System.Drawing.Color.Black;
+            this.gunaGradientTileButton4.OnHoverImage = null;
+            this.gunaGradientTileButton4.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaGradientTileButton4.Radius = 10;
+            this.gunaGradientTileButton4.Size = new System.Drawing.Size(156, 76);
+            this.gunaGradientTileButton4.TabIndex = 7;
+            this.gunaGradientTileButton4.Text = "Fresh Fruit Tea";
+            this.gunaGradientTileButton4.Click += new System.EventHandler(this.gunaGradientTileButton4_Click);
+            // 
+            // gunaGradientTileButton2
+            // 
+            this.gunaGradientTileButton2.AnimationHoverSpeed = 0.07F;
+            this.gunaGradientTileButton2.AnimationSpeed = 0.03F;
+            this.gunaGradientTileButton2.BackColor = System.Drawing.Color.Transparent;
+            this.gunaGradientTileButton2.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.gunaGradientTileButton2.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.gunaGradientTileButton2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.gunaGradientTileButton2.BorderSize = 2;
+            this.gunaGradientTileButton2.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gunaGradientTileButton2.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaGradientTileButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.gunaGradientTileButton2.ForeColor = System.Drawing.Color.Black;
+            this.gunaGradientTileButton2.Image = null;
+            this.gunaGradientTileButton2.ImageSize = new System.Drawing.Size(52, 52);
+            this.gunaGradientTileButton2.Location = new System.Drawing.Point(3, 167);
+            this.gunaGradientTileButton2.Name = "gunaGradientTileButton2";
+            this.gunaGradientTileButton2.OnHoverBaseColor1 = System.Drawing.Color.White;
+            this.gunaGradientTileButton2.OnHoverBaseColor2 = System.Drawing.Color.White;
+            this.gunaGradientTileButton2.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.gunaGradientTileButton2.OnHoverForeColor = System.Drawing.Color.Black;
+            this.gunaGradientTileButton2.OnHoverImage = null;
+            this.gunaGradientTileButton2.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaGradientTileButton2.Radius = 10;
+            this.gunaGradientTileButton2.Size = new System.Drawing.Size(156, 76);
+            this.gunaGradientTileButton2.TabIndex = 5;
+            this.gunaGradientTileButton2.Text = "Topping";
+            this.gunaGradientTileButton2.Click += new System.EventHandler(this.gunaGradientTileButton2_Click);
             // 
             // timer1
             // 
@@ -568,35 +597,6 @@
             this.btn1.Size = new System.Drawing.Size(156, 60);
             this.btn1.TabIndex = 0;
             this.btn1.Text = "ToDo";
-            // 
-            // gunaGradientTileButton4
-            // 
-            this.gunaGradientTileButton4.AnimationHoverSpeed = 0.07F;
-            this.gunaGradientTileButton4.AnimationSpeed = 0.03F;
-            this.gunaGradientTileButton4.BackColor = System.Drawing.Color.Transparent;
-            this.gunaGradientTileButton4.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.gunaGradientTileButton4.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.gunaGradientTileButton4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.gunaGradientTileButton4.BorderSize = 2;
-            this.gunaGradientTileButton4.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaGradientTileButton4.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaGradientTileButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.gunaGradientTileButton4.ForeColor = System.Drawing.Color.Black;
-            this.gunaGradientTileButton4.Image = null;
-            this.gunaGradientTileButton4.ImageSize = new System.Drawing.Size(52, 52);
-            this.gunaGradientTileButton4.Location = new System.Drawing.Point(3, 85);
-            this.gunaGradientTileButton4.Name = "gunaGradientTileButton4";
-            this.gunaGradientTileButton4.OnHoverBaseColor1 = System.Drawing.Color.White;
-            this.gunaGradientTileButton4.OnHoverBaseColor2 = System.Drawing.Color.White;
-            this.gunaGradientTileButton4.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.gunaGradientTileButton4.OnHoverForeColor = System.Drawing.Color.Black;
-            this.gunaGradientTileButton4.OnHoverImage = null;
-            this.gunaGradientTileButton4.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaGradientTileButton4.Radius = 10;
-            this.gunaGradientTileButton4.Size = new System.Drawing.Size(156, 76);
-            this.gunaGradientTileButton4.TabIndex = 7;
-            this.gunaGradientTileButton4.Text = "Fresh Fruit Tea";
-            this.gunaGradientTileButton4.Click += new System.EventHandler(this.gunaGradientTileButton4_Click);
             // 
             // OrderTakeAway
             // 
