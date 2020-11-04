@@ -222,7 +222,7 @@
             this.btnTX_M.Name = "btnTX_M";
             this.btnTX_M.Size = new System.Drawing.Size(162, 76);
             this.btnTX_M.TabIndex = 4;
-            this.btnTX_M.Text = " Trà Xanh (M)";
+            this.btnTX_M.Text = "Trà Xanh (M)";
             this.btnTX_M.Click += new System.EventHandler(this.btnTX_M_Click);
             // 
             // btnTX_L

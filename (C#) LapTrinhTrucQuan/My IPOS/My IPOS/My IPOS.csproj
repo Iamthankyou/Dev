@@ -62,6 +62,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\MaHoaDon.cs" />
     <Compile Include="UserControl\ControlTP.cs">
       <SubType>UserControl</SubType>
     </Compile>

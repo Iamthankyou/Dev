@@ -99,7 +99,7 @@ namespace My_IPOS
 
         private void btnInHoaDon_Click(object sender, EventArgs e)
         {
-            Random random = new Random();
+            MaHoaDon taoID = new MaHoaDon();
             string ID_HoaDon, TongTien, ID_KhachHang, ID_Voucher;
             int soluong = 1;
             DataTable dt ;
@@ -109,13 +109,16 @@ namespace My_IPOS
 
             if (tbTheGiamGia.Text == "") ID_Voucher = "None";
             else ID_Voucher = tbTheGiamGia.Text;
-            TongTien = tbThanhToan.Text;
-            ID_HoaDon = "" + random.Next(1, 100);
-            ID_KhachHang = "TakeAway";
+            TongTien = tbThanhToan.Text;    
+            ID_HoaDon = "" + taoID.TaoID_HoaDon();
+            ID_KhachHang = "TA01";
 
             data.dataChange("insert into HoaDon values('"+ID_HoaDon+"','"+ date +"','" + TongTien+"','"+ID_KhachHang+"','"+ID_Voucher+"')");
-            dt = data.dataReaderTable("select * from TraSua where TenTraSua = N'"+dgvTongTien.Rows[0].Cells[1].Value.ToString()+"'");
-            data.dataChange("insert into ChiTietHoaDon values('50','"+soluong+"','" + ID_HoaDon + "','" + dt.Rows[0]["ID_TraSua"].ToString() + "')");
+            for(int i = 0; i < dgvTongTien.RowCount; i++) 
+            { 
+                dt = data.dataReaderTable("select * from TraSua where TenTraSua = N'"+dgvTongTien.Rows[i].Cells[1].Value.ToString()+"'");
+                data.dataChange("insert into ChiTietHoaDon values('"+soluong+"','" + ID_HoaDon + "','" + dt.Rows[0]["ID_TraSua"].ToString() + "')");
+            }
             this.Close();
             od.outOrder();
         }
