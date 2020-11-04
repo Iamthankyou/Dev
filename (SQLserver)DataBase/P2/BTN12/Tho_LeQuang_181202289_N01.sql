@@ -111,10 +111,15 @@ end
 	chú là “Chuyển trường từ ngày 5/9/2016” cho học sinh có 
 	mã nhập vào trong bảng danh sách học sinh.
 */
+create proc chuyentruong as
+begin
+	update DSHS set Ghichu = N'Chuyển trường từ ngày 5/9/2016'
+end 
 
+go
+exec chuyentruong
 
-
-
+--select *from DSHS
 /*
 	7.Tạo View báo cáo Kết thúc năm học gồm các thông tin: Mã học sinh,
 	Họ và tên, Ngày sinh, Giới tính, Điểm Toán, Lý, Hóa, Văn, Điểm Trung bình, Xếp loại
@@ -142,12 +147,38 @@ as
 	from LOP as L inner join DSHS as DS on L.LOP = DS.LOP
 					inner join DIEM as D on D.MAHS = DS.MAHS
 
-select * from report
+--select * from report
 
 /*
 	8.Tạo trường điểm thấp nhất trong bảng Điểm, tạo thủ tục cập nhật
 	điểm thấp nhất cho trường này của tất cả các bản ghi đã có (dùng con trỏ)
 */
+declare a cursor for select MAHS from DSHS
+open a
+declare @mahs nvarchar(5)
+FETCH NEXT FROM a INTO @mahs
+WHILE @@FETCH_STATUS = 0
+	BEGIN
+		DECLARE @toan float, @hoa float, @van float, @ly float, @dtn float
+		SET @dtn=@toan
+		SELECT @toan=TOAN, @ly=LY, @hoa=HOA, @van=VAN FROM DIEM WHERE @mahs=MAHS
+
+		IF @dtn<@hoa
+			SET @dtn=@hoa
+		IF @dtn<@ly	
+			SET @dtn=@ly
+		IF @dtn<@van
+			SET @dtn=@van
+
+		UPDATE DIEM SET DiemThapNhat =@dtn WHERE @mahs = MAHS
+
+		FETCH NEXT FROM a INTO @mahs
+	END
+
+CLOSE a
+DEALLOCATE a
+
+--select *from Diem
 
 
 
@@ -198,7 +229,7 @@ as
 	where ROUND(((D.TOAN+D.VAN)*2 + D.LY + D.HOA)/6,2) >= 8.5 and
 		dbo.dtn(D.MAHS) >=8
 
-select * from SX1
+--select * from SX1
 
 /*
 	11.Tạo View danh sách HOC SINH DAT THU KHOA KY THI bao gồm 
@@ -215,7 +246,8 @@ as
 	)
 
 Go
-alter view SX
+
+create view SX
 as 
 	select 
 	L.LOP, DS.MAHS, DS.HO +' '+ DS.TEN as HoTen,
@@ -225,7 +257,7 @@ as
 						inner join DIEM as D on D.MAHS = DS.MAHS, dtb()
 	where dtb.DTB = ROUND(((D.TOAN+D.VAN)*2 + D.LY + D.HOA)/6,2).
 
-select * from SX
+--select * from SX
 
 
 
@@ -234,5 +266,92 @@ select * from SX
 
 ---------------------------------------------------bài 2--------------------------------------------
 /*
+	1.	Tạo View gồm các field sau: MaDK, LoaiKH, TenKH,NgaySinh,
+	Phai, DiaChi, DienThoai, SoPhong, LoaiPhong, NgayVao, SoNgayO.
+	Trong đó Số Ngày ở = Ngày Ra – Ngày Vao
 
 */
+USE BT2_BTN12
+Go
+Create view tracuuKH
+as
+select CTK.MaDK, CTK.LoaiKH, CTK.TenKH, CTK.NgaySinh,
+	CTK.Phai, CTK.DiaChi, CTK.DienThoai, DK.SoPhong,
+	DK.LoaiPhong, DK.NgayVao, DATEDIFF(DD,DK.NgayVao, DK.NgayRa) as NgayO 
+from tChiTietKH CTK inner join tDangKy DK on CTK.MaDK = DK.MaDK 
+
+
+--select *from tracuuKH
+
+
+
+/*
+	2.	Viết hàm có mã nhập vào là ngày vào trong năm 1999 
+	và thông tin đưa ra như câu 1
+*/
+Go
+create function nhucau1(@ngay datetime)
+returns table 
+as
+	return(
+		select CTK.MaDK, CTK.LoaiKH, CTK.TenKH, CTK.NgaySinh,
+	CTK.Phai, CTK.DiaChi, CTK.DienThoai, DK.SoPhong,
+	DK.LoaiPhong, DK.NgayVao, DATEDIFF(DD,DK.NgayVao, DK.NgayRa) as NgayO 
+from tChiTietKH CTK inner join tDangKy DK on CTK.MaDK = DK.MaDK where DK.NgayVao = @ngay
+		)
+
+Go
+--select *from dbo.nhucau1('07/01/1999')
+
+
+
+/*
+	3.Viết truy vấn tạo bảng doanh thu (tDoanhThu) gồm các trường 
+*/
+Go
+create TABLE tDoanhThu(
+	[MaDK] [nvarchar](3) PRIMARY KEY NOT NULL,
+	[LoaiPhong] [nvarchar](2) NULL,
+	[SoNgayO] [int] NULL,
+	[ThucThu] [money] NULL
+)
+
+
+/*
+	4.	Tạo Trigger tính tiền và điền tự động vào bảng tDoanhThu như sau: 
+	Các trường lấy thông tin từ các bảng và các thông tin sau:
+Trong đó:
+(a)	Số Ngày Ở= Ngày Ra – Ngày Vào
+(b)	ThucThu: Tính theo yêu cầu sau:
+Nếu Số Ngày ở <10 Thành tiền = Đơn Giá * Số ngày ở
+Nếu 10 <=Số Ngày ở <30 Thành Tiền = Đơn Giá* Số Ngày ở * 0.95 (Giảm5%) 
+Nếu Số ngày ở >= 30 Thành Tiền = Đơn Giá* Số Ngày ở * 0.9 (Giảm10%)
+*/
+Go
+alter trigger dienDoanThu on tDangKy for insert, update 
+as
+begin
+	declare @madk nvarchar(3), @ngayo float, @thanhtien float
+	select @ngayo=DATEDIFF(DD,NgayVao,NgayRa), @madk=MaDK from inserted
+   
+	if @ngayo<10 
+		select @thanhtien=DonGia*@ngayo from 
+		tLoaiPhong inner join inserted on tLoaiPhong.LoaiPhong =inserted.LoaiPhong
+	else if 10 <= @ngayo and @ngayo < 30  
+		select @thanhtien=DonGia*@ngayo*0.95 from 
+		tLoaiPhong inner join inserted on tLoaiPhong.LoaiPhong=inserted.LoaiPhong
+	else 
+		select @thanhtien=DonGia*@ngayo*0.9 from 
+		tLoaiPhong inner join inserted ON tLoaiPhong.LoaiPhong=inserted.LoaiPhong
+	
+	UPDATE tDoanhThu SET SoNgayO=@ngayo, ThucThu=@thanhtien where MaDK=@madk
+end
+
+
+--select*from tDoanhThu
+--select*from tDangKy
+--update tDangKy set LoaiPhong = 'B' where MaDK = '002' select*from tDangKy  select*from tDoanhThu
+
+
+
+--LeQuangThor_Cntt1_K59
