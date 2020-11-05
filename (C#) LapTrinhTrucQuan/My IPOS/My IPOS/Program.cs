@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.Reporting.WinForms;
+using My_IPOS.bin.Debug.report;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +18,7 @@ namespace My_IPOS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
+            Application.Run(new OrderTakeAway());
         }
     }
 }

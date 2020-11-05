@@ -33,5 +33,16 @@ namespace My_IPOS.Properties {
                 return ((string)(this["DataBaseTestCSharpConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-OH9IU5S\\SQLEXPRESS;Initial Catalog=My_IPOS;Integrated Securit" +
+            "y=True")]
+        public string My_IPOSConnectionString {
+            get {
+                return ((string)(this["My_IPOSConnectionString"]));
+            }
+        }
     }
 }

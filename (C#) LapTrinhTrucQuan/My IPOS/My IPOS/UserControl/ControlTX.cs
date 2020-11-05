@@ -55,7 +55,7 @@ namespace My_IPOS
 
         private void btnTX_L_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("thọ ơi");
+            
             int soluong = 1;
             float giamgia = 0;
             int dongia = 32000;

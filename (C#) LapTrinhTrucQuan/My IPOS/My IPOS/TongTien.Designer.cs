@@ -28,10 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TongTien));
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.dgvTongTien = new Guna.UI.WinForms.GunaDataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,7 +51,13 @@
             this.btnInHoaDon = new Guna.UI.WinForms.GunaButton();
             this.btnDong = new Guna.UI.WinForms.GunaButton();
             this.btnVoucher = new Guna.UI.WinForms.GunaButton();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.my_IPos = new My_IPOS.bin.Debug.report.My_IPos();
+            this.DataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataTable1TableAdapter = new My_IPOS.bin.Debug.report.My_IPosTableAdapters.DataTable1TableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTongTien)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.my_IPos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataTable1BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvTongTien
@@ -379,12 +387,49 @@
             this.btnVoucher.Text = "Voucher";
             this.btnVoucher.Click += new System.EventHandler(this.btnVoucher_Click);
             // 
+            // reportViewer1
+            // 
+            this.reportViewer1.DocumentMapWidth = 8;
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.DataTable1BindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "My_IPOS.bin.Debug.report.Report.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(4, 12);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.ShowBackButton = false;
+            this.reportViewer1.ShowExportButton = false;
+            this.reportViewer1.ShowFindControls = false;
+            this.reportViewer1.ShowPageNavigationControls = false;
+            this.reportViewer1.ShowPrintButton = false;
+            this.reportViewer1.ShowRefreshButton = false;
+            this.reportViewer1.ShowStopButton = false;
+            this.reportViewer1.ShowZoomControl = false;
+            this.reportViewer1.Size = new System.Drawing.Size(10, 306);
+            this.reportViewer1.TabIndex = 15;
+            this.reportViewer1.Visible = false;
+            // 
+            // my_IPos
+            // 
+            this.my_IPos.DataSetName = "My_IPos";
+            this.my_IPos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // DataTable1BindingSource
+            // 
+            this.DataTable1BindingSource.DataMember = "DataTable1";
+            this.DataTable1BindingSource.DataSource = this.my_IPos;
+            // 
+            // dataTable1TableAdapter
+            // 
+            this.dataTable1TableAdapter.ClearBeforeFill = true;
+            // 
             // TongTien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(463, 574);
+            this.ClientSize = new System.Drawing.Size(463, 582);
+            this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.btnVoucher);
             this.Controls.Add(this.btnDong);
             this.Controls.Add(this.btnInHoaDon);
@@ -407,6 +452,8 @@
             this.Text = "Tổng Tiền";
             this.Load += new System.EventHandler(this.TongTien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTongTien)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.my_IPos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataTable1BindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -431,5 +478,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private bin.Debug.report.My_IPos my_IPos;
+        private System.Windows.Forms.BindingSource DataTable1BindingSource;
+        private bin.Debug.report.My_IPosTableAdapters.DataTable1TableAdapter dataTable1TableAdapter;
     }
 }
