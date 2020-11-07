@@ -34,6 +34,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TongTien));
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.DataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.my_IPos = new My_IPOS.bin.Debug.report.My_IPos();
             this.dgvTongTien = new Guna.UI.WinForms.GunaDataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,13 +54,22 @@
             this.btnDong = new Guna.UI.WinForms.GunaButton();
             this.btnVoucher = new Guna.UI.WinForms.GunaButton();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.my_IPos = new My_IPOS.bin.Debug.report.My_IPos();
-            this.DataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataTable1TableAdapter = new My_IPOS.bin.Debug.report.My_IPosTableAdapters.DataTable1TableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTongTien)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.my_IPos)).BeginInit();
+            this.btThanhToan = new Guna.UI.WinForms.GunaButton();
             ((System.ComponentModel.ISupportInitialize)(this.DataTable1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.my_IPos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTongTien)).BeginInit();
             this.SuspendLayout();
+            // 
+            // DataTable1BindingSource
+            // 
+            this.DataTable1BindingSource.DataMember = "DataTable1";
+            this.DataTable1BindingSource.DataSource = this.my_IPos;
+            // 
+            // my_IPos
+            // 
+            this.my_IPos.DataSetName = "My_IPos";
+            this.my_IPos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dgvTongTien
             // 
@@ -327,16 +338,17 @@
             this.btnInHoaDon.ForeColor = System.Drawing.Color.White;
             this.btnInHoaDon.Image = ((System.Drawing.Image)(resources.GetObject("btnInHoaDon.Image")));
             this.btnInHoaDon.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnInHoaDon.Location = new System.Drawing.Point(22, 520);
+            this.btnInHoaDon.Location = new System.Drawing.Point(22, 542);
             this.btnInHoaDon.Name = "btnInHoaDon";
             this.btnInHoaDon.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnInHoaDon.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btnInHoaDon.OnHoverForeColor = System.Drawing.Color.White;
             this.btnInHoaDon.OnHoverImage = null;
             this.btnInHoaDon.OnPressedColor = System.Drawing.Color.Black;
-            this.btnInHoaDon.Size = new System.Drawing.Size(118, 42);
+            this.btnInHoaDon.Size = new System.Drawing.Size(44, 20);
             this.btnInHoaDon.TabIndex = 11;
             this.btnInHoaDon.Text = "In hóa đơn";
+            this.btnInHoaDon.Visible = false;
             this.btnInHoaDon.Click += new System.EventHandler(this.btnInHoaDon_Click);
             // 
             // btnDong
@@ -409,19 +421,33 @@
             this.reportViewer1.TabIndex = 15;
             this.reportViewer1.Visible = false;
             // 
-            // my_IPos
-            // 
-            this.my_IPos.DataSetName = "My_IPos";
-            this.my_IPos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // DataTable1BindingSource
-            // 
-            this.DataTable1BindingSource.DataMember = "DataTable1";
-            this.DataTable1BindingSource.DataSource = this.my_IPos;
-            // 
             // dataTable1TableAdapter
             // 
             this.dataTable1TableAdapter.ClearBeforeFill = true;
+            // 
+            // btThanhToan
+            // 
+            this.btThanhToan.AnimationHoverSpeed = 0.07F;
+            this.btThanhToan.AnimationSpeed = 0.03F;
+            this.btThanhToan.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.btThanhToan.BorderColor = System.Drawing.Color.Black;
+            this.btThanhToan.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btThanhToan.FocusedColor = System.Drawing.Color.Empty;
+            this.btThanhToan.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btThanhToan.ForeColor = System.Drawing.Color.White;
+            this.btThanhToan.Image = ((System.Drawing.Image)(resources.GetObject("btThanhToan.Image")));
+            this.btThanhToan.ImageSize = new System.Drawing.Size(20, 20);
+            this.btThanhToan.Location = new System.Drawing.Point(22, 520);
+            this.btThanhToan.Name = "btThanhToan";
+            this.btThanhToan.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btThanhToan.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btThanhToan.OnHoverForeColor = System.Drawing.Color.White;
+            this.btThanhToan.OnHoverImage = null;
+            this.btThanhToan.OnPressedColor = System.Drawing.Color.Black;
+            this.btThanhToan.Size = new System.Drawing.Size(118, 42);
+            this.btThanhToan.TabIndex = 16;
+            this.btThanhToan.Text = "In Hóa Đơn";
+            this.btThanhToan.Click += new System.EventHandler(this.btThanhToan_Click);
             // 
             // TongTien
             // 
@@ -429,6 +455,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(463, 582);
+            this.Controls.Add(this.btThanhToan);
             this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.btnVoucher);
             this.Controls.Add(this.btnDong);
@@ -451,9 +478,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tổng Tiền";
             this.Load += new System.EventHandler(this.TongTien_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTongTien)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.my_IPos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataTable1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.my_IPos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTongTien)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -482,5 +509,6 @@
         private bin.Debug.report.My_IPos my_IPos;
         private System.Windows.Forms.BindingSource DataTable1BindingSource;
         private bin.Debug.report.My_IPosTableAdapters.DataTable1TableAdapter dataTable1TableAdapter;
+        private Guna.UI.WinForms.GunaButton btThanhToan;
     }
 }

@@ -53,25 +53,7 @@ namespace My_IPOS
             tbKhachDua.Text = khachdua.ToString();
             tbTienThua.Text = tienthua.ToString();
             this.reportViewer1.RefreshReport();
-            ///////////////////////////////////////////////////////////////
-            /*if (tbTheGiamGia.Text == "") ID_Voucher = "None";
-            else ID_Voucher = tbTheGiamGia.Text;
-            TT = tbThanhToan.Text;
-            ID_HoaDon = "" + taoID.TaoID_HoaDon();
-            ID_KhachHang = "TA01";
-
-            data.dataChange("insert into HoaDon values('" + ID_HoaDon + "','" + date + "','" + TT + "','" + ID_KhachHang + "','" + ID_Voucher + "')");
-            for (int i = 0; i < dgvTongTien.RowCount; i++)
-            {
-                dt1 = data.dataReaderTable("select * from TraSua where TenTraSua = N'" + dgvTongTien.Rows[i].Cells[1].Value.ToString() + "'");
-                data.dataChange("insert into ChiTietHoaDon values('" + dgvTongTien.Rows[i].Cells[2].Value.ToString() + "','" + ID_HoaDon + "','" + dt1.Rows[0]["ID_TraSua"].ToString() + "')");
-            }
-            try
-            {
-                this.dataTable1TableAdapter.FillBy(this.my_IPos.DataTable1, ID_HoaDon);
-            }
-            catch { }
-            this.reportViewer1.RefreshReport();*/
+            /*this.reportViewer1.RefreshReport();*/
         }
 
         private void btTAorDI_Click(object sender, EventArgs e)
@@ -93,7 +75,7 @@ namespace My_IPOS
             
             if (tbTheGiamGia.Text == "")
             {
-                luu();
+                //luu();
                 MessageBox.Show("voucher này không giảm giá!");
             }
             else if (tbTheGiamGia.Text == "GF50")
@@ -103,7 +85,7 @@ namespace My_IPOS
                 {
                     MessageBox.Show("Đã áp dụng voucher");
                     tbTienThua.Text = "" + (Convert.ToInt32(tbKhachDua.Text.ToString()) - Convert.ToInt32(tbThanhToan.Text.ToString()));
-                    luu();
+                    //luu();
                 }
                 catch { }
             }
@@ -116,10 +98,17 @@ namespace My_IPOS
             try
             {
                 tbTienThua.Text = "" + (Convert.ToInt32(tbKhachDua.Text.ToString()) - Convert.ToInt32(tbThanhToan.Text.ToString()));
-                if (Convert.ToInt32(tbKhachDua.Text.ToString()) - Convert.ToInt32(tbThanhToan.Text.ToString()) >= 0) btnInHoaDon.Enabled = true;
-                else btnInHoaDon.Enabled = false;
+                /*if (Convert.ToInt32(tbKhachDua.Text.ToString()) - Convert.ToInt32(tbThanhToan.Text.ToString()) >= 0) btnInHoaDon.Enabled = true;
+                else btnInHoaDon.Enabled = false;*/
             }
             catch { }
+        }
+
+        private void btThanhToan_Click(object sender, EventArgs e)
+        {
+            luu();
+            btnInHoaDon.Enabled = true;
+            if (MessageBox.Show("Đã lưu hóa đơn!") == DialogResult.OK) btnInHoaDon_Click(sender,e);
         }
 
         private void tbKhachDua_KeyPress(object sender, KeyPressEventArgs e)

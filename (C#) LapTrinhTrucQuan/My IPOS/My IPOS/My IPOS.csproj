@@ -80,11 +80,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaoCao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaoCao.Designer.cs">
+      <DependentUpon>BaoCao.cs</DependentUpon>
+    </Compile>
     <Compile Include="bin\Debug\report\InHoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="bin\Debug\report\InHoaDon.Designer.cs">
       <DependentUpon>InHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="bin\Debug\report\My_IPos.cs">
+      <DependentUpon>My_IPos.xsd</DependentUpon>
     </Compile>
     <Compile Include="bin\Debug\report\My_IPos.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -150,10 +159,14 @@
     <Compile Include="UserControl\ControlTX.Designer.cs">
       <DependentUpon>ControlTX.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="BaoCao.resx">
+      <DependentUpon>BaoCao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="bin\Debug\report\InHoaDon.resx">
       <DependentUpon>InHoaDon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="bin\Debug\report\Report.rdlc" />
+    <EmbeddedResource Include="bin\Debug\report\reportDoanhThu.rdlc" />
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
