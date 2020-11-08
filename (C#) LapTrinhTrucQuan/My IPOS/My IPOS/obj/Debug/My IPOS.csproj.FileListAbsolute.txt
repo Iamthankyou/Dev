@@ -100,3 +100,5 @@ F:\Dev\(C#) LapTrinhTrucQuan\My IPOS\My IPOS\obj\Debug\RdlCompile.cache
 F:\Dev\(C#) LapTrinhTrucQuan\My IPOS\My IPOS\obj\Debug\RdlCompile.compiled
 F:\Dev\(C#) LapTrinhTrucQuan\My IPOS\My IPOS\obj\Debug\My_IPOS.bin.Debug.report.InHoaDon.resources
 F:\Dev\(C#) LapTrinhTrucQuan\My IPOS\My IPOS\obj\Debug\My_IPOS.BaoCao.resources
+F:\Dev\(C#) LapTrinhTrucQuan\My IPOS\My IPOS\obj\Debug\My_IPOS.SuaMenu.resources
+F:\Dev\(C#) LapTrinhTrucQuan\My IPOS\My IPOS\obj\Debug\My_IPOS.ThemMon.resources

@@ -60,7 +60,7 @@
             this.btnTS_M.Name = "btnTS_M";
             this.btnTS_M.Size = new System.Drawing.Size(162, 76);
             this.btnTS_M.TabIndex = 4;
-            this.btnTS_M.Text = " Trà Sữa (M)";
+            this.btnTS_M.Text = "Trà Sữa (M)";
             this.btnTS_M.Click += new System.EventHandler(this.btnTS_M_Click);
             // 
             // ControlTS

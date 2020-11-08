@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrderTakeAway));
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvxTakeAway = new DevComponents.DotNetBar.Controls.DataGridViewX();
@@ -125,6 +126,9 @@
             this.dgvxTakeAway.ReadOnly = true;
             this.dgvxTakeAway.RowHeadersVisible = false;
             this.dgvxTakeAway.RowHeadersWidth = 50;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvxTakeAway.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvxTakeAway.RowTemplate.Height = 40;
             this.dgvxTakeAway.RowTemplate.ReadOnly = true;
             this.dgvxTakeAway.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;

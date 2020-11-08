@@ -33,5 +33,17 @@ namespace My_IPOS
         {
             Application.Restart();
         }
+
+        private void btnSuaMenu_Click(object sender, EventArgs e)
+        {
+            SuaMenu suaMenu = new SuaMenu();
+            suaMenu.ShowDialog();
+        }
+
+        private void btnKhoaSo_Click(object sender, EventArgs e)
+        {
+            BaoCao bc = new BaoCao();
+            bc.ShowDialog();
+        }
     }
 }

@@ -35,6 +35,7 @@
             this.btnTakeAway = new DevComponents.DotNetBar.ButtonX();
             this.btnDangXuat = new DevComponents.DotNetBar.ButtonX();
             this.btnKhoaSo = new DevComponents.DotNetBar.ButtonX();
+            this.btnSuaMenu = new DevComponents.DotNetBar.ButtonX();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -90,12 +91,26 @@
             this.btnKhoaSo.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
             resources.ApplyResources(this.btnKhoaSo, "btnKhoaSo");
             this.btnKhoaSo.Name = "btnKhoaSo";
+            this.btnKhoaSo.Click += new System.EventHandler(this.btnKhoaSo_Click);
+            // 
+            // btnSuaMenu
+            // 
+            this.btnSuaMenu.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnSuaMenu.BackColor = System.Drawing.Color.Transparent;
+            this.btnSuaMenu.ColorTable = DevComponents.DotNetBar.eButtonColor.Magenta;
+            this.btnSuaMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnSuaMenu.Image")));
+            this.btnSuaMenu.ImageFixedSize = new System.Drawing.Size(32, 32);
+            this.btnSuaMenu.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            resources.ApplyResources(this.btnSuaMenu, "btnSuaMenu");
+            this.btnSuaMenu.Name = "btnSuaMenu";
+            this.btnSuaMenu.Click += new System.EventHandler(this.btnSuaMenu_Click);
             // 
             // Home
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
+            this.Controls.Add(this.btnSuaMenu);
             this.Controls.Add(this.btnKhoaSo);
             this.Controls.Add(this.btnDangXuat);
             this.Controls.Add(this.panel1);
@@ -118,5 +133,6 @@
         private DevComponents.DotNetBar.ButtonX btnTakeAway;
         private DevComponents.DotNetBar.ButtonX btnDangXuat;
         private DevComponents.DotNetBar.ButtonX btnKhoaSo;
+        private DevComponents.DotNetBar.ButtonX btnSuaMenu;
     }
 }

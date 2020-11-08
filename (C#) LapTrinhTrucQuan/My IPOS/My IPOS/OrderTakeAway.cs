@@ -109,8 +109,12 @@ namespace My_IPOS
 
         public void updateCell(int a, int b, int values)
         {
-            dgvxTakeAway.Rows[a].Cells[b].Value = values;
-            dgvxTakeAway.Rows[a].Cells[7].Value = Convert.ToInt32(dgvxTakeAway.Rows[a].Cells[7].Value.ToString()) * values;
+            try
+            {
+                dgvxTakeAway.Rows[a].Cells[b].Value = values;
+                dgvxTakeAway.Rows[a].Cells[7].Value = Convert.ToInt32(dgvxTakeAway.Rows[a].Cells[7].Value.ToString()) * values;
+            }
+            catch { }
         }
 
         private void bntBoMon_Click(object sender, EventArgs e)
