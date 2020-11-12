@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TongTien));
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.dgvTongTien = new Guna.UI.WinForms.GunaDataGridView();
@@ -53,32 +53,32 @@
             this.btnVoucher = new Guna.UI.WinForms.GunaButton();
             this.btThanhToan = new Guna.UI.WinForms.GunaButton();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.my_IPos = new My_IPOS.bin.Debug.report.My_IPos();
             this.dataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.my_IPos = new My_IPOS.bin.Debug.report.My_IPos();
             this.dataTable1TableAdapter = new My_IPOS.bin.Debug.report.My_IPosTableAdapters.DataTable1TableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTongTien)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.my_IPos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.my_IPos)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvTongTien
             // 
             this.dgvTongTien.AllowUserToAddRows = false;
             this.dgvTongTien.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
-            this.dgvTongTien.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgvTongTien.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvTongTien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvTongTien.BackgroundColor = System.Drawing.Color.White;
             this.dgvTongTien.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvTongTien.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvTongTien.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTongTien.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvTongTien.ColumnHeadersHeight = 28;
             this.dgvTongTien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvTongTien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -86,14 +86,14 @@
             this.Column2,
             this.Column3,
             this.Column4});
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvTongTien.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvTongTien.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvTongTien.EnableHeadersVisualStyles = false;
             this.dgvTongTien.GridColor = System.Drawing.Color.White;
             this.dgvTongTien.Location = new System.Drawing.Point(20, 12);
@@ -419,21 +419,22 @@
             reportDataSource1.Value = this.dataTable1BindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "My_IPOS.bin.Debug.report.Report.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(22, 48);
+            this.reportViewer1.Location = new System.Drawing.Point(31, 256);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(396, 246);
+            this.reportViewer1.Size = new System.Drawing.Size(396, 62);
             this.reportViewer1.TabIndex = 17;
-            // 
-            // my_IPos
-            // 
-            this.my_IPos.DataSetName = "My_IPos";
-            this.my_IPos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.reportViewer1.Visible = false;
             // 
             // dataTable1BindingSource
             // 
             this.dataTable1BindingSource.DataMember = "DataTable1";
             this.dataTable1BindingSource.DataSource = this.my_IPos;
+            // 
+            // my_IPos
+            // 
+            this.my_IPos.DataSetName = "My_IPos";
+            this.my_IPos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dataTable1TableAdapter
             // 
@@ -469,8 +470,8 @@
             this.Text = "Tổng Tiền";
             this.Load += new System.EventHandler(this.TongTien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTongTien)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.my_IPos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.my_IPos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -40,7 +40,7 @@ namespace My_IPOS
             this.dataTable1TableAdapter.Fill(this.my_IPos.DataTable1);
             int thanhtoan = 0, khachdua = 0, tienthua = 0;
             int n = 0;
-           foreach(DataGridViewRow row in dt.Rows)
+            foreach (DataGridViewRow row in dt.Rows)
             {
                 dgvTongTien.Rows.Add();
                 dgvTongTien.Rows[n].Cells[0].Value = row.Cells[0].Value.ToString();
@@ -74,23 +74,26 @@ namespace My_IPOS
 
         private void btnVoucher_Click(object sender, EventArgs e)
         {
-            
+
             if (tbTheGiamGia.Text == "")
             {
                 MessageBox.Show("voucher này không giảm giá!");
             }
-            else if (tbTheGiamGia.Text == "GF50")
-            {
-                tbThanhToan.Text = "" + (Convert.ToInt32(tbThanhToan.Text) * (1 - 0.5));
-                try
+            else
+            { 
+                DataTable dt = data.dataReaderTable("select * from Voucher where ID_Voucher like '" + tbTheGiamGia.Text + "'");
+                if (dt.Rows.Count != 0)
                 {
-                    MessageBox.Show("Đã áp dụng voucher");
-                    tbTienThua.Text = "" + (Convert.ToInt32(tbKhachDua.Text.ToString()) - Convert.ToInt32(tbThanhToan.Text.ToString()));
+                    tbThanhToan.Text = "" + (Convert.ToInt32(tbThanhToan.Text) * (1 - 0.5));
+                    try
+                    {
+                        MessageBox.Show("Đã áp dụng voucher");
+                        tbTienThua.Text = "" + (Convert.ToInt32(tbKhachDua.Text.ToString()) - Convert.ToInt32(tbThanhToan.Text.ToString()));
+                    }
+                    catch { }
                 }
-                catch { }
+                else MessageBox.Show("Không Có Voucher Này!");
             }
-            else MessageBox.Show("Không Có Voucher Này!");
-            
         }
 
         private void tbKhachDua_TextChanged(object sender, EventArgs e)
@@ -119,7 +122,11 @@ namespace My_IPOS
 
         private void btnInHoaDon_Click(object sender, EventArgs e)
         {
-            reportViewer1.PrintDialog();
+            try
+            {
+                reportViewer1.PrintDialog();
+            }
+            catch { }
             this.Close();
             od.outOrder();
         }
@@ -148,7 +155,6 @@ namespace My_IPOS
             try
             {
                 this.dataTable1TableAdapter.FillBy(this.my_IPos.DataTable1, ID_HoaDon);
-                MessageBox.Show(ID_HoaDon);
             }
             catch { }
             this.reportViewer1.RefreshReport();
