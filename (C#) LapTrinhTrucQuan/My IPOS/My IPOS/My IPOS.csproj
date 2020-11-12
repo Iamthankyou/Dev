@@ -86,12 +86,6 @@
     <Compile Include="BaoCao.Designer.cs">
       <DependentUpon>BaoCao.cs</DependentUpon>
     </Compile>
-    <Compile Include="bin\Debug\report\InHoaDon.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="bin\Debug\report\InHoaDon.Designer.cs">
-      <DependentUpon>InHoaDon.cs</DependentUpon>
-    </Compile>
     <Compile Include="bin\Debug\report\My_IPos.cs">
       <DependentUpon>My_IPos.xsd</DependentUpon>
     </Compile>
@@ -100,6 +94,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>My_IPos.xsd</DependentUpon>
     </Compile>
+    <Compile Include="HoiVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HoiVien.Designer.cs">
+      <DependentUpon>HoiVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\MaHoaDon.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="SuaMenu.cs">
@@ -107,6 +107,12 @@
     </Compile>
     <Compile Include="SuaMenu.Designer.cs">
       <DependentUpon>SuaMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SuaMon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuaMon.Designer.cs">
+      <DependentUpon>SuaMon.cs</DependentUpon>
     </Compile>
     <Compile Include="ThemMon.cs">
       <SubType>Form</SubType>
@@ -174,11 +180,11 @@
     <EmbeddedResource Include="BaoCao.resx">
       <DependentUpon>BaoCao.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="bin\Debug\report\InHoaDon.resx">
-      <DependentUpon>InHoaDon.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="bin\Debug\report\Report.rdlc" />
     <EmbeddedResource Include="bin\Debug\report\reportDoanhThu.rdlc" />
+    <EmbeddedResource Include="HoiVien.resx">
+      <DependentUpon>HoiVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
@@ -210,6 +216,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SuaMenu.resx">
       <DependentUpon>SuaMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuaMon.resx">
+      <DependentUpon>SuaMon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThemMon.resx">
       <DependentUpon>ThemMon.cs</DependentUpon>

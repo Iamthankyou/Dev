@@ -68,7 +68,7 @@
             this.bntBoMon = new DevComponents.DotNetBar.ButtonX();
             this.buttonX23 = new DevComponents.DotNetBar.ButtonX();
             this.buttonX22 = new DevComponents.DotNetBar.ButtonX();
-            this.buttonX21 = new DevComponents.DotNetBar.ButtonX();
+            this.btHoiVien = new DevComponents.DotNetBar.ButtonX();
             this.btn1 = new DevComponents.DotNetBar.ButtonX();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvxTakeAway)).BeginInit();
@@ -491,9 +491,9 @@
             // 
             this.btnTongTien.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnTongTien.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
-            this.btnTongTien.Location = new System.Drawing.Point(7, 271);
+            this.btnTongTien.Location = new System.Drawing.Point(4, 271);
             this.btnTongTien.Name = "btnTongTien";
-            this.btnTongTien.Size = new System.Drawing.Size(318, 66);
+            this.btnTongTien.Size = new System.Drawing.Size(325, 66);
             this.btnTongTien.TabIndex = 1;
             this.btnTongTien.Text = "Tổng Tiền";
             this.btnTongTien.Click += new System.EventHandler(this.btnTongTien_Click);
@@ -509,7 +509,7 @@
             this.tableLayoutPanel3.Controls.Add(this.bntBoMon, 0, 2);
             this.tableLayoutPanel3.Controls.Add(this.buttonX23, 1, 1);
             this.tableLayoutPanel3.Controls.Add(this.buttonX22, 0, 1);
-            this.tableLayoutPanel3.Controls.Add(this.buttonX21, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.btHoiVien, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.btn1, 0, 0);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(4, 4);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -582,15 +582,16 @@
             this.buttonX22.TabIndex = 2;
             this.buttonX22.Text = "ToDo";
             // 
-            // buttonX21
+            // btHoiVien
             // 
-            this.buttonX21.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX21.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.buttonX21.Location = new System.Drawing.Point(165, 3);
-            this.buttonX21.Name = "buttonX21";
-            this.buttonX21.Size = new System.Drawing.Size(156, 60);
-            this.buttonX21.TabIndex = 1;
-            this.buttonX21.Text = "ToDo";
+            this.btHoiVien.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
+            this.btHoiVien.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btHoiVien.Location = new System.Drawing.Point(165, 3);
+            this.btHoiVien.Name = "btHoiVien";
+            this.btHoiVien.Size = new System.Drawing.Size(156, 60);
+            this.btHoiVien.TabIndex = 1;
+            this.btHoiVien.Text = "Hội Viên";
+            this.btHoiVien.Click += new System.EventHandler(this.btHoiVien_Click);
             // 
             // btn1
             // 
@@ -657,7 +658,7 @@
         private DevComponents.DotNetBar.ButtonX bntBoMon;
         private DevComponents.DotNetBar.ButtonX buttonX23;
         private DevComponents.DotNetBar.ButtonX buttonX22;
-        private DevComponents.DotNetBar.ButtonX buttonX21;
+        private DevComponents.DotNetBar.ButtonX btHoiVien;
         private DevComponents.DotNetBar.ButtonX btn1;
         private DevComponents.DotNetBar.Controls.DataGridViewX dgvxTakeAway;
         private System.Windows.Forms.DataGridViewTextBoxColumn clxSTT;

@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnGrab = new DevComponents.DotNetBar.ButtonX();
             this.btnTakeAway = new DevComponents.DotNetBar.ButtonX();
             this.btnDangXuat = new DevComponents.DotNetBar.ButtonX();
             this.btnKhoaSo = new DevComponents.DotNetBar.ButtonX();
@@ -50,16 +49,8 @@
             // tableLayoutPanel1
             // 
             resources.ApplyResources(this.tableLayoutPanel1, "tableLayoutPanel1");
-            this.tableLayoutPanel1.Controls.Add(this.btnGrab, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnTakeAway, 0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            // 
-            // btnGrab
-            // 
-            this.btnGrab.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnGrab.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
-            resources.ApplyResources(this.btnGrab, "btnGrab");
-            this.btnGrab.Name = "btnGrab";
             // 
             // btnTakeAway
             // 
@@ -129,7 +120,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private DevComponents.DotNetBar.ButtonX btnGrab;
         private DevComponents.DotNetBar.ButtonX btnTakeAway;
         private DevComponents.DotNetBar.ButtonX btnDangXuat;
         private DevComponents.DotNetBar.ButtonX btnKhoaSo;

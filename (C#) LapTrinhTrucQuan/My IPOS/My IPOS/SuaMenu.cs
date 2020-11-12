@@ -78,12 +78,19 @@ namespace My_IPOS
 
         private void btSua_Click(object sender, EventArgs e)
         {
-            data.dataChange("update TraSua set ID_TraSua ='" + tbMaMon.Text + "',TenTraSua=N'" + tbTenMon.Text + "', DonGiaTraSua = '" + tbDonGia.Text + "' where ID_TraSua ='" + tbMaMon.Text + "'");
-            MessageBox.Show("Đã Sửa!");
-            tbMaMon.Text = "";
-            tbTenMon.Text = "";
-            tbDonGia.Text = "";
-            loadBang();
+            if (tbDonGia.Text != "" && tbTenMon.Text != "" && tbMaMon.Text != "")
+            {
+                SuaMon s = new SuaMon(tbMaMon.Text, tbTenMon.Text, tbDonGia.Text);
+                s.ShowDialog();
+                tbMaMon.Text = "";
+                tbTenMon.Text = "";
+                tbDonGia.Text = "";
+                loadBang();
+            }
+            else
+            {
+                MessageBox.Show("Bạn chưa chọn món nào để sửa");
+            }
         }
 
         private void btXoa_Click(object sender, EventArgs e)

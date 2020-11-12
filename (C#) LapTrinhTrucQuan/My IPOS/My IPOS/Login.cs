@@ -12,6 +12,7 @@ namespace My_IPOS
 {
     public partial class Login : Form
     {
+        int checkEye = 0;
         public Login()
         {
             InitializeComponent();
@@ -28,9 +29,9 @@ namespace My_IPOS
                 }
                 else
                 {
-                    NewCa newCa = new NewCa();
+                    Home home = new Home();
                     this.Hide();
-                    newCa.ShowDialog();
+                    home.ShowDialog();
                 }
             }
             else
@@ -54,6 +55,32 @@ namespace My_IPOS
             if (e.KeyCode == Keys.Down) btnDangNhap.Focus();
             else if (e.KeyCode == Keys.Up) tbUserName.Focus();
             else if (e.KeyCode == Keys.Enter) btnDangNhap_Click(sender,e);
+        }
+
+        private void btEye_Click(object sender, EventArgs e)
+        {
+            checkEye++;
+            if (checkEye % 2 == 0)
+            {
+                tbPassword.UseSystemPasswordChar = true;
+            }
+            else
+            {
+                tbPassword.UseSystemPasswordChar = false;
+            }
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            if (checkEye % 2 == 0)
+            {
+                tbPassword.UseSystemPasswordChar = true;
+
+            }
+            else
+            {
+                tbPassword.UseSystemPasswordChar = false;
+            }
         }
     }
 }

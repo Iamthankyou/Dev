@@ -19,6 +19,7 @@ namespace My_IPOS
         DataGridView dt;
         DataBase data = new DataBase();
         OrderTakeAway od;
+
         MaHoaDon taoID = new MaHoaDon();
         string ID_HoaDon, TT, ID_KhachHang, ID_Voucher;
         DataTable dt1;
@@ -131,13 +132,19 @@ namespace My_IPOS
             else ID_Voucher = tbTheGiamGia.Text;
             TT = tbThanhToan.Text;
             ID_HoaDon = "" + taoID.TaoID_HoaDon();
-            ID_KhachHang = "TA01";
+            ID_KhachHang = od.MaKhach;
 
             data.dataChange("insert into HoaDon values('" + ID_HoaDon + "','" + date + "','" + TT + "','" + ID_KhachHang + "','" + ID_Voucher + "')");
             for (int i = 0; i < dgvTongTien.RowCount; i++)
             {
                 dt1 = data.dataReaderTable("select * from TraSua where TenTraSua = N'" + dgvTongTien.Rows[i].Cells[1].Value.ToString() + "'");
-                data.dataChange("insert into ChiTietHoaDon values('" + dgvTongTien.Rows[i].Cells[2].Value.ToString() + "','" + ID_HoaDon + "','" + dt1.Rows[0]["ID_TraSua"].ToString() + "')");
+                if(dt1.Rows.Count != 0)
+                    data.dataChange("insert into ChiTietHoaDon values('" + dgvTongTien.Rows[i].Cells[2].Value.ToString() + "','" + ID_HoaDon + "','" + dt1.Rows[0]["ID_TraSua"].ToString() + "')");
+                else
+                {
+                    dt1 = data.dataReaderTable("select * from Topping where TenTopping = N'" + dgvTongTien.Rows[i].Cells[1].Value.ToString() + "'");
+                    data.dataChange("insert into ThemTopping values('" + dgvTongTien.Rows[i].Cells[2].Value.ToString() + "','" + dt1.Rows[0]["ID_Topping"].ToString() + "','" + ID_HoaDon + "')");
+                }
             }
             try
             {

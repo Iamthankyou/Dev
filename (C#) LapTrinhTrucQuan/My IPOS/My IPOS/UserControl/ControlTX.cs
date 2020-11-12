@@ -25,7 +25,7 @@ namespace My_IPOS
 
         private void btnTX_M_Click(object sender, EventArgs e)
         {
-            DataTable dt = data.dataReaderTable("select DonGiaTraSua from TraSua where TenTraSua = '"+btnTX_M.Text+"'");
+            DataTable dt = data.dataReaderTable("select DonGiaTraSua from TraSua where TenTraSua = N'"+btnTX_M.Text+"'");
             int dongia = Convert.ToInt32(dt.Rows[0]["DonGiaTraSua"].ToString());
             int soluong = 1;
             float giamgia = 0;
@@ -37,7 +37,7 @@ namespace My_IPOS
 
         private void btnTXXoai_M_Click(object sender, EventArgs e)
         {
-            DataTable dt = data.dataReaderTable("select DonGiaTraSua from TraSua where TenTraSua = '" + btnTXXoai_M.Text + "'");
+            DataTable dt = data.dataReaderTable("select DonGiaTraSua from TraSua where TenTraSua = N'" + btnTXXoai_M.Text + "'");
             int dongia = Convert.ToInt32(dt.Rows[0]["DonGiaTraSua"].ToString());
             int soluong = 1;
             float giamgia = 0;
@@ -49,7 +49,7 @@ namespace My_IPOS
 
         private void btnTXDuaHongHac_M_Click(object sender, EventArgs e)
         {
-            DataTable dt = data.dataReaderTable("select DonGiaTraSua from TraSua where TenTraSua = '" + btnTXDuaHongHac_M.Text + "'");
+            DataTable dt = data.dataReaderTable("select DonGiaTraSua from TraSua where TenTraSua = N'" + btnTXDuaHongHac_M.Text + "'");
             int dongia = Convert.ToInt32(dt.Rows[0]["DonGiaTraSua"].ToString());
             int soluong = 1;
             float giamgia = 0;
@@ -61,7 +61,7 @@ namespace My_IPOS
 
         private void btnTX_L_Click(object sender, EventArgs e)
         {
-            DataTable dt = data.dataReaderTable("select DonGiaTraSua from TraSua where TenTraSua = '" + btnTX_L.Text + "'");
+            DataTable dt = data.dataReaderTable("select DonGiaTraSua from TraSua where TenTraSua = N'" + btnTX_L.Text + "'");
             int dongia = Convert.ToInt32(dt.Rows[0]["DonGiaTraSua"].ToString());
             int soluong = 1;
             float giamgia = 0;
@@ -73,7 +73,7 @@ namespace My_IPOS
 
         private void btnTXXoai_L_Click(object sender, EventArgs e)
         {
-            DataTable dt = data.dataReaderTable("select DonGiaTraSua from TraSua where TenTraSua = '" + btnTXXoai_L.Text + "'");
+            DataTable dt = data.dataReaderTable("select DonGiaTraSua from TraSua where TenTraSua = N'" + btnTXXoai_L.Text + "'");
             int dongia = Convert.ToInt32(dt.Rows[0]["DonGiaTraSua"].ToString());
             int soluong = 1;
             float giamgia = 0;
@@ -85,7 +85,7 @@ namespace My_IPOS
 
         private void btnTXDauTamPhaLeTuyet_L_Click(object sender, EventArgs e)
         {
-            DataTable dt = data.dataReaderTable("select DonGiaTraSua from TraSua where TenTraSua = '" + btnTXDauTamPhaLeTuyet_L.Text + "'");
+            DataTable dt = data.dataReaderTable("select DonGiaTraSua from TraSua where TenTraSua = N'" + btnTXDauTamPhaLeTuyet_L.Text + "'");
             int dongia = Convert.ToInt32(dt.Rows[0]["DonGiaTraSua"].ToString());
             int soluong = 1;
             float giamgia = 0;
@@ -97,7 +97,7 @@ namespace My_IPOS
 
         private void btnTXDuaHongHac_L_Click(object sender, EventArgs e)
         {
-            DataTable dt = data.dataReaderTable("select DonGiaTraSua from TraSua where TenTraSua = '" + btnTXDuaHongHac_L.Text + "'");
+            DataTable dt = data.dataReaderTable("select DonGiaTraSua from TraSua where TenTraSua = N'" + btnTXDuaHongHac_L.Text + "'");
             int dongia = Convert.ToInt32(dt.Rows[0]["DonGiaTraSua"].ToString());
             int soluong = 1;
             float giamgia = 0;
@@ -109,7 +109,7 @@ namespace My_IPOS
 
         private void btnTXKiwiChanhLeo_M_Click(object sender, EventArgs e)
         {
-            DataTable dt = data.dataReaderTable("select DonGiaTraSua from TraSua where TenTraSua = '" + btnTXKiwiChanhLeo_M.Text + "'");
+            DataTable dt = data.dataReaderTable("select DonGiaTraSua from TraSua where TenTraSua = N'" + btnTXKiwiChanhLeo_M.Text + "'");
             int dongia = Convert.ToInt32(dt.Rows[0]["DonGiaTraSua"].ToString());
             int soluong = 1;
             float giamgia = 0;
@@ -121,7 +121,7 @@ namespace My_IPOS
 
         private void btnTXChanhLeo_M_Click(object sender, EventArgs e)
         {
-            DataTable dt = data.dataReaderTable("select DonGiaTraSua from TraSua where TenTraSua = '" + btnTXChanhLeo_M.Text + "'");
+            DataTable dt = data.dataReaderTable("select DonGiaTraSua from TraSua where TenTraSua = N'" + btnTXChanhLeo_M.Text + "'");
             int dongia = Convert.ToInt32(dt.Rows[0]["DonGiaTraSua"].ToString());
             int soluong = 1;
             float giamgia = 0;
@@ -133,7 +133,7 @@ namespace My_IPOS
 
         private void btnTXDuaNhietDoi_M_Click(object sender, EventArgs e)
         {
-            DataTable dt = data.dataReaderTable("select DonGiaTraSua from TraSua where TenTraSua = '" + btnTXDuaNhietDoi_M.Text + "'");
+            DataTable dt = data.dataReaderTable("select DonGiaTraSua from TraSua where TenTraSua = N'" + btnTXDuaNhietDoi_M.Text + "'");
             int dongia = Convert.ToInt32(dt.Rows[0]["DonGiaTraSua"].ToString());
             int soluong = 1;
             float giamgia = 0;
@@ -145,7 +145,7 @@ namespace My_IPOS
 
         private void btnTXHongLongPhaLeTuyet_M_Click(object sender, EventArgs e)
         {
-            DataTable dt = data.dataReaderTable("select DonGiaTraSua from TraSua where TenTraSua = '" + btnTXHongLongPhaLeTuyet_M.Text + "'");
+            DataTable dt = data.dataReaderTable("select DonGiaTraSua from TraSua where TenTraSua = N'" + btnTXHongLongPhaLeTuyet_M.Text + "'");
             int dongia = Convert.ToInt32(dt.Rows[0]["DonGiaTraSua"].ToString());
             int soluong = 1;
             float giamgia = 0;
@@ -157,7 +157,7 @@ namespace My_IPOS
 
         private void btnTXKiwiChanhLeo_L_Click(object sender, EventArgs e)
         {
-            DataTable dt = data.dataReaderTable("select DonGiaTraSua from TraSua where TenTraSua = '" + btnTXKiwiChanhLeo_L.Text + "'");
+            DataTable dt = data.dataReaderTable("select DonGiaTraSua from TraSua where TenTraSua = N'" + btnTXKiwiChanhLeo_L.Text + "'");
             int dongia = Convert.ToInt32(dt.Rows[0]["DonGiaTraSua"].ToString());
             int soluong = 1;
             float giamgia = 0;
@@ -169,7 +169,7 @@ namespace My_IPOS
 
         private void btnTXChanhLeo_L_Click(object sender, EventArgs e)
         {
-            DataTable dt = data.dataReaderTable("select DonGiaTraSua from TraSua where TenTraSua = '" + btnTXChanhLeo_L.Text + "'");
+            DataTable dt = data.dataReaderTable("select DonGiaTraSua from TraSua where TenTraSua = N'" + btnTXChanhLeo_L.Text + "'");
             int dongia = Convert.ToInt32(dt.Rows[0]["DonGiaTraSua"].ToString());
             int soluong = 1;
             float giamgia = 0;
@@ -181,7 +181,7 @@ namespace My_IPOS
 
         private void btnTXDuaNhietDoi_L_Click(object sender, EventArgs e)
         {
-            DataTable dt = data.dataReaderTable("select DonGiaTraSua from TraSua where TenTraSua = '" + btnTXDuaNhietDoi_L.Text + "'");
+            DataTable dt = data.dataReaderTable("select DonGiaTraSua from TraSua where TenTraSua = N'" + btnTXDuaNhietDoi_L.Text + "'");
             int dongia = Convert.ToInt32(dt.Rows[0]["DonGiaTraSua"].ToString());
             int soluong = 1;
             float giamgia = 0;
@@ -193,7 +193,7 @@ namespace My_IPOS
 
         private void btnTXHongLongPhaLeTuyet_L_Click(object sender, EventArgs e)
         {
-            DataTable dt = data.dataReaderTable("select DonGiaTraSua from TraSua where TenTraSua = '" + btnTXHongLongPhaLeTuyet_L.Text + "'");
+            DataTable dt = data.dataReaderTable("select DonGiaTraSua from TraSua where TenTraSua = N'" + btnTXHongLongPhaLeTuyet_L.Text + "'");
             int dongia = Convert.ToInt32(dt.Rows[0]["DonGiaTraSua"].ToString());
             int soluong = 1;
             float giamgia = 0;
@@ -205,7 +205,7 @@ namespace My_IPOS
 
         private void btnTXDauTamPhaLeTuyet_M_Click(object sender, EventArgs e)
         {
-            DataTable dt = data.dataReaderTable("select DonGiaTraSua from TraSua where TenTraSua = '" + btnTXDauTamPhaLeTuyet_M.Text + "'");
+            DataTable dt = data.dataReaderTable("select DonGiaTraSua from TraSua where TenTraSua = N'" + btnTXDauTamPhaLeTuyet_M.Text + "'");
             int dongia = Convert.ToInt32(dt.Rows[0]["DonGiaTraSua"].ToString());
             int soluong = 1;
             float giamgia = 0;

@@ -119,45 +119,18 @@
   </resheader>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="tableLayoutPanel1.ColumnCount" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>1</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnGrab.Location" type="System.Drawing.Point, System.Drawing">
-    <value>360, 35</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="btnGrab.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>70, 35, 3, 3</value>
-  </data>
-  <data name="btnGrab.Size" type="System.Drawing.Size, System.Drawing">
-    <value>150, 100</value>
-  </data>
-  <data name="btnGrab.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="btnGrab.Text" xml:space="preserve">
-    <value>Grab</value>
-  </data>
-  <data name="&gt;&gt;btnGrab.Name" xml:space="preserve">
-    <value>btnGrab</value>
-  </data>
-  <data name="&gt;&gt;btnGrab.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=6.9.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;btnGrab.Parent" xml:space="preserve">
-    <value>tableLayoutPanel1</value>
-  </data>
-  <data name="&gt;&gt;btnGrab.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="btnTakeAway.Location" type="System.Drawing.Point, System.Drawing">
     <value>70, 35</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="btnTakeAway.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>70, 35, 3, 3</value>
   </data>
   <data name="btnTakeAway.Size" type="System.Drawing.Size, System.Drawing">
-    <value>150, 100</value>
+    <value>220, 165</value>
   </data>
   <data name="btnTakeAway.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -175,16 +148,16 @@
     <value>tableLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;btnTakeAway.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>0</value>
   </data>
   <data name="tableLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>117, 115</value>
+    <value>303, 197</value>
   </data>
   <data name="tableLayoutPanel1.RowCount" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
   <data name="tableLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>580, 175</value>
+    <value>352, 249</value>
   </data>
   <data name="tableLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -202,7 +175,7 @@
     <value>0</value>
   </data>
   <data name="tableLayoutPanel1.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="btnGrab" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="btnTakeAway" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,50,Percent,50" /&gt;&lt;Rows Styles="Percent,50" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="btnTakeAway" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,50" /&gt;&lt;Rows Styles="Percent,50" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
     <value>1, 1</value>
@@ -444,7 +417,7 @@
     <value>6</value>
   </data>
   <data name="btnKhoaSo.Text" xml:space="preserve">
-    <value>Khóa Sổ</value>
+    <value>Thống Kê</value>
   </data>
   <data name="&gt;&gt;btnKhoaSo.Name" xml:space="preserve">
     <value>btnKhoaSo</value>

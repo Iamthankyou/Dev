@@ -127,6 +127,7 @@
             this.tbMaMon.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbMaMon.Location = new System.Drawing.Point(230, 22);
             this.tbMaMon.Name = "tbMaMon";
+            this.tbMaMon.ReadOnly = true;
             this.tbMaMon.Size = new System.Drawing.Size(285, 26);
             this.tbMaMon.TabIndex = 3;
             this.tbMaMon.TextChanged += new System.EventHandler(this.tbLDonGia_TextChanged);

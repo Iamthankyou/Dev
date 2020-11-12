@@ -23,7 +23,7 @@ namespace My_IPOS
         {
             if(tbDate.Value.Date == tbDate2.Value.Date)
             {
-                DataTable tb = data.dataReaderTable("select SUM((CT.SoLuong*TS.DonGiaTraSua)*(1-V.PhanTram)) tien from HoaDon HD inner join ChiTietHoaDon CT on CT.ID_HoaDon = HD.ID_HoaDon inner join TraSua TS on TS.ID_TraSua = CT.ID_TraSua inner join Voucher V on V.ID_Voucher = HD.ID_Voucher where YEAR(HD.NgayBan) = '" + tbDate.Value.Year + "' and Month(HD.NgayBan) = '" + tbDate.Value.Month + "' and Day(HD.NgayBan) = '" + tbDate.Value.Day + "'");
+                DataTable tb = data.dataReaderTable("select Sum(HD.TongTien) tien from HoaDon HD where YEAR(HD.NgayBan) = '" + tbDate.Value.Year + "' and Month(HD.NgayBan) = '" + tbDate.Value.Month + "' and Day(HD.NgayBan) = '" + tbDate.Value.Day + "'");
                 tongdoanhthu.Text = tb.Rows[0]["tien"].ToString()+" $";
                 tb = data.dataReaderTable("select COUNT(*) as Voucher from HoaDon HD where YEAR(HD.NgayBan) = '" + tbDate.Value.Year + "' and Month(HD.NgayBan) = '" + tbDate.Value.Month + "' and Day(HD.NgayBan) = '" + tbDate.Value.Day + "' and HD.ID_Voucher !='None'");
                 tongphieugiamgia.Text = tb.Rows[0]["Voucher"].ToString();
@@ -38,7 +38,7 @@ namespace My_IPOS
             }
             else
             {
-                DataTable tb = data.dataReaderTable("select SUM((CT.SoLuong*TS.DonGiaTraSua)*(1-V.PhanTram)) tien from HoaDon HD inner join ChiTietHoaDon CT on CT.ID_HoaDon = HD.ID_HoaDon inner join TraSua TS on TS.ID_TraSua = CT.ID_TraSua inner join Voucher V on V.ID_Voucher = HD.ID_Voucher where YEAR(HD.NgayBan) >= '" + tbDate.Value.Year + "' and Month(HD.NgayBan) >= '" + tbDate.Value.Month + "' and Day(HD.NgayBan) >= '" + tbDate.Value.Day + "' and" +
+                DataTable tb = data.dataReaderTable("select Sum(HD.TongTien) tien from HoaDon HD where YEAR(HD.NgayBan) >= '" + tbDate.Value.Year + "' and Month(HD.NgayBan) >= '" + tbDate.Value.Month + "' and Day(HD.NgayBan) >= '" + tbDate.Value.Day + "' and" +
                     " (YEAR(HD.NgayBan) <= '" + tbDate2.Value.Year + "' and Month(HD.NgayBan) <= '" + tbDate2.Value.Month + "' and Day(HD.NgayBan) <= '" + tbDate2.Value.Day + "')");
                 tongdoanhthu.Text = tb.Rows[0]["tien"].ToString() + " $";
                 tb = data.dataReaderTable("select COUNT(*) as Voucher from HoaDon HD where YEAR(HD.NgayBan) >= '" + tbDate.Value.Year + "' and Month(HD.NgayBan) >= '" + tbDate.Value.Month + "' and Day(HD.NgayBan) >= '" + tbDate.Value.Day + "' and" +

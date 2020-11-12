@@ -40,12 +40,11 @@ namespace Baitap27
         private void btAnh_Click(object sender, EventArgs e)
         {
             OpenFileDialog dlgOpen = new OpenFileDialog();
-                if(dlgOpen.ShowDialog() == DialogResult.OK)
+            if (dlgOpen.ShowDialog() == DialogResult.OK)
             {
-                
                 pictureBox1.Image = Image.FromFile(dlgOpen.FileName);
                 MessageBox.Show(dlgOpen.FileName);
-
+                MessageBox.Show(pictureBox1.ToString());
             }    
         }
 

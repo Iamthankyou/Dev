@@ -16,6 +16,7 @@ namespace My_IPOS
         Bitmap back, hour, minute, dot, second;
 
         public int stt = 0;
+        public string MaKhach = "TA01";
 
         public OrderTakeAway()
         {
@@ -78,7 +79,7 @@ namespace My_IPOS
         private void btnTongTien_Click(object sender, EventArgs e)
         {
             TongTien tongtien = new TongTien(dgvxTakeAway,this);
-            tongtien.Show();
+            tongtien.ShowDialog();
         }
 
         public void addMon(int stt, string TenMon, int SoLuong, float GiamGia, int DonGia, string GhiChu, string GioGoi, float ThanhTien, string MaMon)
@@ -105,6 +106,12 @@ namespace My_IPOS
             ControlTP a = new ControlTP(this);
             panel5.Controls.Clear();
             panel5.Controls.Add(a);
+        }
+
+        private void btHoiVien_Click(object sender, EventArgs e)
+        {
+            HoiVien hv = new HoiVien(this);
+            hv.ShowDialog();
         }
 
         public void updateCell(int a, int b, int values)
