@@ -24,18 +24,20 @@ namespace My_IPOS
         string ID_HoaDon, TT, ID_KhachHang, ID_Voucher;
         DataTable dt1;
         DateTime dateTime = DateTime.Now;
-        
+        string user;
 
-        public TongTien(DataGridView a, OrderTakeAway od)
+        public TongTien(DataGridView a, OrderTakeAway od, string user)
         {
             InitializeComponent();
             dt = a;
             this.od = od;
+            this.user = user;
         }
 
         private void TongTien_Load(object sender, EventArgs e)
         {
-            
+            // TODO: This line of code loads data into the 'my_IPos.DataTable1' table. You can move, or remove it, as needed.
+            this.dataTable1TableAdapter.Fill(this.my_IPos.DataTable1);
             int thanhtoan = 0, khachdua = 0, tienthua = 0;
             int n = 0;
            foreach(DataGridViewRow row in dt.Rows)
@@ -54,7 +56,6 @@ namespace My_IPOS
             tbKhachDua.Text = khachdua.ToString();
             tbTienThua.Text = tienthua.ToString();
             this.reportViewer1.RefreshReport();
-            /*this.reportViewer1.RefreshReport();*/
         }
 
         private void btTAorDI_Click(object sender, EventArgs e)
@@ -76,7 +77,6 @@ namespace My_IPOS
             
             if (tbTheGiamGia.Text == "")
             {
-                //luu();
                 MessageBox.Show("voucher này không giảm giá!");
             }
             else if (tbTheGiamGia.Text == "GF50")
@@ -86,7 +86,6 @@ namespace My_IPOS
                 {
                     MessageBox.Show("Đã áp dụng voucher");
                     tbTienThua.Text = "" + (Convert.ToInt32(tbKhachDua.Text.ToString()) - Convert.ToInt32(tbThanhToan.Text.ToString()));
-                    //luu();
                 }
                 catch { }
             }
@@ -134,7 +133,7 @@ namespace My_IPOS
             ID_HoaDon = "" + taoID.TaoID_HoaDon();
             ID_KhachHang = od.MaKhach;
 
-            data.dataChange("insert into HoaDon values('" + ID_HoaDon + "','" + date + "','" + TT + "','" + ID_KhachHang + "','" + ID_Voucher + "')");
+            data.dataChange("insert into HoaDon values('" + ID_HoaDon + "','" + date + "','" + TT + "','" + ID_KhachHang + "','" + ID_Voucher + "','"+user+"')");
             for (int i = 0; i < dgvTongTien.RowCount; i++)
             {
                 dt1 = data.dataReaderTable("select * from TraSua where TenTraSua = N'" + dgvTongTien.Rows[i].Cells[1].Value.ToString() + "'");
@@ -149,6 +148,7 @@ namespace My_IPOS
             try
             {
                 this.dataTable1TableAdapter.FillBy(this.my_IPos.DataTable1, ID_HoaDon);
+                MessageBox.Show(ID_HoaDon);
             }
             catch { }
             this.reportViewer1.RefreshReport();

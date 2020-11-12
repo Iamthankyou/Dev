@@ -17,10 +17,12 @@ namespace My_IPOS
 
         public int stt = 0;
         public string MaKhach = "TA01";
+        string user;
 
-        public OrderTakeAway()
+        public OrderTakeAway(string user)
         {
             InitializeComponent();
+            this.user = user;
 
             back = new Bitmap(".\\image\\back.png");
             hour = new Bitmap(".\\image\\hour.png");
@@ -78,7 +80,7 @@ namespace My_IPOS
 
         private void btnTongTien_Click(object sender, EventArgs e)
         {
-            TongTien tongtien = new TongTien(dgvxTakeAway,this);
+            TongTien tongtien = new TongTien(dgvxTakeAway,this, user);
             tongtien.ShowDialog();
         }
 
@@ -153,5 +155,9 @@ namespace My_IPOS
             this.Close();
         }
 
+        public void tat()
+        {
+            btHoiVien.Enabled = false;
+        }
     }
 }

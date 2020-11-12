@@ -1,4 +1,5 @@
-﻿using System;
+﻿using My_IPOS.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +14,8 @@ namespace My_IPOS
     public partial class Login : Form
     {
         int checkEye = 0;
+        DataBase data = new DataBase();
+
         public Login()
         {
             InitializeComponent();
@@ -20,16 +23,16 @@ namespace My_IPOS
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            string userName = "admin", password = "admin";
             if (tbUserName.Text != "" && tbPassword.Text != "")
             {
-                if (userName != tbUserName.Text || password != tbPassword.Text)
+                DataTable dt = data.dataReaderTable("select * from Login where UserName ='"+tbUserName.Text+"' and Password ='"+tbPassword.Text+"'");
+                if (dt.Rows.Count == 0)
                 {
                     MessageBox.Show("Sai User Name hoặc Password!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {
-                    Home home = new Home();
+                    Home home = new Home(tbUserName.Text);
                     this.Hide();
                     home.ShowDialog();
                 }

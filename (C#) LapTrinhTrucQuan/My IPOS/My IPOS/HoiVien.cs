@@ -49,12 +49,14 @@ namespace My_IPOS
 
         private void btChapNhan_Click(object sender, EventArgs e)
         {
-            if(tbMaHoiVien.Enabled == false)
+            DataTable dt = data.dataReaderTable("select * from KhachHang where ID_KhachHang like '" + tbMaHoiVien.Text + "'");
+            if (tbMaHoiVien.Enabled == false)
             {
-                DataTable dt = data.dataReaderTable("select * from KhachHang where ID_KhachHang like '" + tbMaHoiVien.Text + "'");
                 int diem = Convert.ToInt32(dt.Rows[0]["Diem"].ToString());
-                data.dataChange("UPDATE KhachHang SET Diem = '" + diem++ + "' WHERE ID_KhachHang = 'TA01'");
-            }else if(tbMaHoiVien.Text !="" && tbTenHoiVien.Text != "" && tbDienThoai.Text != "")
+                data.dataChange("UPDATE KhachHang SET Diem = '" + ++diem + "' WHERE ID_KhachHang = '"+tbMaHoiVien.Text+"'");
+                od.tat();
+                this.Close();
+            }else if(tbMaHoiVien.Text !="" && tbTenHoiVien.Text != "" && tbDienThoai.Text != "" && dt.Rows.Count == 0)
             {
                 data.dataChange("insert into KhachHang values('"+tbMaHoiVien.Text+"',N'"+tbTenHoiVien.Text+"','"+dtpNgaySinh.Value.Date.Date.ToString()+"',N'"+cbGioiTinh.SelectedItem.ToString()+"','"+tbDienThoai.Text+"','1')");
                 od.MaKhach = tbMaHoiVien.Text;

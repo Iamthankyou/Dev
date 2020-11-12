@@ -12,7 +12,7 @@ namespace My_IPOS.Model
 {
     public partial class edit : Form
     {
-        OrderTakeAway tw = new OrderTakeAway();
+        OrderTakeAway tw;
         int row;
         int column;
         public edit(OrderTakeAway away,int row, int column)

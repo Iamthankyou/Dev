@@ -538,28 +538,6 @@
               </TextRuns>
               <Style />
             </Paragraph>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value />
-                  <Style>
-                    <FontWeight>Bold</FontWeight>
-                  </Style>
-                </TextRun>
-              </TextRuns>
-              <Style />
-            </Paragraph>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value />
-                  <Style>
-                    <FontWeight>Bold</FontWeight>
-                  </Style>
-                </TextRun>
-              </TextRuns>
-              <Style />
-            </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox10</rd:DefaultName>
           <Top>0.78471in</Top>
@@ -720,30 +698,9 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Thu Ngân:</Value>
+                  <Value>=Fields!ID_HoaDon.Value</Value>
                   <Style>
-                    <FontWeight>Bold</FontWeight>
-                  </Style>
-                </TextRun>
-              </TextRuns>
-              <Style />
-            </Paragraph>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value />
-                  <Style>
-                    <FontWeight>Bold</FontWeight>
-                  </Style>
-                </TextRun>
-              </TextRuns>
-              <Style />
-            </Paragraph>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value />
-                  <Style>
+                    <FontSize>12pt</FontSize>
                     <FontWeight>Bold</FontWeight>
                   </Style>
                 </TextRun>
@@ -752,11 +709,45 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox10</rd:DefaultName>
-          <Top>1.32291in</Top>
-          <Left>1.76104in</Left>
-          <Height>0.25in</Height>
-          <Width>0.78125in</Width>
+          <Top>0.79278in</Top>
+          <Left>2.55146in</Left>
+          <Height>0.2882in</Height>
+          <Width>1.5475in</Width>
           <ZIndex>7</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox5">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=Fields!UserName.Value</Value>
+                  <Style>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox3</rd:DefaultName>
+          <Top>1.32291in</Top>
+          <Left>2.65909in</Left>
+          <Height>0.25in</Height>
+          <Width>0.97222in</Width>
+          <ZIndex>8</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -774,19 +765,21 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>=Fields!ID_HoaDon.Value</Value>
-                  <Style />
+                  <Value>Thu Ngân:</Value>
+                  <Style>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
                 </TextRun>
               </TextRuns>
               <Style />
             </Paragraph>
           </Paragraphs>
-          <rd:DefaultName>Textbox15</rd:DefaultName>
-          <Top>0.78471in</Top>
-          <Left>2.52368in</Left>
+          <rd:DefaultName>Textbox10</rd:DefaultName>
+          <Top>1.32291in</Top>
+          <Left>1.856in</Left>
           <Height>0.25in</Height>
-          <Width>1.57528in</Width>
-          <ZIndex>8</ZIndex>
+          <Width>0.78919in</Width>
+          <ZIndex>9</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -1047,7 +1040,7 @@
             <PaddingBottom>2pt</PaddingBottom>
           </Style>
         </Textbox>
-        <Textbox Name="Textbox5">
+        <Textbox Name="Textbox7">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
           <Paragraphs>
@@ -1067,9 +1060,9 @@
           </Paragraphs>
           <rd:DefaultName>Textbox3</rd:DefaultName>
           <Top>0.17708in</Top>
-          <Left>2.6591in</Left>
+          <Left>2.6452in</Left>
           <Height>0.25in</Height>
-          <Width>1.21937in</Width>
+          <Width>1.45376in</Width>
           <ZIndex>8</ZIndex>
           <Style>
             <Border>
@@ -1144,6 +1137,10 @@
         </Field>
         <Field Name="TenKhachHang">
           <DataField>TenKhachHang</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="UserName">
+          <DataField>UserName</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>

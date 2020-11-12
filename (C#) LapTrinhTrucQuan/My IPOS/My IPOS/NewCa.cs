@@ -31,10 +31,10 @@ namespace My_IPOS
 
         private void btBatDau_Click(object sender, EventArgs e)
         {
-            setDuDau(Convert.ToInt32(tbDuDau.Text.ToString()));
+            /*setDuDau(Convert.ToInt32(tbDuDau.Text.ToString()));
             this.Hide();
             Home home = new Home();
-            home.Show();
+            home.Show();*/
         }
 
         private void NewCa_FormClosing(object sender, FormClosingEventArgs e)

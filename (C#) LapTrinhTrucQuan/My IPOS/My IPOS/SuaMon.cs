@@ -27,6 +27,7 @@ namespace My_IPOS
         {
             data.dataChange("update TraSua set ID_TraSua ='" + tbMaMon.Text + "',TenTraSua=N'" + tbTenMon.Text + "', DonGiaTraSua = '" + tbDonGia.Text + "' where ID_TraSua ='" + tbMaMon.Text + "'");
             MessageBox.Show("Đã Sửa!");
+            this.Close();
         }
     }
 }

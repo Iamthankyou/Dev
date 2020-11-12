@@ -13,8 +13,10 @@ namespace My_IPOS
 {
     public partial class Home : Form
     {
-        public Home()
+        string user;
+        public Home(string user)
         {
+            this.user = user;
             InitializeComponent();
         }
 
@@ -25,7 +27,7 @@ namespace My_IPOS
 
         private void btnTakeAway_Click_1(object sender, EventArgs e)
         {
-            OrderTakeAway orderTakeAway = new OrderTakeAway();
+            OrderTakeAway orderTakeAway = new OrderTakeAway(user);
             orderTakeAway.Show();
         }
 
