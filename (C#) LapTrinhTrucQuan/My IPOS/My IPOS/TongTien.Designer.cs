@@ -34,6 +34,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TongTien));
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.dataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.my_IPos = new My_IPOS.bin.Debug.report.My_IPos();
             this.dgvTongTien = new Guna.UI.WinForms.GunaDataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,13 +55,21 @@
             this.btnVoucher = new Guna.UI.WinForms.GunaButton();
             this.btThanhToan = new Guna.UI.WinForms.GunaButton();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.dataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.my_IPos = new My_IPOS.bin.Debug.report.My_IPos();
             this.dataTable1TableAdapter = new My_IPOS.bin.Debug.report.My_IPosTableAdapters.DataTable1TableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTongTien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.my_IPos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTongTien)).BeginInit();
             this.SuspendLayout();
+            // 
+            // dataTable1BindingSource
+            // 
+            this.dataTable1BindingSource.DataMember = "DataTable1";
+            this.dataTable1BindingSource.DataSource = this.my_IPos;
+            // 
+            // my_IPos
+            // 
+            this.my_IPos.DataSetName = "My_IPos";
+            this.my_IPos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dgvTongTien
             // 
@@ -419,22 +429,12 @@
             reportDataSource1.Value = this.dataTable1BindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "My_IPOS.bin.Debug.report.Report.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(31, 256);
+            this.reportViewer1.Location = new System.Drawing.Point(20, 253);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(396, 62);
+            this.reportViewer1.Size = new System.Drawing.Size(421, 65);
             this.reportViewer1.TabIndex = 17;
             this.reportViewer1.Visible = false;
-            // 
-            // dataTable1BindingSource
-            // 
-            this.dataTable1BindingSource.DataMember = "DataTable1";
-            this.dataTable1BindingSource.DataSource = this.my_IPos;
-            // 
-            // my_IPos
-            // 
-            this.my_IPos.DataSetName = "My_IPos";
-            this.my_IPos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dataTable1TableAdapter
             // 
@@ -469,9 +469,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tổng Tiền";
             this.Load += new System.EventHandler(this.TongTien_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTongTien)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.my_IPos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTongTien)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -24,11 +24,11 @@ namespace My_IPOS
             if (tbDonGia.Text == "" || tbTenMon.Text == "" || tbMaMon.Text == "") MessageBox.Show("Bạn Chưa Nhập Dữ liệu!");
             else
             {
-                DataTable dt = data.dataReaderTable("select * from TraSua where ID_TraSua ='" + tbMaMon.Text + "'");
+                DataTable dt = data.dataReaderTable("select * from Mon where ID_Mon ='" + tbMaMon.Text + "'");
                 //if (tbDonGia.Text != "" && tbTenMon.Text != "" && tbMaMon.Text != "")
                 if (dt.Rows.Count == 0)
                 {
-                    data.dataChange("insert into TraSua values('" + tbMaMon.Text + "',N'" + tbTenMon.Text + "','" + tbDonGia.Text + "')");
+                    data.dataChange("insert into Mon values('" + tbMaMon.Text + "',N'" + tbTenMon.Text + "','" + tbDonGia.Text + "')");
                     tbMaMon.Text = "";
                     tbTenMon.Text = "";
                     tbDonGia.Text = "";

@@ -25,8 +25,8 @@ namespace My_IPOS
 
         private void btnTX_M_Click(object sender, EventArgs e)
         {
-            DataTable dt = data.dataReaderTable("select DonGiaTraSua from TraSua where TenTraSua = N'"+btnTX_M.Text+"'");
-            int dongia = Convert.ToInt32(dt.Rows[0]["DonGiaTraSua"].ToString());
+            DataTable dt = data.dataReaderTable("select DonGiaMon from Mon where TenMon = N'"+btnTX_M.Text+"'");
+            int dongia = Convert.ToInt32(dt.Rows[0]["DonGiaMon"].ToString());
             int soluong = 1;
             float giamgia = 0;
             string ghichu = "";
@@ -37,8 +37,8 @@ namespace My_IPOS
 
         private void btnTXXoai_M_Click(object sender, EventArgs e)
         {
-            DataTable dt = data.dataReaderTable("select DonGiaTraSua from TraSua where TenTraSua = N'" + btnTXXoai_M.Text + "'");
-            int dongia = Convert.ToInt32(dt.Rows[0]["DonGiaTraSua"].ToString());
+            DataTable dt = data.dataReaderTable("select DonGiaMon from Mon where TenMon = N'" + btnTXXoai_M.Text + "'");
+            int dongia = Convert.ToInt32(dt.Rows[0]["DonGiaMon"].ToString());
             int soluong = 1;
             float giamgia = 0;
             string ghichu = "";
@@ -49,8 +49,8 @@ namespace My_IPOS
 
         private void btnTXDuaHongHac_M_Click(object sender, EventArgs e)
         {
-            DataTable dt = data.dataReaderTable("select DonGiaTraSua from TraSua where TenTraSua = N'" + btnTXDuaHongHac_M.Text + "'");
-            int dongia = Convert.ToInt32(dt.Rows[0]["DonGiaTraSua"].ToString());
+            DataTable dt = data.dataReaderTable("select DonGiaMon from Mon where TenMon = N'" + btnTXDuaHongHac_M.Text + "'");
+            int dongia = Convert.ToInt32(dt.Rows[0]["DonGiaMon"].ToString());
             int soluong = 1;
             float giamgia = 0;
             string ghichu = "";
@@ -61,8 +61,8 @@ namespace My_IPOS
 
         private void btnTX_L_Click(object sender, EventArgs e)
         {
-            DataTable dt = data.dataReaderTable("select DonGiaTraSua from TraSua where TenTraSua = N'" + btnTX_L.Text + "'");
-            int dongia = Convert.ToInt32(dt.Rows[0]["DonGiaTraSua"].ToString());
+            DataTable dt = data.dataReaderTable("select DonGiaMon from Mon where TenMon = N'" + btnTX_L.Text + "'");
+            int dongia = Convert.ToInt32(dt.Rows[0]["DonGiaMon"].ToString());
             int soluong = 1;
             float giamgia = 0;
             string ghichu = "";
@@ -73,8 +73,8 @@ namespace My_IPOS
 
         private void btnTXXoai_L_Click(object sender, EventArgs e)
         {
-            DataTable dt = data.dataReaderTable("select DonGiaTraSua from TraSua where TenTraSua = N'" + btnTXXoai_L.Text + "'");
-            int dongia = Convert.ToInt32(dt.Rows[0]["DonGiaTraSua"].ToString());
+            DataTable dt = data.dataReaderTable("select DonGiaMon from Mon where TenMon = N'" + btnTXXoai_L.Text + "'");
+            int dongia = Convert.ToInt32(dt.Rows[0]["DonGiaMon"].ToString());
             int soluong = 1;
             float giamgia = 0;
             string ghichu = "";
@@ -85,8 +85,8 @@ namespace My_IPOS
 
         private void btnTXDauTamPhaLeTuyet_L_Click(object sender, EventArgs e)
         {
-            DataTable dt = data.dataReaderTable("select DonGiaTraSua from TraSua where TenTraSua = N'" + btnTXDauTamPhaLeTuyet_L.Text + "'");
-            int dongia = Convert.ToInt32(dt.Rows[0]["DonGiaTraSua"].ToString());
+            DataTable dt = data.dataReaderTable("select DonGiaMon from Mon where TenMon = N'" + btnTXDauTamPhaLeTuyet_L.Text + "'");
+            int dongia = Convert.ToInt32(dt.Rows[0]["DonGiaMon"].ToString());
             int soluong = 1;
             float giamgia = 0;
             string ghichu = "";
@@ -97,8 +97,8 @@ namespace My_IPOS
 
         private void btnTXDuaHongHac_L_Click(object sender, EventArgs e)
         {
-            DataTable dt = data.dataReaderTable("select DonGiaTraSua from TraSua where TenTraSua = N'" + btnTXDuaHongHac_L.Text + "'");
-            int dongia = Convert.ToInt32(dt.Rows[0]["DonGiaTraSua"].ToString());
+            DataTable dt = data.dataReaderTable("select DonGiaMon from Mon where TenMon = N'" + btnTXDuaHongHac_L.Text + "'");
+            int dongia = Convert.ToInt32(dt.Rows[0]["DonGiaMon"].ToString());
             int soluong = 1;
             float giamgia = 0;
             string ghichu = "";
@@ -109,8 +109,8 @@ namespace My_IPOS
 
         private void btnTXKiwiChanhLeo_M_Click(object sender, EventArgs e)
         {
-            DataTable dt = data.dataReaderTable("select DonGiaTraSua from TraSua where TenTraSua = N'" + btnTXKiwiChanhLeo_M.Text + "'");
-            int dongia = Convert.ToInt32(dt.Rows[0]["DonGiaTraSua"].ToString());
+            DataTable dt = data.dataReaderTable("select DonGiaMon from Mon where TenMon = N'" + btnTXKiwiChanhLeo_M.Text + "'");
+            int dongia = Convert.ToInt32(dt.Rows[0]["DonGiaMon"].ToString());
             int soluong = 1;
             float giamgia = 0;
             string ghichu = "";
@@ -121,8 +121,8 @@ namespace My_IPOS
 
         private void btnTXChanhLeo_M_Click(object sender, EventArgs e)
         {
-            DataTable dt = data.dataReaderTable("select DonGiaTraSua from TraSua where TenTraSua = N'" + btnTXChanhLeo_M.Text + "'");
-            int dongia = Convert.ToInt32(dt.Rows[0]["DonGiaTraSua"].ToString());
+            DataTable dt = data.dataReaderTable("select DonGiaMon from Mon where TenMon = N'" + btnTXChanhLeo_M.Text + "'");
+            int dongia = Convert.ToInt32(dt.Rows[0]["DonGiaMon"].ToString());
             int soluong = 1;
             float giamgia = 0;
             string ghichu = "";
@@ -133,8 +133,8 @@ namespace My_IPOS
 
         private void btnTXDuaNhietDoi_M_Click(object sender, EventArgs e)
         {
-            DataTable dt = data.dataReaderTable("select DonGiaTraSua from TraSua where TenTraSua = N'" + btnTXDuaNhietDoi_M.Text + "'");
-            int dongia = Convert.ToInt32(dt.Rows[0]["DonGiaTraSua"].ToString());
+            DataTable dt = data.dataReaderTable("select DonGiaMon from Mon where TenMon = N'" + btnTXDuaNhietDoi_M.Text + "'");
+            int dongia = Convert.ToInt32(dt.Rows[0]["DonGiaMon"].ToString());
             int soluong = 1;
             float giamgia = 0;
             string ghichu = "";
@@ -145,8 +145,8 @@ namespace My_IPOS
 
         private void btnTXHongLongPhaLeTuyet_M_Click(object sender, EventArgs e)
         {
-            DataTable dt = data.dataReaderTable("select DonGiaTraSua from TraSua where TenTraSua = N'" + btnTXHongLongPhaLeTuyet_M.Text + "'");
-            int dongia = Convert.ToInt32(dt.Rows[0]["DonGiaTraSua"].ToString());
+            DataTable dt = data.dataReaderTable("select DonGiaMon from Mon where TenMon = N'" + btnTXHongLongPhaLeTuyet_M.Text + "'");
+            int dongia = Convert.ToInt32(dt.Rows[0]["DonGiaMon"].ToString());
             int soluong = 1;
             float giamgia = 0;
             string ghichu = "";
@@ -157,8 +157,8 @@ namespace My_IPOS
 
         private void btnTXKiwiChanhLeo_L_Click(object sender, EventArgs e)
         {
-            DataTable dt = data.dataReaderTable("select DonGiaTraSua from TraSua where TenTraSua = N'" + btnTXKiwiChanhLeo_L.Text + "'");
-            int dongia = Convert.ToInt32(dt.Rows[0]["DonGiaTraSua"].ToString());
+            DataTable dt = data.dataReaderTable("select DonGiaMon from Mon where TenMon = N'" + btnTXKiwiChanhLeo_L.Text + "'");
+            int dongia = Convert.ToInt32(dt.Rows[0]["DonGiaMon"].ToString());
             int soluong = 1;
             float giamgia = 0;
             string ghichu = "";
@@ -169,8 +169,8 @@ namespace My_IPOS
 
         private void btnTXChanhLeo_L_Click(object sender, EventArgs e)
         {
-            DataTable dt = data.dataReaderTable("select DonGiaTraSua from TraSua where TenTraSua = N'" + btnTXChanhLeo_L.Text + "'");
-            int dongia = Convert.ToInt32(dt.Rows[0]["DonGiaTraSua"].ToString());
+            DataTable dt = data.dataReaderTable("select DonGiaMon from Mon where TenMon = N'" + btnTXChanhLeo_L.Text + "'");
+            int dongia = Convert.ToInt32(dt.Rows[0]["DonGiaMon"].ToString());
             int soluong = 1;
             float giamgia = 0;
             string ghichu = "";
@@ -181,8 +181,8 @@ namespace My_IPOS
 
         private void btnTXDuaNhietDoi_L_Click(object sender, EventArgs e)
         {
-            DataTable dt = data.dataReaderTable("select DonGiaTraSua from TraSua where TenTraSua = N'" + btnTXDuaNhietDoi_L.Text + "'");
-            int dongia = Convert.ToInt32(dt.Rows[0]["DonGiaTraSua"].ToString());
+            DataTable dt = data.dataReaderTable("select DonGiaMon from Mon where TenMon = N'" + btnTXDuaNhietDoi_L.Text + "'");
+            int dongia = Convert.ToInt32(dt.Rows[0]["DonGiaMon"].ToString());
             int soluong = 1;
             float giamgia = 0;
             string ghichu = "";
@@ -193,8 +193,8 @@ namespace My_IPOS
 
         private void btnTXHongLongPhaLeTuyet_L_Click(object sender, EventArgs e)
         {
-            DataTable dt = data.dataReaderTable("select DonGiaTraSua from TraSua where TenTraSua = N'" + btnTXHongLongPhaLeTuyet_L.Text + "'");
-            int dongia = Convert.ToInt32(dt.Rows[0]["DonGiaTraSua"].ToString());
+            DataTable dt = data.dataReaderTable("select DonGiaMon from Mon where TenMon = N'" + btnTXHongLongPhaLeTuyet_L.Text + "'");
+            int dongia = Convert.ToInt32(dt.Rows[0]["DonGiaMon"].ToString());
             int soluong = 1;
             float giamgia = 0;
             string ghichu = "";
@@ -205,8 +205,8 @@ namespace My_IPOS
 
         private void btnTXDauTamPhaLeTuyet_M_Click(object sender, EventArgs e)
         {
-            DataTable dt = data.dataReaderTable("select DonGiaTraSua from TraSua where TenTraSua = N'" + btnTXDauTamPhaLeTuyet_M.Text + "'");
-            int dongia = Convert.ToInt32(dt.Rows[0]["DonGiaTraSua"].ToString());
+            DataTable dt = data.dataReaderTable("select DonGiaMon from Mon where TenMon = N'" + btnTXDauTamPhaLeTuyet_M.Text + "'");
+            int dongia = Convert.ToInt32(dt.Rows[0]["DonGiaMon"].ToString());
             int soluong = 1;
             float giamgia = 0;
             string ghichu = "";

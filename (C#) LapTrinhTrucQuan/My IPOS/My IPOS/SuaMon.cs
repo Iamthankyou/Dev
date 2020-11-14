@@ -25,7 +25,7 @@ namespace My_IPOS
 
         private void gunaGradientButton1_Click(object sender, EventArgs e)
         {
-            data.dataChange("update TraSua set ID_TraSua ='" + tbMaMon.Text + "',TenTraSua=N'" + tbTenMon.Text + "', DonGiaTraSua = '" + tbDonGia.Text + "' where ID_TraSua ='" + tbMaMon.Text + "'");
+            data.dataChange("update Mon set ID_Mon ='" + tbMaMon.Text + "',TenMon= N'" + tbTenMon.Text + "', DonGiaMon = '" + tbDonGia.Text + "' where ID_Mon ='" + tbMaMon.Text + "'");
             MessageBox.Show("Đã Sửa!");
             this.Close();
         }

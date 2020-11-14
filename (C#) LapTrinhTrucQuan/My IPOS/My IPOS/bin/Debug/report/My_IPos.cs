@@ -14,3 +14,4 @@ namespace My_IPOS.bin.Debug.report.My_IPosTableAdapters {
     public partial class DataTable1TableAdapter {
     }
 }
+

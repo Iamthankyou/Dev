@@ -24,8 +24,8 @@ namespace My_IPOS
 
         private void btnTPTranChauQQ_Click(object sender, EventArgs e)
         {
-            DataTable dt = data.dataReaderTable("select DonGiaTopping from Topping where TenTopping = N'" + btnTPTranChauQQ.Text + "'");
-            int dongia = Convert.ToInt32(dt.Rows[0]["DonGiaTopping"].ToString());
+            DataTable dt = data.dataReaderTable("select DonGiaMon from Mon where TenMon = N'" + btnTPTranChauQQ.Text + "'");
+            int dongia = Convert.ToInt32(dt.Rows[0]["DonGiaMon"].ToString());
             int soluong = 1;
             float giamgia = 0;
             string ghichu = "";

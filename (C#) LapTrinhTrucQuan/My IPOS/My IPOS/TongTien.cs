@@ -36,8 +36,11 @@ namespace My_IPOS
 
         private void TongTien_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'my_IPos.DataTable1' table. You can move, or remove it, as needed.
-            this.dataTable1TableAdapter.Fill(this.my_IPos.DataTable1);
+            try
+            {
+                this.dataTable1TableAdapter.Fill(this.my_IPos.DataTable1);
+            }
+            catch { }
             int thanhtoan = 0, khachdua = 0, tienthua = 0;
             int n = 0;
             foreach (DataGridViewRow row in dt.Rows)
@@ -143,14 +146,10 @@ namespace My_IPOS
             data.dataChange("insert into HoaDon values('" + ID_HoaDon + "','" + date + "','" + TT + "','" + ID_KhachHang + "','" + ID_Voucher + "','"+user+"')");
             for (int i = 0; i < dgvTongTien.RowCount; i++)
             {
-                dt1 = data.dataReaderTable("select * from TraSua where TenTraSua = N'" + dgvTongTien.Rows[i].Cells[1].Value.ToString() + "'");
-                if(dt1.Rows.Count != 0)
-                    data.dataChange("insert into ChiTietHoaDon values('" + dgvTongTien.Rows[i].Cells[2].Value.ToString() + "','" + ID_HoaDon + "','" + dt1.Rows[0]["ID_TraSua"].ToString() + "')");
-                else
-                {
-                    dt1 = data.dataReaderTable("select * from Topping where TenTopping = N'" + dgvTongTien.Rows[i].Cells[1].Value.ToString() + "'");
-                    data.dataChange("insert into ThemTopping values('" + dgvTongTien.Rows[i].Cells[2].Value.ToString() + "','" + dt1.Rows[0]["ID_Topping"].ToString() + "','" + ID_HoaDon + "')");
-                }
+                dt1 = data.dataReaderTable("select * from Mon where TenMon = N'" + dgvTongTien.Rows[i].Cells[1].Value.ToString() + "'");
+                if (dt1.Rows.Count != 0)
+                    data.dataChange("insert into ChiTietHoaDon values('" + dgvTongTien.Rows[i].Cells[2].Value.ToString() + "','" + ID_HoaDon + "','" + dt1.Rows[0]["ID_Mon"].ToString() + "')");
+                else MessageBox.Show("Có lỗi");
             }
             try
             {

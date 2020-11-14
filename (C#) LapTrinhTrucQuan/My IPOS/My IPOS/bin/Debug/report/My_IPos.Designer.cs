@@ -279,11 +279,7 @@ namespace My_IPOS.bin.Debug.report {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class DataTable1DataTable : global::System.Data.TypedTableBase<DataTable1Row> {
             
-            private global::System.Data.DataColumn columnTenTraSua;
-            
             private global::System.Data.DataColumn columnSoLuong;
-            
-            private global::System.Data.DataColumn columnDonGiaTraSua;
             
             private global::System.Data.DataColumn columnID_HoaDon;
             
@@ -298,6 +294,10 @@ namespace My_IPOS.bin.Debug.report {
             private global::System.Data.DataColumn columnNguyenGia;
             
             private global::System.Data.DataColumn columnTenVoucher;
+            
+            private global::System.Data.DataColumn columnDonGiaMon;
+            
+            private global::System.Data.DataColumn columnTenMon;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -334,25 +334,9 @@ namespace My_IPOS.bin.Debug.report {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn TenTraSuaColumn {
-                get {
-                    return this.columnTenTraSua;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn SoLuongColumn {
                 get {
                     return this.columnSoLuong;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn DonGiaTraSuaColumn {
-                get {
-                    return this.columnDonGiaTraSua;
                 }
             }
             
@@ -414,6 +398,22 @@ namespace My_IPOS.bin.Debug.report {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn DonGiaMonColumn {
+                get {
+                    return this.columnDonGiaMon;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn TenMonColumn {
+                get {
+                    return this.columnTenMon;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -449,19 +449,19 @@ namespace My_IPOS.bin.Debug.report {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public DataTable1Row AddDataTable1Row(string TenTraSua, int SoLuong, int DonGiaTraSua, string ID_HoaDon, int TongTien, string TenKhachHang, string UserName, double ThanhTien, double NguyenGia, string TenVoucher) {
+            public DataTable1Row AddDataTable1Row(int SoLuong, string ID_HoaDon, int TongTien, string TenKhachHang, string UserName, double ThanhTien, double NguyenGia, string TenVoucher, int DonGiaMon, string TenMon) {
                 DataTable1Row rowDataTable1Row = ((DataTable1Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        TenTraSua,
                         SoLuong,
-                        DonGiaTraSua,
                         ID_HoaDon,
                         TongTien,
                         TenKhachHang,
                         UserName,
                         ThanhTien,
                         NguyenGia,
-                        TenVoucher};
+                        TenVoucher,
+                        DonGiaMon,
+                        TenMon};
                 rowDataTable1Row.ItemArray = columnValuesArray;
                 this.Rows.Add(rowDataTable1Row);
                 return rowDataTable1Row;
@@ -491,9 +491,7 @@ namespace My_IPOS.bin.Debug.report {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columnTenTraSua = base.Columns["TenTraSua"];
                 this.columnSoLuong = base.Columns["SoLuong"];
-                this.columnDonGiaTraSua = base.Columns["DonGiaTraSua"];
                 this.columnID_HoaDon = base.Columns["ID_HoaDon"];
                 this.columnTongTien = base.Columns["TongTien"];
                 this.columnTenKhachHang = base.Columns["TenKhachHang"];
@@ -501,17 +499,15 @@ namespace My_IPOS.bin.Debug.report {
                 this.columnThanhTien = base.Columns["ThanhTien"];
                 this.columnNguyenGia = base.Columns["NguyenGia"];
                 this.columnTenVoucher = base.Columns["TenVoucher"];
+                this.columnDonGiaMon = base.Columns["DonGiaMon"];
+                this.columnTenMon = base.Columns["TenMon"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnTenTraSua = new global::System.Data.DataColumn("TenTraSua", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTenTraSua);
                 this.columnSoLuong = new global::System.Data.DataColumn("SoLuong", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSoLuong);
-                this.columnDonGiaTraSua = new global::System.Data.DataColumn("DonGiaTraSua", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDonGiaTraSua);
                 this.columnID_HoaDon = new global::System.Data.DataColumn("ID_HoaDon", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnID_HoaDon);
                 this.columnTongTien = new global::System.Data.DataColumn("TongTien", typeof(int), null, global::System.Data.MappingType.Element);
@@ -526,12 +522,13 @@ namespace My_IPOS.bin.Debug.report {
                 base.Columns.Add(this.columnNguyenGia);
                 this.columnTenVoucher = new global::System.Data.DataColumn("TenVoucher", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTenVoucher);
+                this.columnDonGiaMon = new global::System.Data.DataColumn("DonGiaMon", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDonGiaMon);
+                this.columnTenMon = new global::System.Data.DataColumn("TenMon", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTenMon);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID_HoaDon}, true));
-                this.columnTenTraSua.AllowDBNull = false;
-                this.columnTenTraSua.MaxLength = 50;
                 this.columnSoLuong.AllowDBNull = false;
-                this.columnDonGiaTraSua.AllowDBNull = false;
                 this.columnID_HoaDon.AllowDBNull = false;
                 this.columnID_HoaDon.Unique = true;
                 this.columnID_HoaDon.MaxLength = 10;
@@ -544,6 +541,9 @@ namespace My_IPOS.bin.Debug.report {
                 this.columnNguyenGia.ReadOnly = true;
                 this.columnTenVoucher.AllowDBNull = false;
                 this.columnTenVoucher.MaxLength = 50;
+                this.columnDonGiaMon.AllowDBNull = false;
+                this.columnTenMon.AllowDBNull = false;
+                this.columnTenMon.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -686,34 +686,12 @@ namespace My_IPOS.bin.Debug.report {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string TenTraSua {
-                get {
-                    return ((string)(this[this.tableDataTable1.TenTraSuaColumn]));
-                }
-                set {
-                    this[this.tableDataTable1.TenTraSuaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int SoLuong {
                 get {
                     return ((int)(this[this.tableDataTable1.SoLuongColumn]));
                 }
                 set {
                     this[this.tableDataTable1.SoLuongColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int DonGiaTraSua {
-                get {
-                    return ((int)(this[this.tableDataTable1.DonGiaTraSuaColumn]));
-                }
-                set {
-                    this[this.tableDataTable1.DonGiaTraSuaColumn] = value;
                 }
             }
             
@@ -801,6 +779,28 @@ namespace My_IPOS.bin.Debug.report {
                 }
                 set {
                     this[this.tableDataTable1.TenVoucherColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int DonGiaMon {
+                get {
+                    return ((int)(this[this.tableDataTable1.DonGiaMonColumn]));
+                }
+                set {
+                    this[this.tableDataTable1.DonGiaMonColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string TenMon {
+                get {
+                    return ((string)(this[this.tableDataTable1.TenMonColumn]));
+                }
+                set {
+                    this[this.tableDataTable1.TenMonColumn] = value;
                 }
             }
             
@@ -988,9 +988,7 @@ namespace My_IPOS.bin.Debug.report.My_IPosTableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "DataTable1";
-            tableMapping.ColumnMappings.Add("TenTraSua", "TenTraSua");
             tableMapping.ColumnMappings.Add("SoLuong", "SoLuong");
-            tableMapping.ColumnMappings.Add("DonGiaTraSua", "DonGiaTraSua");
             tableMapping.ColumnMappings.Add("ID_HoaDon", "ID_HoaDon");
             tableMapping.ColumnMappings.Add("TongTien", "TongTien");
             tableMapping.ColumnMappings.Add("TenKhachHang", "TenKhachHang");
@@ -998,6 +996,8 @@ namespace My_IPOS.bin.Debug.report.My_IPosTableAdapters {
             tableMapping.ColumnMappings.Add("ThanhTien", "ThanhTien");
             tableMapping.ColumnMappings.Add("NguyenGia", "NguyenGia");
             tableMapping.ColumnMappings.Add("TenVoucher", "TenVoucher");
+            tableMapping.ColumnMappings.Add("DonGiaMon", "DonGiaMon");
+            tableMapping.ColumnMappings.Add("TenMon", "TenMon");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -1014,24 +1014,24 @@ namespace My_IPOS.bin.Debug.report.My_IPosTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT        HD.TongTien, HD.ID_HoaDon, TS.TenTraSua, CTHD.SoLuong, TS.DonGiaTraSua, (CTHD.SoLuong * TS.DonGiaTraSua) * (1 - V.PhanTram) AS ThanhTien, KH.TenKhachHang, HD.UserName, HD.TongTien / (1 - V.PhanTram) 
+            this._commandCollection[0].CommandText = @"SELECT HD.TongTien, HD.ID_HoaDon, M.TenMon ,CTHD.SoLuong, M.DonGiaMon, (CTHD.SoLuong * M.DonGiaMon) * (1 - V.PhanTram) AS ThanhTien, KH.TenKhachHang, HD.UserName, HD.TongTien / (1 - V.PhanTram) 
                          AS NguyenGia, V.TenVoucher
 FROM            ChiTietHoaDon AS CTHD INNER JOIN
                          HoaDon AS HD ON CTHD.ID_HoaDon = HD.ID_HoaDon INNER JOIN
-                         TraSua AS TS ON CTHD.ID_TraSua = TS.ID_TraSua INNER JOIN
+                         Mon AS M ON CTHD.ID_Mon = M.ID_Mon INNER JOIN
                          KhachHang AS KH ON KH.ID_KhachHang = HD.ID_KhachHang INNER JOIN
-                         Voucher AS V ON V.ID_Voucher = HD.ID_Voucher
-WHERE        (HD.ID_HoaDon = '1_4112020')";
+                         Voucher AS V ON V.ID_Voucher = HD.ID_Voucher 
+WHERE        (HD.ID_HoaDon = '7_12112020')";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = @"SELECT        HD.TongTien, HD.ID_HoaDon, TS.TenTraSua, CTHD.SoLuong, TS.DonGiaTraSua, (CTHD.SoLuong * TS.DonGiaTraSua) * (1 - V.PhanTram) AS ThanhTien, KH.TenKhachHang, HD.UserName, HD.TongTien / (1 - V.PhanTram) 
+            this._commandCollection[1].CommandText = @"SELECT HD.TongTien, HD.ID_HoaDon, M.TenMon ,CTHD.SoLuong, M.DonGiaMon, (CTHD.SoLuong * M.DonGiaMon) * (1 - V.PhanTram) AS ThanhTien, KH.TenKhachHang, HD.UserName, HD.TongTien / (1 - V.PhanTram) 
                          AS NguyenGia, V.TenVoucher
 FROM            ChiTietHoaDon AS CTHD INNER JOIN
                          HoaDon AS HD ON CTHD.ID_HoaDon = HD.ID_HoaDon INNER JOIN
-                         TraSua AS TS ON CTHD.ID_TraSua = TS.ID_TraSua INNER JOIN
+                         Mon AS M ON CTHD.ID_Mon = M.ID_Mon INNER JOIN
                          KhachHang AS KH ON KH.ID_KhachHang = HD.ID_KhachHang INNER JOIN
-                         Voucher AS V ON V.ID_Voucher = HD.ID_Voucher
+                         Voucher AS V ON V.ID_Voucher = HD.ID_Voucher 
 WHERE        (HD.ID_HoaDon = @id)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "ID_HoaDon", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
