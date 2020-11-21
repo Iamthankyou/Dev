@@ -47,5 +47,10 @@ namespace My_IPOS
             BaoCao bc = new BaoCao();
             bc.ShowDialog();
         }
+
+        private void Home_Load(object sender, EventArgs e)
+        {
+            if (user != "admin") btnSuaMenu.Visible = false;
+        }
     }
 }
